@@ -1,4 +1,4 @@
-from time import time
+import time
 import requests
 from bs4 import BeautifulSoup
 import json
@@ -84,14 +84,14 @@ def scrapear_carreras(url_carreras):
         nombre_carrera = enlace.get_text(strip=True) # Obtengo el texto del enlace y limpio espacios
         url_relativa = enlace['href'] # Obtengo el atributo href del enlace
         if nombre_carrera and url_relativa and len(nombre_carrera) > 10:
-           url_completa = url_relativa if url_relativa.startswith(('http://', 'https://')) else os.getenv('URL_BASE', 'https://www.ungs.edu.ar') + url_relativa # Construyo la URL completa
+           url_completa = url_relativa if url_relativa.startswith(('http://', 'https://')) else os.getenv('URL_BASE') + url_relativa # Construyo la URL completa
            nombre_limpio = re.sub(r'\s+', ' ', nombre_carrera).strip() # Limpio el nombre de la carrera
         
         if url_completa not in urls_extraidas: # Verifico si la URL ya fue extraída
             urls_extraidas.add(url_completa)
             links_carreras.append({
                 "carrera": nombre_carrera,
-                "url": url_completa
+                "url_plan_estudios": url_completa
             })
     print(f"Carrera encontrada: {nombre_carrera} - URL: {url_completa}") 
 
@@ -99,10 +99,83 @@ def scrapear_carreras(url_carreras):
     print(f"Error al acceder a la URL {url_carreras}: {e}")
   except Exception as e:
     print(f"Error al procesar la página {url_carreras}: {e}")
-    
+
   return links_carreras
+
+def scrapear_carrara(carrera_data):
+  """
+  """
+  detalle_carrera = []
+  
+  for item, carrera in enumerate(carrera_data): # Recorro cada carrera extraída
+      url = carrera['url_plan_estudios']
+      print(f"--> {item + 1}/{len(carrera_data)} Accediendo a la carrera: {carrera['carrera']} - URL: {url}")
+
+      try: 
+        response = realizar_solicitud_con_reintentos(url)
+        if not response:
+          raise requests.exceptions.RequestException("No se recibió respuesta válida.")
+        resultado = BeautifulSoup(response.content, 'html.parser') # Parsea el contenido HTML de la página
+
+        # El contenido relevante suele estar dentro de <article> o <main>
+        contenedor_principal = resultado.find('article') or resultado.find('main') or resultado.find('div', id='content') or resultado
+        contenedor_texto = contenedor_principal.get_text()
+        texto_normalizado = re.sub(r'\s+', ' ', contenedor_texto).strip()
+        
+        # --- 1. Extracción de Título Oficial (Asumimos Presentación) ---
+        patron_titulo = r'(?:Título\s*que\s*otorga|Título\s*final)\s*[:\s-]*\s*(.*?)(?:Modalidad|Duración|\.|\n|;|,|\s{2,})' # Patrón para capturar el título oficial
+        carrera['titulo_oficial'] = limpiar_texto(texto_normalizado, patron_titulo, 1) # Extrae el título oficial
+
+        # --- 3. Carga Horaria, Asignaturas y Duración (Asumimos Plan de Estudios / General) ---
+            
+        # --- 4. Extracción de Ámbitos de Desempeño (Asumimos pestaña "Ámbitos de Desempeño") ---
+
+
+      except requests.exceptions.RequestException as e:
+            print(f"--- Error al acceder a {url}: {e} (Se registra como error)")
+            error_msg = "Error de Conexión/Extracción"
+            carrera['titulo_oficial'] = error_msg
+      except Exception as e:
+          print(f"--- Error general al procesar {url}: {e} (Se registra como error)")
+          error_msg = "Error de Extracción"
+          carrera['titulo_oficial'] = error_msg
+            
+      detalle_carrera.append(carrera)
+
+       # --- PAUSA OBLIGATORIA DE 15 SEGUNDOS ---
+      if item < len(carrera_data) - 1:
+          print(f"\n>> ⏳ Pausando por {os.getenv('DELAY_BETWEEN_CAREERS')} segundos para ser cortés con el servidor...\n")
+
+          time.sleep(15)
+  
+  return detalle_carrera
+
+
 
 if __name__ == "__main__":
    carreras_extraidas = scrapear_carreras(os.getenv('URL_CARRERAS'))
+   if not carreras_extraidas:
+    print("No se encontraron carreras en la página proporcionada.")
+   else:
+    print(f"✅ Extracción de {len(carreras_extraidas)} enlaces completada. Iniciando scraping de detalles con pausas...")
+      
+    # obtengo los detalles de cada carrera
+    detalles_carreras = scrapear_carrara(carreras_extraidas)
 
-    
+    print(f"detalles_carreras: {detalles_carreras}")
+
+     # --- Guardar los datos en un archivo JSON ---
+    try:
+          with open(os.getenv('OUTPUT_FILENAME'), 'w', encoding='utf-8') as f:
+              json.dump(detalles_carreras, f, indent=4, ensure_ascii=False)
+          
+          # Imprimir una muestra en consola (los primeros 3)
+          print("--- Muestra de los primeros 3 resultados ---")
+          print(json.dumps(detalles_carreras[:3], indent=4, ensure_ascii=False))
+          print("\n" + "*"*80)
+          print(f"💾 Los datos han sido guardados correctamente en el archivo: {os.getenv('OUTPUT_FILENAME')}")
+          print(f"Total de carreras encontradas: {len(detalles_carreras)}")
+          print("*"*80)
+
+    except IOError as e:
+          print(f"\nError: No se pudo escribir el archivo {os.getenv('OUTPUT_FILENAME')}. {e}")
