@@ -122,14 +122,43 @@ def scrapear_carrara(carrera_data):
         contenedor_texto = contenedor_principal.get_text()
         texto_normalizado = re.sub(r'\s+', ' ', contenedor_texto).strip()
         
-        # --- 1. Extracción de Título Oficial (Asumimos Presentación) ---
-        patron_titulo = r'(?:Título\s*que\s*otorga|Título\s*final)\s*[:\s-]*\s*(.*?)(?:Modalidad|Duración|\.|\n|;|,|\s{2,})' # Patrón para capturar el título oficial
-        carrera['titulo_oficial'] = limpiar_texto(texto_normalizado, patron_titulo, 1) # Extrae el título oficial
+       # ============================================================
+       # EXTRACCIÓN DE ITEMS PRINCIPALES (Duración, Título, Modalidad)
+       # ============================================================
 
-        # --- 3. Carga Horaria, Asignaturas y Duración (Asumimos Plan de Estudios / General) ---
-            
-        # --- 4. Extracción de Ámbitos de Desempeño (Asumimos pestaña "Ámbitos de Desempeño") ---
+        items = resultado.find_all("li")
 
+        duracion = "No encontrado"
+        titulo = "No encontrado"
+        modalidad = "No encontrado"
+
+        for li in items:
+            texto = li.get_text(strip=True)
+
+            if texto.lower().startswith("duración"):
+                duracion = texto.replace("Duración:", "").strip()
+
+            elif texto.lower().startswith("título"):
+                titulo = texto.replace("Título:", "").strip()
+
+            elif texto.lower().startswith("modalidad"):
+                modalidad = texto.replace("Modalidad:", "").strip()
+
+        carrera["duracion"] = duracion
+        carrera["titulo_oficial"] = titulo
+        carrera["modalidad"] = modalidad
+
+        # ============================================================
+        # EXTRACCIÓN DE "Ámbitos de desempeño"
+        # ============================================================
+
+        # ============================================================
+        # EXTRACCIÓN DEL PLAN DE ESTUDIOS
+        # ============================================================
+
+        # ============================================================
+        # EXTRACCIÓN DEL ITINERARIO (si existe)
+        # ============================================================
 
       except requests.exceptions.RequestException as e:
             print(f"--- Error al acceder a {url}: {e} (Se registra como error)")

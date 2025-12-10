@@ -2,151 +2,211 @@
     {
         "carrera": "Ingeniería Electromecánica",
         "url_plan_estudios": "https://www.ungs.edu.ar/carrera/ingenieria-electromecanica-orientacion-automatizacion",
-        "titulo_oficial": "No encontrado"
+        "duracion": "5 años",
+        "titulo_oficial": "Ingeniero/a en Electromecánica Orientación Automatización",
+        "modalidad": "Presencial"
     },
     {
         "carrera": "Ingeniería Industrial",
         "url_plan_estudios": "https://www.ungs.edu.ar/carrera/ingenieria-industrial",
-        "titulo_oficial": "No encontrado"
+        "duracion": "5 años",
+        "titulo_oficial": "Ingeniero/a Industrial",
+        "modalidad": "Presencial"
     },
     {
         "carrera": "Ingeniería Química",
         "url_plan_estudios": "https://www.ungs.edu.ar/carrera/ingenieria-quimica",
-        "titulo_oficial": "No encontrado"
+        "duracion": "5 años",
+        "titulo_oficial": "Ingeniero/a Químico/a",
+        "modalidad": "Presencial"
     },
     {
         "carrera": "Licenciatura en Administración de Empresas",
         "url_plan_estudios": "https://www.ungs.edu.ar/carrera/licenciatura-en-administracion-de-empresas",
-        "titulo_oficial": "No encontrado"
+        "duracion": "Duración de la carrera: 5 años",
+        "titulo_oficial": "Licenciado/a en Administración de Empresas",
+        "modalidad": "Presencial"
     },
     {
         "carrera": "Licenciatura en Administración Pública",
         "url_plan_estudios": "https://www.ungs.edu.ar/carrera/licenciatura-en-administracion-publica",
-        "titulo_oficial": "No encontrado"
+        "duracion": "5 años",
+        "titulo_oficial": "Licenciado/a en Administración Pública",
+        "modalidad": "Presencial"
     },
     {
         "carrera": "Licenciatura en Comunicación",
         "url_plan_estudios": "https://www.ungs.edu.ar/carrera/licenciatura-en-comunicacion",
-        "titulo_oficial": "No encontrado"
+        "duracion": "5 años",
+        "titulo_oficial": "Licenciado/a en Comunicación",
+        "modalidad": "Presencial"
     },
     {
         "carrera": "Licenciatura en Cultura y Lenguajes Artísticos",
         "url_plan_estudios": "https://www.ungs.edu.ar/carrera/licenciatura-en-cultura-y-lenguajes-artisticos",
-        "titulo_oficial": "No encontrado"
+        "duracion": "5 años",
+        "titulo_oficial": "Licenciado/a en Cultura y Lenguajes Artísticos",
+        "modalidad": "Presencial"
     },
     {
         "carrera": "Licenciatura en Ecología",
         "url_plan_estudios": "https://www.ungs.edu.ar/carrera/licenciatura-en-ecologia",
-        "titulo_oficial": "No encontrado"
+        "duracion": "5 años",
+        "titulo_oficial": "Licenciado/a en Ecología",
+        "modalidad": "Presencial"
     },
     {
         "carrera": "Licenciatura en Economía Industrial",
         "url_plan_estudios": "https://www.ungs.edu.ar/carrera/licenciatura-en-economia-industrial",
-        "titulo_oficial": "No encontrado"
+        "duracion": "Duración de la carrera: 5 años",
+        "titulo_oficial": "Licenciado/a en Economía Industrial",
+        "modalidad": "Presencial"
     },
     {
         "carrera": "Licenciatura en Economía Política",
         "url_plan_estudios": "https://www.ungs.edu.ar/carrera/licenciatura-en-economia-politica",
-        "titulo_oficial": "No encontrado"
+        "duracion": "Duración de la carrera: 5 años",
+        "titulo_oficial": "Licenciado/a en Economía Política",
+        "modalidad": "Presencial"
     },
     {
         "carrera": "Licenciatura en Educación",
         "url_plan_estudios": "https://www.ungs.edu.ar/carrera/licenciatura-en-educacion",
-        "titulo_oficial": "No encontrado"
+        "duracion": "5 años",
+        "titulo_oficial": "Licenciado/a en Educación",
+        "modalidad": "Presencial"
     },
     {
         "carrera": "Licenciatura en Estudios Políticos",
         "url_plan_estudios": "https://www.ungs.edu.ar/carrera/licenciatura-en-estudios-politicos",
-        "titulo_oficial": "No encontrado"
+        "duracion": "5 años",
+        "titulo_oficial": "Licenciado/a en Estudios Políticos",
+        "modalidad": "Presencial"
     },
     {
         "carrera": "Licenciatura en Filosofía – Ciclo de Complementación Curricular",
         "url_plan_estudios": "https://www.ungs.edu.ar/carrera/licenciatura-en-filosofia-ciclo-de-complementacion-curricular",
-        "titulo_oficial": "No encontrado"
+        "duracion": "Duración de la carrera: 2 años",
+        "titulo_oficial": "Licenciada/o en Filosofía",
+        "modalidad": "Presencial"
     },
     {
         "carrera": "Licenciatura en Logística",
         "url_plan_estudios": "https://www.ungs.edu.ar/carrera/licenciatura-en-logistica",
-        "titulo_oficial": "No encontrado"
+        "duracion": "Duración de la carrera:5 años",
+        "titulo_oficial": "Licenciado/a en Logística",
+        "modalidad": "Presencial"
     },
     {
         "carrera": "Licenciatura en Política Social",
         "url_plan_estudios": "https://www.ungs.edu.ar/carrera/licenciatura-en-politica-social",
-        "titulo_oficial": "No encontrado"
+        "duracion": "5 años",
+        "titulo_oficial": "Licenciado/a en Política Social",
+        "modalidad": "Presencial"
     },
     {
         "carrera": "Licenciatura en Sistemas",
         "url_plan_estudios": "https://www.ungs.edu.ar/carrera/licenciatura-en-sistemas",
-        "titulo_oficial": "No encontrado"
+        "duracion": "5 años",
+        "titulo_oficial": "Licenciado/a en Sistemas",
+        "modalidad": "Presencial"
     },
     {
         "carrera": "Licenciatura en Sociología",
         "url_plan_estudios": "https://www.ungs.edu.ar/carrera/licenciatura-en-sociologia",
-        "titulo_oficial": "No encontrado"
+        "duracion": "Duración de la carrera:5 años",
+        "titulo_oficial": "Licenciado/a en Sociología",
+        "modalidad": "Presencial"
     },
     {
         "carrera": "Licenciatura en Urbanismo",
         "url_plan_estudios": "https://www.ungs.edu.ar/carrera/licenciatura-en-urbanismo",
-        "titulo_oficial": "No encontrado"
+        "duracion": "5 años",
+        "titulo_oficial": "Licenciado/a en Urbanismo",
+        "modalidad": "Presencial"
     },
     {
         "carrera": "Profesorado Universitario de Educación Superior en Economía",
         "url_plan_estudios": "https://www.ungs.edu.ar/carrera/profesorado-universitario-de-educacion-superior-en-economia",
-        "titulo_oficial": "No encontrado"
+        "duracion": "5 años",
+        "titulo_oficial": "Profesor/a Universitario/a de Educación Superior en Economía",
+        "modalidad": "Presencial"
     },
     {
         "carrera": "Profesorado Universitario de Educación Superior en Educación",
         "url_plan_estudios": "https://www.ungs.edu.ar/carrera/profesorado-universitario-de-educacion-superior-en-educacion",
-        "titulo_oficial": "No encontrado"
+        "duracion": "Duración de la carrera: 5 años",
+        "titulo_oficial": "Profesor/a Universitario/a de Educación Superior en Educación",
+        "modalidad": "Presencial"
     },
     {
         "carrera": "Profesorado Universitario de Educación Superior en Filosofía",
         "url_plan_estudios": "https://www.ungs.edu.ar/carrera/profesorado-universitario-en-filosofia",
-        "titulo_oficial": "No encontrado"
+        "duracion": "5 años",
+        "titulo_oficial": "Profesor/a Universitario/a de Educación Superior en Filosofía",
+        "modalidad": "Presencial"
     },
     {
         "carrera": "Profesorado Universitario de Educación Superior en Física",
         "url_plan_estudios": "https://www.ungs.edu.ar/carrera/profesorado-universitario-en-fisica",
-        "titulo_oficial": "No encontrado"
+        "duracion": "5 años",
+        "titulo_oficial": "Profesor/a Universitario/a de Educación Superior en Física",
+        "modalidad": "Presencial"
     },
     {
         "carrera": "Profesorado Universitario de Educación Superior en Geografía",
         "url_plan_estudios": "https://www.ungs.edu.ar/carrera/profesorado-universitario-de-educacion-superior-en-geografia",
-        "titulo_oficial": "No encontrado"
+        "duracion": "5 años",
+        "titulo_oficial": "Profesor/a Universitario/a de Educación Superior en Geografía",
+        "modalidad": "Presencial"
     },
     {
         "carrera": "Profesorado Universitario de Educación Superior en Historia",
         "url_plan_estudios": "https://www.ungs.edu.ar/carrera/profesorado-universitario-en-historia",
-        "titulo_oficial": "No encontrado"
+        "duracion": "5 años",
+        "titulo_oficial": "Profesor/a Universitario/a de Educación Superior en Historia",
+        "modalidad": "Presencial"
     },
     {
         "carrera": "Profesorado Universitario de Educación Superior en Lengua y Literatura",
         "url_plan_estudios": "https://www.ungs.edu.ar/carrera/profesorado-universitario-en-lengua-y-literatura",
-        "titulo_oficial": "No encontrado"
+        "duracion": "5 años",
+        "titulo_oficial": "Profesor/a Universitario/a de Educación Superior en Lengua y Literatura",
+        "modalidad": "Presencial"
     },
     {
         "carrera": "Profesorado Universitario de Educación Superior en Matemática",
         "url_plan_estudios": "https://www.ungs.edu.ar/carrera/profesorado-universitario-en-matematica",
-        "titulo_oficial": "No encontrado"
+        "duracion": "5 años",
+        "titulo_oficial": "Profesor/a Universitario/a de Educación Superior en Matemática",
+        "modalidad": "Presencial"
     },
     {
         "carrera": "Tecnicatura Universitaria en Automatización y Control",
         "url_plan_estudios": "https://www.ungs.edu.ar/carrera/tecnico-universitaria-en-automatizacion-y-control",
-        "titulo_oficial": "No encontrado"
+        "duracion": "3 años",
+        "titulo_oficial": "Técnico/a Universitario en Automatización y Control",
+        "modalidad": "Presencial"
     },
     {
         "carrera": "Tecnicatura Universitaria en Informática",
         "url_plan_estudios": "https://www.ungs.edu.ar/carrera/tecnicatura-universitaria-en-informatica",
-        "titulo_oficial": "No encontrado"
+        "duracion": "3 años",
+        "titulo_oficial": "Técnico/a Universitario en Informática",
+        "modalidad": "Presencial"
     },
     {
         "carrera": "Tecnicatura Universitaria en Química",
         "url_plan_estudios": "https://www.ungs.edu.ar/carrera/tecnicatura-universitaria-en-quimica",
-        "titulo_oficial": "No encontrado"
+        "duracion": "3 años",
+        "titulo_oficial": "Técnico/a Universitario en Química",
+        "modalidad": "Presencial"
     },
     {
         "carrera": "Tecnicatura Universitaria en Sistemas de Información Geográfica",
         "url_plan_estudios": "https://www.ungs.edu.ar/carrera/tecnicatura-universitaria-en-sistemas-de-informacion-geografica",
-        "titulo_oficial": "No encontrado"
+        "duracion": "3 años",
+        "titulo_oficial": "Técnico/a Universitario en Sistemas de Información Geográfica",
+        "modalidad": "Presencial"
     }
 ]

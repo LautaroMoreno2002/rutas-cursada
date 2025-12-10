@@ -1,0 +1,8 @@
+# requirements.txt
+time
+requests
+beautifulsoup4
+json
+re
+os
+python-dotenv
