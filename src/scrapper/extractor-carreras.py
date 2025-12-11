@@ -151,6 +151,27 @@ def scrapear_carrara(carrera_data):
         # ============================================================
         # EXTRACCIÓN DE "Ámbitos de desempeño"
         # ============================================================
+        ambitos = []
+
+        # Buscar el h1 que contiene el título
+        titulo_ambitos = resultado.find("h1", string=re.compile("ámbitos|ambitos", re.I))
+
+        if titulo_ambitos:
+            # Buscar la lista que viene inmediatamente después
+            ul = titulo_ambitos.find_next("ul")
+            if ul:
+                ambitos = [li.get_text(strip=True) for li in ul.find_all("li")]
+
+        # Guardarlo en tu objeto
+        carrera["ambitos_desempeno"] = ambitos
+
+        print("Ámbitos encontrados:", ambitos)
+
+        # if ambito_section:
+            # for li in ambito_section.find_all("li"):
+                # ambitos.append(li.get_text(strip=True))
+
+        # carrera["ambitos_desempeno"] = ambitos
 
         # ============================================================
         # EXTRACCIÓN DEL PLAN DE ESTUDIOS
