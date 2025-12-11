@@ -167,12 +167,6 @@ def scrapear_carrara(carrera_data):
 
         print("Ámbitos encontrados:", ambitos)
 
-        # if ambito_section:
-            # for li in ambito_section.find_all("li"):
-                # ambitos.append(li.get_text(strip=True))
-
-        # carrera["ambitos_desempeno"] = ambitos
-
         # ============================================================
         # EXTRACCIÓN DEL PLAN DE ESTUDIOS
         # ============================================================
