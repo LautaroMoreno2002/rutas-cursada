@@ -42,6 +42,74 @@ def limpiar_texto(text, label_pattern, capture_group):
     return re.sub(r'\s+', ' ', match.group(capture_group).strip())
   return "No encontrado"
 
+def extraer_tabla_plan_estudios(soup):
+    """
+    Busca el encabezado 'Plan de Estudios' y extrae la tabla completa
+    con las materias y sus datos.
+    """
+    plan = []
+
+    # Buscar título
+    h1_plan = soup.find("h1", string=re.compile("Plan de Estudios", re.I))
+    if not h1_plan:
+        return plan
+
+    # Buscar la tabla que aparece después del h1
+    tabla = h1_plan.find_next("table")
+    if not tabla:
+        return plan
+
+    rows = tabla.find_all("tr")
+
+    # Saltar encabezados
+    for tr in rows[1:]:
+        celdas = [td.get_text(strip=True) for td in tr.find_all("td")]
+
+        if len(celdas) >= 5:
+            plan.append({
+                "asignatura": celdas[0],
+                "regimen": celdas[1],
+                "carga_horaria_semanal": celdas[2],
+                "carga_horaria_total": celdas[3],
+                "correlativas": celdas[4]
+            })
+
+    return plan
+
+
+def extraer_itinerario(soup):
+    """
+    Extrae TODAS las tablas del itinerario (1° y 2° tabla completa).
+    Devuelve un diccionario con estructura limpia.
+    """
+    itinerarios = []
+
+    # Buscar el título principal
+    h1_it = soup.find("h1", string=re.compile("Itinerario", re.I))
+    if not h1_it:
+        return itinerarios
+
+    # Buscar todas las tablas después del título
+    tablas = h1_it.find_all_next("table")
+
+    for tabla in tablas:
+        tabla_data = []
+        for tr in tabla.find_all("tr"):
+            fila = []
+            for td in tr.find_all(["td", "th"]):
+                # Algunos TD contienen listas ul/li → convertir a texto plano
+                if td.find("ul"):
+                    li_items = [li.get_text(strip=True) for li in td.find_all("li")]
+                    fila.append(li_items)
+                else:
+                    fila.append(td.get_text(strip=True))
+            tabla_data.append(fila)
+
+        itinerarios.append(tabla_data)
+
+    return itinerarios
+
+
 def scrapear_carreras(url_carreras):
   """
   Esta función realiza web scraping en el link de las carreras de una universidad
@@ -170,10 +238,17 @@ def scrapear_carrara(carrera_data):
         # ============================================================
         # EXTRACCIÓN DEL PLAN DE ESTUDIOS
         # ============================================================
+        plan_estudios = extraer_tabla_plan_estudios(resultado)
+        carrera["plan_estudios"] = plan_estudios
+        print(f"Plan de estudios: {len(plan_estudios)} materias extraídas.")
+
 
         # ============================================================
-        # EXTRACCIÓN DEL ITINERARIO (si existe)
+        # EXTRACCIÓN DEL ITINERARIO
         # ============================================================
+        itinerario = extraer_itinerario(resultado)
+        carrera["itinerario"] = itinerario
+        print(f"Itinerarios encontrados: {len(itinerario)} tablas.")
 
       except requests.exceptions.RequestException as e:
             print(f"--- Error al acceder a {url}: {e} (Se registra como error)")
