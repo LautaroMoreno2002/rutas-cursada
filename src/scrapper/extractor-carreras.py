@@ -42,6 +42,15 @@ def limpiar_texto(text, label_pattern, capture_group):
     return re.sub(r'\s+', ' ', match.group(capture_group).strip())
   return "No encontrado"
 
+def extraer_correlativas(correlativas_str):
+    correlativas = []
+    if not correlativas_str or correlativas_str.lower() in ['','ninguna', 'no tiene', 'sin correlativas']:
+      return 'No tiene correlativas'
+    else:
+      correlativas = re.split(r',|;|-|- | -| - |_|I\*|II\*|III\*|IV\*', correlativas_str) # Dividir por comas o 'y'/'and'
+      correlativas_limpias = [corr.strip() for corr in correlativas if corr.strip()] # Limpiar espacios y eliminar vacíos
+      return correlativas_limpias
+    
 def extraer_tabla_plan_estudios(soup):
     """
     Busca el encabezado 'Plan de Estudios' y extrae la tabla completa
@@ -71,11 +80,10 @@ def extraer_tabla_plan_estudios(soup):
                 "regimen": celdas[1],
                 "carga_horaria_semanal": celdas[2],
                 "carga_horaria_total": celdas[3],
-                "correlativas": celdas[4]
+                "correlativas": extraer_correlativas(celdas[4])
             })
 
     return plan
-
 
 def extraer_itinerario(soup):
     """
@@ -108,7 +116,6 @@ def extraer_itinerario(soup):
         itinerarios.append(tabla_data)
 
     return itinerarios
-
 
 def scrapear_carreras(url_carreras):
   """
@@ -158,7 +165,7 @@ def scrapear_carreras(url_carreras):
         if url_completa not in urls_extraidas: # Verifico si la URL ya fue extraída
             urls_extraidas.add(url_completa)
             links_carreras.append({
-                "carrera": nombre_carrera,
+                "carrera": nombre_limpio,
                 "url_plan_estudios": url_completa
             })
     print(f"Carrera encontrada: {nombre_carrera} - URL: {url_completa}") 
@@ -170,7 +177,7 @@ def scrapear_carreras(url_carreras):
 
   return links_carreras
 
-def scrapear_carrara(carrera_data):
+def scrapear_carrera(carrera_data):
   """
   """
   detalle_carrera = []
@@ -265,7 +272,7 @@ def scrapear_carrara(carrera_data):
       if item < len(carrera_data) - 1:
           print(f"\n>> ⏳ Pausando por {os.getenv('DELAY_BETWEEN_CAREERS')} segundos para ser cortés con el servidor...\n")
 
-          time.sleep(15)
+          time.sleep(0)  # Pausa de 15 segundos entre cada solicitud de carrera
   
   return detalle_carrera
 
@@ -279,7 +286,7 @@ if __name__ == "__main__":
     print(f"✅ Extracción de {len(carreras_extraidas)} enlaces completada. Iniciando scraping de detalles con pausas...")
       
     # obtengo los detalles de cada carrera
-    detalles_carreras = scrapear_carrara(carreras_extraidas)
+    detalles_carreras = scrapear_carrera(carreras_extraidas)
 
     print(f"detalles_carreras: {detalles_carreras}")
 
@@ -287,7 +294,7 @@ if __name__ == "__main__":
     try:
           with open(os.getenv('OUTPUT_FILENAME'), 'w', encoding='utf-8') as f:
               json.dump(detalles_carreras, f, indent=4, ensure_ascii=False)
-          
+  
           # Imprimir una muestra en consola (los primeros 3)
           print("--- Muestra de los primeros 3 resultados ---")
           print(json.dumps(detalles_carreras[:3], indent=4, ensure_ascii=False))
