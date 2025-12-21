@@ -27,7 +27,7 @@ def realizar_solicitud_con_reintentos(url_carreras):
         raise Exception("No se pudo completar la solicitud después de varios intentos.")
   return None
 
-def limpiar_texto(text, label_pattern, capture_group):
+def limpiar_texto(text, label_pattern=r"(.*)", capture_group=1):
   """
   Limpia y extrae el texto basado en un patrón de etiqueta dado.
   Args:
@@ -47,7 +47,13 @@ def extraer_correlativas(correlativas_str):
     if not correlativas_str or correlativas_str.lower() in ['','ninguna', 'no tiene', 'sin correlativas']:
       return 'No tiene correlativas'
     else:
-      correlativas = re.split(r',|;|-|- | -| - |_|I\*|II\*|III\*|IV\*', correlativas_str) # Dividir por comas o 'y'/'and'
+      # 2. Uso de limpiar_texto para normalizar el string (quita saltos de línea y basura del scraper)
+      texto_limpio = limpiar_texto(correlativas_str)
+    
+      if texto_limpio == "No encontrado":
+          return 'No tiene correlativas'
+      
+      correlativas = re.split(r';|\* - \*|\* -| - \*|- | - |_ |-|I\*|II\*|III\*|IV\*|\*A|\*B|\*C|\*D|\*E|\*F|\*G|\*H|\*I|\*J|\*K|\*L|\*Ll|\*M|\*N|\*O|\*P|\*Q|\*R|\*S|\*T|\*U|\*V|\*W|\*X|\*Y|\*Z', texto_limpio) # Dividir por comas o 'y'/'and'
       correlativas_limpias = [corr.strip() for corr in correlativas if corr.strip()] # Limpiar espacios y eliminar vacíos
       return correlativas_limpias
     

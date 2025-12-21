@@ -273,8 +273,7 @@
                 "carga_horaria_semanal": "4",
                 "carga_horaria_total": "64",
                 "correlativas": [
-                    "Higiene",
-                    "seguridad y protección ambiental",
+                    "Higiene, seguridad y protección ambiental",
                     "Estadística aplicada"
                 ]
             },
@@ -376,8 +375,7 @@
                 "carga_horaria_total": "64",
                 "correlativas": [
                     "Organización industrial",
-                    "Ética",
-                    "derecho ylegislación profesional"
+                    "Ética, derecho ylegislación profesional"
                 ]
             },
             {
@@ -2264,10 +2262,8 @@
                     "Operaciones unitarias III",
                     "Seminario de inserción laboral",
                     "Laboratoriointerdisciplinario de capacidades emprendedoras",
-                    "Ética",
-                    "derecho y legislación profesional",
-                    "Higiene",
-                    "seguridad y protección ambiental"
+                    "Ética, derecho y legislación profesional",
+                    "Higiene,seguridad y protección ambiental"
                 ]
             },
             {
@@ -2295,8 +2291,7 @@
                 "carga_horaria_total": "64",
                 "correlativas": [
                     "Organización industrial",
-                    "Ética",
-                    "derecho ylegislación profesional"
+                    "Ética, derecho ylegislación profesional"
                 ]
             },
             {
@@ -2371,8 +2366,7 @@
                 "carga_horaria_semanal": "4",
                 "carga_horaria_total": "64",
                 "correlativas": [
-                    "Higiene",
-                    "seguridad y protección ambiental",
+                    "Higiene, seguridad y protección ambiental",
                     "Estadística aplicada"
                 ]
             },
@@ -3584,8 +3578,7 @@
                 "carga_horaria_semanal": "4",
                 "carga_horaria_total": "64",
                 "correlativas": [
-                    "Estado",
-                    "Administración y Políticas Públicas"
+                    "Estado, Administración y Políticas Públicas"
                 ]
             },
             {
@@ -3594,8 +3587,7 @@
                 "carga_horaria_semanal": "6",
                 "carga_horaria_total": "96",
                 "correlativas": [
-                    "Estado",
-                    "Administración y Políticas Públicas"
+                    "Estado, Administración y Políticas Públicas"
                 ]
             },
             {
@@ -3640,8 +3632,7 @@
                 "carga_horaria_semanal": "6",
                 "carga_horaria_total": "96",
                 "correlativas": [
-                    "Estado",
-                    "Administración y Políticas Públicas",
+                    "Estado, Administración y Políticas Públicas",
                     "Historia Argentina Contemporánea"
                 ]
             },
@@ -3651,7 +3642,7 @@
                 "carga_horaria_semanal": "4",
                 "carga_horaria_total": "64",
                 "correlativas": [
-                    "13 (trece)  materias de la carrera"
+                    "13 (trece) materias de la carrera"
                 ]
             },
             {
@@ -4067,8 +4058,7 @@
                 "carga_horaria_semanal": "4",
                 "carga_horaria_total": "64",
                 "correlativas": [
-                    "Lenguaje",
-                    "Comunicación y Cultura"
+                    "Lenguaje, Comunicación y Cultura"
                 ]
             },
             {
@@ -4096,8 +4086,7 @@
                 "carga_horaria_semanal": "4",
                 "carga_horaria_total": "64",
                 "correlativas": [
-                    "Lenguaje",
-                    "Comunicación y Cultura"
+                    "Lenguaje, Comunicación y Cultura"
                 ]
             },
             {
@@ -4106,8 +4095,7 @@
                 "carga_horaria_semanal": "6",
                 "carga_horaria_total": "96",
                 "correlativas": [
-                    "Introducción a la Comunicación –Lenguaje",
-                    "Comunicación y Cultura"
+                    "Introducción a la Comunicación –Lenguaje, Comunicación y Cultura"
                 ]
             },
             {
@@ -4125,8 +4113,7 @@
                 "carga_horaria_semanal": "4",
                 "carga_horaria_total": "64",
                 "correlativas": [
-                    "Lenguaje",
-                    "Comunicación y Cultura",
+                    "Lenguaje, Comunicación y Cultura",
                     "Introducción a la Comunicación"
                 ]
             },
@@ -4154,8 +4141,7 @@
                 "carga_horaria_semanal": "6",
                 "carga_horaria_total": "96",
                 "correlativas": [
-                    "Lenguaje",
-                    "Cultura y Comunicación de la Imagen"
+                    "Lenguaje, Cultura y Comunicación de la Imagen"
                 ]
             },
             {
@@ -4200,8 +4186,7 @@
                 "carga_horaria_semanal": "4",
                 "carga_horaria_total": "64",
                 "correlativas": [
-                    "Concepciones de la Comunicación",
-                    "Metodología de la Investigación Cualitativa. Cultura y Comunicación Organizaciones y Comunicación"
+                    "Concepciones de la Comunicación, Metodología de la Investigación Cualitativa. Cultura y Comunicación Organizaciones y Comunicación"
                 ]
             },
             {
@@ -4210,8 +4195,7 @@
                 "carga_horaria_semanal": "4",
                 "carga_horaria_total": "64",
                 "correlativas": [
-                    "Historia Moderna y Contemporánea",
-                    "Historia Argentina Contemporánea o Historia Latinoamericana Contemporánea"
+                    "Historia Moderna y Contemporánea, Historia Argentina Contemporánea o Historia Latinoamericana Contemporánea"
                 ]
             },
             {
@@ -4238,8 +4222,7 @@
                 "carga_horaria_semanal": "4",
                 "carga_horaria_total": "64",
                 "correlativas": [
-                    "Organizaciones y Comunicación",
-                    "Planificación y Evaluación de Proyectos Comunicativos"
+                    "Organizaciones y Comunicación, Planificación y Evaluación de Proyectos Comunicativos"
                 ]
             },
             {
@@ -4275,8 +4258,7 @@
                 "carga_horaria_semanal": "4",
                 "carga_horaria_total": "64",
                 "correlativas": [
-                    "Concepciones de la Comunicación",
-                    "Comunicación Mediática"
+                    "Concepciones de la Comunicación, Comunicación Mediática"
                 ]
             },
             {
@@ -4606,8 +4588,7 @@
                 "carga_horaria_semanal": "4",
                 "carga_horaria_total": "64",
                 "correlativas": [
-                    "Lenguaje",
-                    "Comunicación y Cultura"
+                    "Lenguaje, Comunicación y Cultura"
                 ]
             },
             {
@@ -4655,8 +4636,7 @@
                 "carga_horaria_semanal": "4",
                 "carga_horaria_total": "64",
                 "correlativas": [
-                    "Lenguaje",
-                    "Comunicación y Cultura"
+                    "Lenguaje, Comunicación y Cultura"
                 ]
             },
             {
@@ -4675,8 +4655,7 @@
                 "carga_horaria_total": "96",
                 "correlativas": [
                     "Sociología de la Cultura",
-                    "Lenguaje",
-                    "Cultura y Comunicación de la Imagen"
+                    "Lenguaje, Cultura y Comunicación de la Imagen"
                 ]
             },
             {
@@ -4685,8 +4664,7 @@
                 "carga_horaria_semanal": "6",
                 "carga_horaria_total": "96",
                 "correlativas": [
-                    "Lenguaje",
-                    "Comunicación y Cultura Escrita"
+                    "Lenguaje, Comunicación y Cultura Escrita"
                 ]
             },
             {
@@ -4724,8 +4702,7 @@
                 "carga_horaria_total": "96",
                 "correlativas": [
                     "Sociología de la Cultura",
-                    "Lenguaje",
-                    "Cultura y Comunicación de la Imagen"
+                    "Lenguaje, Cultura y Comunicación de la Imagen"
                 ]
             },
             {
@@ -4753,8 +4730,7 @@
                 "carga_horaria_semanal": "4",
                 "carga_horaria_total": "64",
                 "correlativas": [
-                    "Lenguaje",
-                    "Comunicación y Cultura Escrita"
+                    "Lenguaje, Comunicación y Cultura Escrita"
                 ]
             },
             {
@@ -4783,8 +4759,7 @@
                 "carga_horaria_semanal": "6",
                 "carga_horaria_total": "96",
                 "correlativas": [
-                    "Lenguaje",
-                    "Cultura y Comunicación de la Imagen",
+                    "Lenguaje, Cultura y Comunicación de la Imagen",
                     "Sociología de la Cultura"
                 ]
             },
@@ -5597,8 +5572,7 @@
                 "carga_horaria_semanal": "4",
                 "carga_horaria_total": "64",
                 "correlativas": [
-                    "Elementos de Química Orgánica",
-                    "Analítica y Biológica"
+                    "Elementos de Química Orgánica, Analítica y Biológica"
                 ]
             },
             {
@@ -5669,8 +5643,7 @@
                 "correlativas": [
                     "Laboratorio Interdisciplinario",
                     "Química Ambiental",
-                    "Política",
-                    "Actores y Legislación de la Gestión Ambiental"
+                    "Política, Actores y Legislación de la Gestión Ambiental"
                 ]
             },
             {
@@ -5680,8 +5653,7 @@
                 "carga_horaria_total": "64",
                 "correlativas": [
                     "Matemática Aplicada",
-                    "Formulación",
-                    "Gestión y Evaluación de Proyectos"
+                    "Formulación, Gestión y Evaluación de Proyectos"
                 ]
             },
             {
@@ -5709,8 +5681,7 @@
                 "carga_horaria_semanal": "6",
                 "carga_horaria_total": "96",
                 "correlativas": [
-                    "Cartografía",
-                    "Sensores Remotos y Sistemas deInformación Geográfica",
+                    "Cartografía, Sensores Remotos y Sistemas deInformación Geográfica",
                     "Geografía Física"
                 ]
             },
@@ -5729,7 +5700,7 @@
                 "carga_horaria_semanal": "4",
                 "carga_horaria_total": "64",
                 "correlativas": [
-                    "Gestión de los RecursosEnergéticos",
+                    "Gestión de los RecursosEnergéticos",
                     "Gestión deRecursos Hídricos"
                 ]
             },
@@ -5740,8 +5711,7 @@
                 "carga_horaria_total": "64",
                 "correlativas": [
                     "Teledetección yProcesamiento deImágenes Satelitales",
-                    "Formulación",
-                    "Gestión yEvaluación de Proyectos"
+                    "Formulación, Gestión yEvaluación de Proyectos"
                 ]
             },
             {
@@ -5788,7 +5758,7 @@
                 "carga_horaria_semanal": "4",
                 "carga_horaria_total": "64",
                 "correlativas": [
-                    "Gestión de los RecursosEnergéticos",
+                    "Gestión de los RecursosEnergéticos",
                     "Taller de Evaluación deImpacto Ambiental"
                 ]
             },
@@ -6261,7 +6231,7 @@
                 "carga_horaria_semanal": "4",
                 "carga_horaria_total": "64",
                 "correlativas": [
-                    "Inglés  con Propósitos Específicos  III"
+                    "Inglés con Propósitos Específicos III"
                 ]
             },
             {
@@ -6671,9 +6641,7 @@
                 "carga_horaria_semanal": "6",
                 "carga_horaria_total": "96",
                 "correlativas": [
-                    "Introducción a la Economía",
-                    "Taller Inicial Común: Taller de Lectura y Escritura",
-                    "Taller Inicial Orientado: Ciencias Exactas"
+                    "Introducción a la Economía, Taller Inicial Común: Taller de Lectura y Escritura, Taller Inicial Orientado: Ciencias Exactas"
                 ]
             },
             {
@@ -6682,8 +6650,7 @@
                 "carga_horaria_semanal": "8",
                 "carga_horaria_total": "128",
                 "correlativas": [
-                    "Taller Inicial Común: Taller de Lectura y Escritura",
-                    "Taller Inicial Orientado: Ciencias Exactas"
+                    "Taller Inicial Común: Taller de Lectura y Escritura, Taller Inicial Orientado: Ciencias Exactas"
                 ]
             },
             {
@@ -6692,10 +6659,7 @@
                 "carga_horaria_semanal": "6",
                 "carga_horaria_total": "96",
                 "correlativas": [
-                    "Sociología Clásica",
-                    "Problemas Socioeconómicos Contemporáneos",
-                    "Taller de Lectura y Escritura en las Disciplinas",
-                    "Taller Inicial Orientado: Ciencias Exactas"
+                    "Sociología Clásica, Problemas Socioeconómicos Contemporáneos, Taller de Lectura y Escritura en las Disciplinas, Taller Inicial Orientado: Ciencias Exactas"
                 ]
             },
             {
@@ -6713,9 +6677,7 @@
                 "carga_horaria_semanal": "6",
                 "carga_horaria_total": "96",
                 "correlativas": [
-                    "Problemas Socioeconómicos Contemporáneos",
-                    "Taller de Lectura y Escritura en las Disciplinas",
-                    "Introducción a la Economía"
+                    "Problemas Socioeconómicos Contemporáneos, Taller de Lectura y Escritura en las Disciplinas, Introducción a la Economía"
                 ]
             },
             {
@@ -6778,8 +6740,7 @@
                 "carga_horaria_semanal": "4",
                 "carga_horaria_total": "64",
                 "correlativas": [
-                    "Problemas de Filosofía",
-                    "Economía Keynesiana"
+                    "Problemas de Filosofía, Economía Keynesiana"
                 ]
             },
             {
@@ -6797,8 +6758,7 @@
                 "carga_horaria_semanal": "6",
                 "carga_horaria_total": "96",
                 "correlativas": [
-                    "Economía Neoclásica",
-                    "Matemática para Economistas II"
+                    "Economía Neoclásica, Matemática para Economistas II"
                 ]
             },
             {
@@ -6862,8 +6822,7 @@
                 "carga_horaria_semanal": "6",
                 "carga_horaria_total": "96",
                 "correlativas": [
-                    "Microeconomía",
-                    "Macroeconomía Argentina y Latinoamericana"
+                    "Microeconomía, Macroeconomía Argentina y Latinoamericana"
                 ]
             },
             {
@@ -6872,8 +6831,7 @@
                 "carga_horaria_semanal": "6",
                 "carga_horaria_total": "96",
                 "correlativas": [
-                    "Historia Económica y Social Mundial y Latinoamericana",
-                    "Macroeconomía Argentina y Latinoamericana"
+                    "Historia Económica y Social Mundial y Latinoamericana, Macroeconomía Argentina y Latinoamericana"
                 ]
             },
             {
@@ -6891,8 +6849,7 @@
                 "carga_horaria_semanal": "6",
                 "carga_horaria_total": "96",
                 "correlativas": [
-                    "Historia Económica y Social mundial y Latinoamericana",
-                    "Macroeconomía Argentina y Latinoamericana"
+                    "Historia Económica y Social mundial y Latinoamericana, Macroeconomía Argentina y Latinoamericana"
                 ]
             },
             {
@@ -6901,8 +6858,7 @@
                 "carga_horaria_semanal": "6",
                 "carga_horaria_total": "96",
                 "correlativas": [
-                    "Teorías Contemporáneas de la Economía Política I",
-                    "Tópicos Avanzados de Economía Clásica y Marxista"
+                    "Teorías Contemporáneas de la Economía Política I, Tópicos Avanzados de Economía Clásica y Marxista"
                 ]
             },
             {
@@ -6911,8 +6867,7 @@
                 "carga_horaria_semanal": "6",
                 "carga_horaria_total": "96",
                 "correlativas": [
-                    "Teorías Contemporáneas de la Economía Política I",
-                    "Macroeconomía Argentina y Latinoamericana"
+                    "Teorías Contemporáneas de la Economía Política I, Macroeconomía Argentina y Latinoamericana"
                 ]
             },
             {
@@ -6921,8 +6876,7 @@
                 "carga_horaria_semanal": "6",
                 "carga_horaria_total": "96",
                 "correlativas": [
-                    "Tópicos de Macroeconomía Avanzada",
-                    "Desarrollo y Subdesarrollo"
+                    "Tópicos de Macroeconomía Avanzada, Desarrollo y Subdesarrollo"
                 ]
             },
             {
@@ -6931,8 +6885,7 @@
                 "carga_horaria_semanal": "6",
                 "carga_horaria_total": "96",
                 "correlativas": [
-                    "Microeconomía",
-                    "Teorías Contemporáneas de la Economía Política I"
+                    "Microeconomía, Teorías Contemporáneas de la Economía Política I"
                 ]
             }
         ],
@@ -7902,8 +7855,7 @@
                 "carga_horaria_semanal": "6",
                 "carga_horaria_total": "96",
                 "correlativas": [
-                    "Estado",
-                    "Administración y Políticas Públicas",
+                    "Estado, Administración y Políticas Públicas",
                     "Introducción a la Economía",
                     "Inglés Lectocomprensión I",
                     "Portugués I"
@@ -7938,8 +7890,7 @@
                 "carga_horaria_semanal": "6",
                 "carga_horaria_total": "96",
                 "correlativas": [
-                    "Estado",
-                    "Administración y Políticas Públicas–Taller Inicial Orientado: Ciencias Sociales o Taller Inicial Orientado: Ciencias Humanas",
+                    "Estado, Administración y Políticas Públicas–Taller Inicial Orientado: Ciencias Sociales o Taller Inicial Orientado: Ciencias Humanas",
                     "Taller de Lectura y Escritura en las Disciplinas"
                 ]
             },
@@ -8437,8 +8388,7 @@
                 "carga_horaria_semanal": "4",
                 "carga_horaria_total": "64",
                 "correlativas": [
-                    "Envases",
-                    "embalajes y manejo de materiales"
+                    "Envases, embalajes y manejo de materiales"
                 ]
             },
             {
@@ -8483,8 +8433,7 @@
                 "carga_horaria_semanal": "4",
                 "carga_horaria_total": "64",
                 "correlativas": [
-                    "Higiene",
-                    "seguridad y protección ambiental Estadística aplicada"
+                    "Higiene, seguridad y protección ambiental Estadística aplicada"
                 ]
             },
             {
@@ -8801,8 +8750,7 @@
                 "carga_horaria_semanal": "4",
                 "carga_horaria_total": "64",
                 "correlativas": [
-                    "Estado",
-                    "Administración y Políticas Públicas"
+                    "Estado, Administración y Políticas Públicas"
                 ]
             },
             {
@@ -8811,8 +8759,7 @@
                 "carga_horaria_semanal": "6",
                 "carga_horaria_total": "96",
                 "correlativas": [
-                    "Estado",
-                    "Administración y Políticas Públicas",
+                    "Estado, Administración y Políticas Públicas",
                     "Fundamentos de la Investigación Social"
                 ]
             },
@@ -8927,8 +8874,7 @@
                 "carga_horaria_semanal": "4",
                 "carga_horaria_total": "64",
                 "correlativas": [
-                    "Estado",
-                    "Administración y Políticas Públicas",
+                    "Estado, Administración y Políticas Públicas",
                     "Política",
                     "Política Social I: Política y Cuestión Social",
                     "Historia Económica y Social Mundial y Latinoamericana"
@@ -10206,8 +10152,7 @@
                 "carga_horaria_semanal": "6",
                 "carga_horaria_total": "96",
                 "correlativas": [
-                    "Estado",
-                    "Administración y Políticas Públicas",
+                    "Estado, Administración y Políticas Públicas",
                     "Sociología Contemporánea"
                 ]
             },
@@ -10355,7 +10300,7 @@
                 "carga_horaria_semanal": "4",
                 "carga_horaria_total": "64",
                 "correlativas": [
-                    "13 (trece)  materias de la carrera"
+                    "13 (trece) materias de la carrera"
                 ]
             },
             {
@@ -11184,9 +11129,7 @@
                 "carga_horaria_semanal": "6",
                 "carga_horaria_total": "96",
                 "correlativas": [
-                    "Taller Inicial Común: Taller de Lectura y EscrituraTaller Inicial Orientado: Ciencias Sociales o Ciencias Humanas",
-                    "Pedagogía",
-                    "Historia Moderna y Contemporánea"
+                    "Taller Inicial Común: Taller de Lectura y EscrituraTaller Inicial Orientado: Ciencias Sociales o Ciencias Humanas,Pedagogía,Historia Moderna y Contemporánea"
                 ]
             },
             {
@@ -11213,8 +11156,7 @@
                 "carga_horaria_semanal": "4",
                 "carga_horaria_total": "64",
                 "correlativas": [
-                    "Taller Inicial Común: Taller de Lectura y EscrituraTaller Inicial Orientado: Ciencias Sociales o Ciencias Humanas",
-                    "Pedagogía"
+                    "Taller Inicial Común: Taller de Lectura y EscrituraTaller Inicial Orientado: Ciencias Sociales o Ciencias Humanas,Pedagogía"
                 ]
             },
             {
@@ -11259,8 +11201,7 @@
                 "carga_horaria_semanal": "4",
                 "carga_horaria_total": "64",
                 "correlativas": [
-                    "Problemas Socioeconómicos Contemporáneos",
-                    "Historia General de la Educación"
+                    "Problemas Socioeconómicos Contemporáneos,Historia General de la Educación"
                 ]
             },
             {
@@ -11359,8 +11300,7 @@
                 "carga_horaria_semanal": "6",
                 "carga_horaria_total": "192",
                 "correlativas": [
-                    "Residencia I en EducaciónTeoría y Diseño del CurriculumAdolescencia y Educación SecundariaPolítica EducacionalSeminario Sujetos",
-                    "Diversidad y Accesibilidad"
+                    "Residencia I en EducaciónTeoría y Diseño del CurriculumAdolescencia y Educación SecundariaPolítica EducacionalSeminario Sujetos, Diversidad y Accesibilidad"
                 ]
             },
             {
@@ -11378,8 +11318,7 @@
                 "carga_horaria_semanal": "4",
                 "carga_horaria_total": "64",
                 "correlativas": [
-                    "Psicología EducacionalSeminario Sujetos",
-                    "Diversidad y Accesibilidad"
+                    "Psicología EducacionalSeminario Sujetos, Diversidad y Accesibilidad"
                 ]
             },
             {
@@ -12616,7 +12555,7 @@
                 "carga_horaria_semanal": "6",
                 "carga_horaria_total": "96",
                 "correlativas": [
-                    "Introducción  a la Geografía",
+                    "Introducción a la Geografía",
                     "Problemas Socioeconómicos Contemporáneos",
                     "Taller Inicial Orientado: Ciencias Sociales o Taller Inicial Orientado: Ciencias Humanas",
                     "Taller de Lectura y Escritura en las Disciplinas"
@@ -12670,8 +12609,7 @@
                 "carga_horaria_semanal": "4",
                 "carga_horaria_total": "64",
                 "correlativas": [
-                    "Cartografía",
-                    "Sensores Remotos y Sistemas de Información Geográfica",
+                    "Cartografía, Sensores Remotos y Sistemas de Información Geográfica",
                     "Geografía Económica",
                     "Geografía Física"
                 ]
@@ -12833,7 +12771,7 @@
                     "Residencia I. La Escuela: Ámbito del Trabajo Docente",
                     "Enseñar en la Escuela Secundaria y en el Nivel Superior",
                     "Enseñanza de la Geografía",
-                    "Geografía  Regional Argentina: Social y Económica"
+                    "Geografía Regional Argentina: Social y Económica"
                 ]
             },
             {
@@ -13227,8 +13165,7 @@
                 "correlativas": [
                     "Taller Inicial Común: Taller de Lectura y Escritura",
                     "Taller Inicial Orientado: Ciencias Sociales o Taller Inicial Orientado: Ciencias Humanas",
-                    "Elementos de Prehistoria e Historia de Oriente",
-                    "Historia Antigua y Altomedieval"
+                    "Elementos de Prehistoria e Historia de Oriente, Historia Antigua y Altomedieval"
                 ]
             },
             {
@@ -13284,8 +13221,7 @@
                 "carga_horaria_semanal": "6",
                 "carga_horaria_total": "96",
                 "correlativas": [
-                    "Elementos de Prehistoria e Historia de Oriente",
-                    "Historia Antigua y Altomedieval",
+                    "Elementos de Prehistoria e Historia de Oriente, Historia Antigua y Altomedieval",
                     "Historia Medieval y Moderna",
                     "Historia Contemporánea de Europa",
                     "Historia Latinoamericana I",
@@ -13671,8 +13607,7 @@
                 "carga_horaria_semanal": "4",
                 "carga_horaria_total": "64",
                 "correlativas": [
-                    "Lenguaje",
-                    "Comunicación y Cultura"
+                    "Lenguaje, Comunicación y Cultura"
                 ]
             },
             {
@@ -13721,8 +13656,7 @@
                 "carga_horaria_semanal": "8",
                 "carga_horaria_total": "128",
                 "correlativas": [
-                    "Lenguaje",
-                    "Comunicación y Cultura",
+                    "Lenguaje, Comunicación y Cultura",
                     "Problemas Socioeconómicos Contemporáneos",
                     "Taller de Lectura y Escritura en las Disciplinas"
                 ]
@@ -13745,8 +13679,7 @@
                 "carga_horaria_total": "128",
                 "correlativas": [
                     "Taller de Lectura y Escritura en las Disciplinas",
-                    "Lenguaje",
-                    "Comunicación y Cultura",
+                    "Lenguaje, Comunicación y Cultura",
                     "Adolescencia y Educación Secundaria",
                     "Problemas Socioeconómicos Contemporáneos"
                 ]
@@ -13777,8 +13710,7 @@
                 "carga_horaria_semanal": "6",
                 "carga_horaria_total": "96",
                 "correlativas": [
-                    "Estudios de la Literatura Medieval",
-                    "Renacentista y Barroca",
+                    "Estudios de la Literatura Medieval, Renacentista y Barroca",
                     "Estudios de la Literatura Moderna"
                 ]
             },
@@ -13815,8 +13747,7 @@
                 "carga_horaria_semanal": "6",
                 "carga_horaria_total": "96",
                 "correlativas": [
-                    "Estudios de la Literatura Medieval",
-                    "Renacentista y Barroca –      Estudios de la Literatura Moderna"
+                    "Estudios de la Literatura Medieval, Renacentista y Barroca – Estudios de la Literatura Moderna"
                 ]
             },
             {
@@ -13825,8 +13756,7 @@
                 "carga_horaria_semanal": "6",
                 "carga_horaria_total": "96",
                 "correlativas": [
-                    "Lenguaje",
-                    "Comunicación y Cultura Escrita –Estudios Lingüísticos",
+                    "Lenguaje, Comunicación y Cultura Escrita –Estudios Lingüísticos",
                     "Estudios Gramaticales"
                 ]
             },
@@ -13845,8 +13775,7 @@
                 "carga_horaria_semanal": "4",
                 "carga_horaria_total": "64",
                 "correlativas": [
-                    "Estudios de la Literatura Medieval",
-                    "Renacentista y Barroca",
+                    "Estudios de la Literatura Medieval, Renacentista y Barroca",
                     "Estudios de la Literatura Moderna"
                 ]
             },
@@ -13856,8 +13785,7 @@
                 "carga_horaria_semanal": "8",
                 "carga_horaria_total": "128",
                 "correlativas": [
-                    "Lenguaje",
-                    "Comunicación y Cultura Escrita – Literatura Argentina: Narrativa o Literatura Argentina: Teatro y Poesía",
+                    "Lenguaje, Comunicación y Cultura Escrita – Literatura Argentina: Narrativa o Literatura Argentina: Teatro y Poesía",
                     "Estudios Lingüísticos",
                     "Estudios Gramaticales",
                     "Aprendizaje Escolar"
@@ -13869,8 +13797,7 @@
                 "carga_horaria_semanal": "4",
                 "carga_horaria_total": "64",
                 "correlativas": [
-                    "Estudios de la Literatura Medieval",
-                    "Renacentista y Barroca",
+                    "Estudios de la Literatura Medieval, Renacentista y Barroca",
                     "Estudios de la Literatura Moderna",
                     "Estudios de la Literatura Contemporánea"
                 ]
@@ -13881,8 +13808,7 @@
                 "carga_horaria_semanal": "6",
                 "carga_horaria_total": "96",
                 "correlativas": [
-                    "Lenguaje",
-                    "Comunicación y Cultura Escrita",
+                    "Lenguaje, Comunicación y Cultura Escrita",
                     "Estudios Lingüísticos",
                     "Estudios Gramaticales"
                 ]
@@ -13893,8 +13819,7 @@
                 "carga_horaria_semanal": "6",
                 "carga_horaria_total": "96",
                 "correlativas": [
-                    "Estudios de la Literatura Medieval",
-                    "Renacentista y Barroca",
+                    "Estudios de la Literatura Medieval, Renacentista y Barroca",
                     "Estudios de la Literatura Moderna"
                 ]
             },
@@ -13904,8 +13829,7 @@
                 "carga_horaria_semanal": "6",
                 "carga_horaria_total": "96",
                 "correlativas": [
-                    "Estudios de la Literatura Medieval",
-                    "Renacentista y Barroca",
+                    "Estudios de la Literatura Medieval, Renacentista y Barroca",
                     "Estudios de la Literatura Moderna",
                     "Estudios de la Literatura Contemporánea"
                 ]
@@ -13938,8 +13862,7 @@
                 "carga_horaria_semanal": "4",
                 "carga_horaria_total": "64",
                 "correlativas": [
-                    "Lenguaje",
-                    "Comunicación y Cultura Escrita",
+                    "Lenguaje, Comunicación y Cultura Escrita",
                     "Estudios Lingüísticos",
                     "Estudios Gramaticales"
                 ]
@@ -14357,8 +14280,7 @@
                 "carga_horaria_total": "128",
                 "correlativas": [
                     "Cálculo II",
-                    "dos materias entre las siguientes tres: Álgebra I",
-                    "Matemática Discreta o Geometría I"
+                    "dos materias entre las siguientes tres: Álgebra I, Matemática Discreta o Geometría I"
                 ]
             },
             {
@@ -14411,8 +14333,7 @@
                     "Residencia I. La escuela: ámbito del trabajo docente",
                     "Enseñar en la Escuela Secundaria y en el Nivel Superior",
                     "Ecuaciones Diferenciales",
-                    "Geometría I y una de las siguientes materias: Geometría II",
-                    "Álgebra II o Análisis Matemático."
+                    "Geometría I y una de las siguientes materias: Geometría II, Álgebra II o Análisis Matemático."
                 ]
             },
             {
@@ -14456,8 +14377,7 @@
                     "Análisis Matemático",
                     "Matemática Discreta",
                     "Mecánica Elemental",
-                    "Geometría I",
-                    "Álgebra I y una de las siguientes dos materias: Álgebra II o Geometría II"
+                    "Geometría I, Álgebra I y una de las siguientes dos materias: Álgebra II o Geometría II"
                 ]
             }
         ],
@@ -15310,8 +15230,7 @@
                 "carga_horaria_semanal": "8",
                 "carga_horaria_total": "128",
                 "correlativas": [
-                    "Química Orgánica",
-                    "Inglés Lectocomprensión I"
+                    "Química Orgánica, Inglés Lectocomprensión I"
                 ]
             },
             {
@@ -15329,7 +15248,7 @@
                 "carga_horaria_semanal": "8",
                 "carga_horaria_total": "128",
                 "correlativas": [
-                    "Química Inorgánica"
+                    "Química Inorgánica,"
                 ]
             },
             {
@@ -15338,8 +15257,7 @@
                 "carga_horaria_semanal": "8",
                 "carga_horaria_total": "128",
                 "correlativas": [
-                    "Laboratorio I",
-                    "Química Orgánica"
+                    "Laboratorio I, Química Orgánica"
                 ]
             },
             {
@@ -15348,8 +15266,7 @@
                 "carga_horaria_semanal": "4",
                 "carga_horaria_total": "64",
                 "correlativas": [
-                    "Química de la Vida",
-                    "Inglés Lectocomprensión II"
+                    "Química de la Vida, Inglés Lectocomprensión II"
                 ]
             },
             {
@@ -15367,8 +15284,7 @@
                 "carga_horaria_semanal": "10",
                 "carga_horaria_total": "160",
                 "correlativas": [
-                    "Química Analítica I",
-                    "Laboratorio II"
+                    "Química Analítica I, Laboratorio II"
                 ]
             }
         ],
