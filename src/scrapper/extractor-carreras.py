@@ -43,19 +43,46 @@ def limpiar_texto(text, label_pattern=r"(.*)", capture_group=1):
   return "No encontrado"
 
 def extraer_correlativas(correlativas_str):
-    correlativas = []
-    if not correlativas_str or correlativas_str.lower() in ['','ninguna', 'no tiene', 'sin correlativas']:
-      return 'No tiene correlativas'
-    else:
-      # 2. Uso de limpiar_texto para normalizar el string (quita saltos de línea y basura del scraper)
-      texto_limpio = limpiar_texto(correlativas_str)
-    
-      if texto_limpio == "No encontrado":
-          return 'No tiene correlativas'
-      
-      correlativas = re.split(r';|\* - \*|\* -| - \*|- | - |_ |-|I\*|II\*|III\*|IV\*|\*A|\*B|\*C|\*D|\*E|\*F|\*G|\*H|\*I|\*J|\*K|\*L|\*Ll|\*M|\*N|\*O|\*P|\*Q|\*R|\*S|\*T|\*U|\*V|\*W|\*X|\*Y|\*Z', texto_limpio) # Dividir por comas o 'y'/'and'
-      correlativas_limpias = [corr.strip() for corr in correlativas if corr.strip()] # Limpiar espacios y eliminar vacíos
-      return correlativas_limpias
+    if not correlativas_str or correlativas_str.lower() in [
+        '', 'ninguna', 'no tiene', 'sin correlativas'
+    ]:
+        return 'No tiene correlativas'
+
+    texto = limpiar_texto(correlativas_str)
+
+    if texto == "No encontrado":
+        return 'No tiene correlativas'
+
+    # 1️⃣ Separar materias pegadas por números romanos
+    texto = re.sub(
+        r"(I{1,3}|IV|V|VI)(?=[A-ZÁÉÍÓÚÑ])",
+        r"\1, ",
+        texto
+    )
+
+    # 2️⃣ Separar materias pegadas tipo:
+    #     "ExactasTaller", "EscrituraTaller"
+    texto = re.sub(
+        r"([a-záéíóúñ])([A-ZÁÉÍÓÚÑ][a-záéíóúñ])",
+        r"\1, \2",
+        texto
+    )
+
+    # 3️⃣ Normalizar separadores clásicos
+    texto = re.sub(r"\s*[;,\-]\s*", ",", texto)
+
+    # 4️⃣ Split final
+    partes = texto.split(",")
+
+    # 5️⃣ Limpieza final
+    correlativas_limpias = [
+        p.strip()
+        for p in partes
+        if p.strip() and len(p.strip()) > 3
+    ]
+
+    return correlativas_limpias
+
     
 def extraer_tabla_plan_estudios(soup):
     """
@@ -278,7 +305,7 @@ def scrapear_carrera(carrera_data):
       if item < len(carrera_data) - 1:
           print(f"\n>> ⏳ Pausando por {os.getenv('DELAY_BETWEEN_CAREERS')} segundos para ser cortés con el servidor...\n")
 
-          time.sleep(0)  # Pausa de 15 segundos entre cada solicitud de carrera
+          time.sleep(1)  # Pausa de 15 segundos entre cada solicitud de carrera
   
   return detalle_carrera
 
