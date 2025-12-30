@@ -82,8 +82,7 @@ def extraer_correlativas(correlativas_str):
     ]
 
     return correlativas_limpias
-
-    
+  
 def extraer_tabla_plan_estudios(soup):
     """
     Busca el encabezado 'Plan de Estudios' y extrae la tabla completa
@@ -308,8 +307,6 @@ def scrapear_carrera(carrera_data):
           time.sleep(1)  # Pausa de 15 segundos entre cada solicitud de carrera
   
   return detalle_carrera
-
-
 
 if __name__ == "__main__":
    carreras_extraidas = scrapear_carreras(os.getenv('URL_CARRERAS'))
