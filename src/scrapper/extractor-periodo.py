@@ -36,14 +36,14 @@ def convertir_pdf_a_xlsx(ruta_pdf):
                   filas.append(fila)
 
   df = pd.DataFrame(filas)
-  df.to_excel("archivo.xlsx", index=False)
+  df.to_excel(os.getenv("PERIODO_EXCEL_FILENAME"), index=False)
 
 
 if __name__ == "__main__":
   periodo_extraido = extraer_periodo(os.getenv("URL_PERIODO"))
 
   pdf_response = requests.get(periodo_extraido)
-  with open("periodo.pdf", "wb") as f:
+  with open(os.getenv("PERIODO_PDF_FILENAME"), "wb") as f:
     f.write(pdf_response.content)
   
   convertir_pdf_a_xlsx("periodo.pdf")
