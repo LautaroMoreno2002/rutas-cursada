@@ -322,16 +322,16 @@ if __name__ == "__main__":
 
      # --- Guardar los datos en un archivo JSON ---
     try:
-          with open(os.getenv('OUTPUT_FILENAME'), 'w', encoding='utf-8') as f:
+          with open(os.getenv('CARRERAS_FILENAME'), 'w', encoding='utf-8') as f:
               json.dump(detalles_carreras, f, indent=4, ensure_ascii=False)
   
           # Imprimir una muestra en consola (los primeros 3)
           print("--- Muestra de los primeros 3 resultados ---")
           print(json.dumps(detalles_carreras[:3], indent=4, ensure_ascii=False))
           print("\n" + "*"*80)
-          print(f"💾 Los datos han sido guardados correctamente en el archivo: {os.getenv('OUTPUT_FILENAME')}")
+          print(f"💾 Los datos han sido guardados correctamente en el archivo: {os.getenv('CARRERAS_FILENAME')}")
           print(f"Total de carreras encontradas: {len(detalles_carreras)}")
           print("*"*80)
 
     except IOError as e:
-          print(f"\nError: No se pudo escribir el archivo {os.getenv('OUTPUT_FILENAME')}. {e}")
+          print(f"\nError: No se pudo escribir el archivo {os.getenv('CARRERAS_FILENAME')}. {e}")
