@@ -11,7 +11,10 @@ __pycache__/
 entorno/
 env/
 venv/
-src/data/
+src/data/periodo.pdf
+src/data/periodo.xlsx
+src/data/carreras.json
+
 build/
 develop-eggs/
 dist/
