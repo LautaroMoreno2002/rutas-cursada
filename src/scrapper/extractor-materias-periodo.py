@@ -53,9 +53,16 @@ for (codigo, actividad), df_materia in df.groupby([0, 1]):
         }
         # Agrupo por comisión
         for (comision), df_comision in df_materia.groupby(2):
+            docentes = []
+            for valor in df_comision[7].dropna():
+                partes = [d.strip() for d in valor.split(",")]
+                docentes.extend(partes)
+
+            docentes = list(set(docentes))  # quitar repetidos
+
             comision_json = {
                 "comision": comision,
-                "docentes": "" if df_comision[7].size <= 0 else df_comision[7].dropna().unique().tolist(),
+                "docentes": "" if len(docentes) <= 0 else docentes,
                 "dias": []
             }
             # Recorro los días y horarios
