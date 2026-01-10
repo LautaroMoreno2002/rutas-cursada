@@ -43,6 +43,7 @@ resultado = []
 # Agrupo por código y materia
 for (codigo, actividad), df_materia in df.groupby([0, 1]):
     if codigo != "Códig o Activid ad" and actividad != "Actividad":
+        actividad = re.sub(r'\s*\(.*?\)\s*', '', actividad).strip()
         materia_json = {
             "codigo_actividad": codigo,
             "actividad": actividad,
