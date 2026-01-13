@@ -101,19 +101,21 @@ def extraer_tabla_plan_estudios(soup):
         return plan
 
     rows = tabla.find_all("tr")
+    print(rows)
 
     # Saltar encabezados
     for tr in rows[1:]:
         celdas = [td.get_text(strip=True) for td in tr.find_all("td")]
 
         if len(celdas) >= 5:
-            plan.append({
-                "asignatura": celdas[0],
-                "regimen": celdas[1],
-                "carga_horaria_semanal": celdas[2],
-                "carga_horaria_total": celdas[3],
-                "correlativas": extraer_correlativas(celdas[4])
-            })
+            if celdas[0] != "":
+                plan.append({
+                    "asignatura": celdas[0],
+                    "regimen_de_cursada": celdas[1],
+                    "carga_horaria_semanal": celdas[2],
+                    "carga_horaria_total": celdas[3],
+                    "correlativas": extraer_correlativas(celdas[4])
+                })
 
     return plan
 
@@ -327,12 +329,12 @@ if __name__ == "__main__":
               json.dump(detalles_carreras, f, indent=4, ensure_ascii=False)
   
           # Imprimir una muestra en consola (los primeros 3)
-          print("--- Muestra de los primeros 3 resultados ---")
-          print(json.dumps(detalles_carreras[:3], indent=4, ensure_ascii=False))
-          print("\n" + "*"*80)
-          print(f"💾 Los datos han sido guardados correctamente en el archivo: {os.getenv('CARRERAS_FILENAME')}")
-          print(f"Total de carreras encontradas: {len(detalles_carreras)}")
-          print("*"*80)
+        #   print("--- Muestra de los primeros 3 resultados ---")
+        #   print(json.dumps(detalles_carreras[:3], indent=4, ensure_ascii=False))
+        #   print("\n" + "*"*80)
+        #   print(f"💾 Los datos han sido guardados correctamente en el archivo: {os.getenv('CARRERAS_FILENAME')}")
+        #   print(f"Total de carreras encontradas: {len(detalles_carreras)}")
+        #   print("*"*80)
 
     except IOError as e:
           print(f"\nError: No se pudo escribir el archivo {os.getenv('CARRERAS_FILENAME')}. {e}")
