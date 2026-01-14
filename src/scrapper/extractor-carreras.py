@@ -109,8 +109,9 @@ def extraer_tabla_plan_estudios(soup):
 
         if len(celdas) >= 5:
             if celdas[0] != "":
+                nombre_limpio = celdas[0].rstrip(" *")
                 plan.append({
-                    "asignatura": celdas[0],
+                    "asignatura": nombre_limpio,
                     "regimen_de_cursada": celdas[1],
                     "carga_horaria_semanal": celdas[2],
                     "carga_horaria_total": celdas[3],
