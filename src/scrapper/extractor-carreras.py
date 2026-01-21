@@ -68,8 +68,12 @@ def extraer_correlativas(correlativas_str):
         texto
     )
 
-    # 3️⃣ Normalizar separadores clásicos
-    texto = re.sub(r"\s*[;,\-]\s*", ",", texto)
+    # Separadores raros
+    texto = re.sub(r"\s*[□•|→·]\s*", ",", texto)
+
+    # Separadores clásicos
+    texto = re.sub(r"\s*[;,\-]\s*|-|– ", ",", texto)
+
 
     # 4️⃣ Split final
     partes = texto.split(",")
