@@ -72,7 +72,7 @@ def extraer_correlativas(correlativas_str):
     texto = re.sub(r"\s*[□•|→·]\s*", ",", texto)
 
     # Separadores clásicos
-    texto = re.sub(r"\s*[;,\-]\s*|-|– ", ",", texto)
+    texto = re.sub(r"\s*[;,\-–]\s*", ",", texto)
 
 
     # 4️⃣ Split final
@@ -222,9 +222,9 @@ def scrapear_carrera(carrera_data):
   detalle_carrera = []
   
   for item, carrera in enumerate(carrera_data): # Recorro cada carrera extraída
-      if carrera["carrera"] == "Tecnicatura Universitaria en Informática":
+    if carrera["carrera"] == "Tecnicatura Universitaria en Informática" or carrera["carrera"] == "Licenciatura en Sistemas":
         url = carrera['url_plan_estudios']
-        # print(f"--> {item + 1}/{len(carrera_data)} Accediendo a la carrera: {carrera['carrera']} - URL: {url}")
+            # print(f"--> {item + 1}/{len(carrera_data)} Accediendo a la carrera: {carrera['carrera']} - URL: {url}")
 
         try: 
             response = realizar_solicitud_con_reintentos(url)
