@@ -109,6 +109,7 @@ def extraer_tabla_plan_estudios(soup):
 
     # Saltar encabezados
     for tr in rows[1:]:
+        print(tr)
         celdas = [td.get_text(strip=True) for td in tr.find_all("td")]
 
         if len(celdas) >= 5:
@@ -121,6 +122,14 @@ def extraer_tabla_plan_estudios(soup):
                     "carga_horaria_total": celdas[3],
                     "correlativas": extraer_correlativas(celdas[4])
                 })
+    # Otros requisitos académicos (si existe)
+
+    tabla2 = tabla.find_next("table")
+    if not tabla2:
+        return plan
+
+    rows2 = tabla2.find_all("tr")
+    print("row: ",rows2)
 
     return plan
 
@@ -222,7 +231,8 @@ def scrapear_carrera(carrera_data):
   detalle_carrera = []
   
   for item, carrera in enumerate(carrera_data): # Recorro cada carrera extraída
-    if carrera["carrera"] == "Tecnicatura Universitaria en Informática" or carrera["carrera"] == "Licenciatura en Sistemas":
+    # if carrera["carrera"] == "Tecnicatura Universitaria en Informática" or carrera["carrera"] == "Licenciatura en Sistemas":
+    if carrera["carrera"] == "Licenciatura en Sistemas":
         url = carrera['url_plan_estudios']
             # print(f"--> {item + 1}/{len(carrera_data)} Accediendo a la carrera: {carrera['carrera']} - URL: {url}")
 
