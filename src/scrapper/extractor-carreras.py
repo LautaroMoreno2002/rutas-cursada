@@ -105,11 +105,9 @@ def extraer_tabla_plan_estudios(soup):
         return plan
 
     rows = tabla.find_all("tr")
-    print(rows)
 
     # Saltar encabezados
     for tr in rows[1:]:
-        print(tr)
         celdas = [td.get_text(strip=True) for td in tr.find_all("td")]
 
         if len(celdas) >= 5:
@@ -122,15 +120,27 @@ def extraer_tabla_plan_estudios(soup):
                     "carga_horaria_total": celdas[3],
                     "correlativas": extraer_correlativas(celdas[4])
                 })
-    # Otros requisitos académicos (si existe)
 
+    # Otros requisitos académicos (si existe)
     tabla2 = tabla.find_next("table")
     if not tabla2:
+        print("No se ha encontrado otra tabla más.")
         return plan
 
     rows2 = tabla2.find_all("tr")
-    print("row: ",rows2)
+    for tr in rows2:
+            celdas = [td.get_text(strip=True) for td in tr.find_all("td")]
 
+            if len(celdas) >= 5:
+                if celdas[0] != "" or celdas[0] != "Otros requisitos académicos":
+                    nombre_limpio = celdas[0]
+                    plan.append({
+                        "asignatura": nombre_limpio,
+                        "regimen_de_cursada": celdas[1],
+                        "carga_horaria_semanal": celdas[2],
+                        "carg_horaria_total": celdas[3],
+                        "correlativas": extraer_correlativas(celdas[4])
+                    })
     return plan
 
 def extraer_itinerario(soup):
