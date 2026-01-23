@@ -53,21 +53,11 @@ def extraer_correlativas(correlativas_str):
     if texto == "No encontrado":
         return 'No tiene correlativas'
 
-    # 1️⃣ Separar materias pegadas por números romanos
     texto = re.sub(
-        r"(I{1,3}|IV|V|VI)(?=[A-ZÁÉÍÓÚÑ])",
-        r"\1, ",
-        texto
+    r"(?<![IVX])(I{1,3}|IV|V|VI)(?![IVX])(?=[A-ZÁÉÍÓÚÑ])",
+    r"\1, ",
+    texto
     )
-
-    # 2️⃣ Separar materias pegadas tipo:
-    #     "ExactasTaller", "EscrituraTaller"
-    texto = re.sub(
-        r"([a-záéíóúñ])([A-ZÁÉÍÓÚÑ][a-záéíóúñ])",
-        r"\1, \2",
-        texto
-    )
-
     # Separadores raros
     texto = re.sub(r"\s*[□•|→·]\s*", ",", texto)
 
