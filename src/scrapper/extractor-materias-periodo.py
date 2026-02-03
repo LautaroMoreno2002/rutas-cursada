@@ -1,7 +1,7 @@
 import requests
 import os
 import pandas as pd
-import openpyxl
+# import openpyxl
 import re
 import json
 from dotenv import load_dotenv
@@ -13,6 +13,7 @@ df = df.iloc[2:].reset_index(drop=True)  # Quita las primeras 2 filas
 df = df.replace("\n", " ", regex=True)
 
 """
+ESTRUCTURA DEL JSON
 {
     codigo_actividad: "",
     actividad: "",
