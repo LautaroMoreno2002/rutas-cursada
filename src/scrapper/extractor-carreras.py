@@ -137,6 +137,24 @@ def extraer_itinerario(soup):
     """
     Extrae TODAS las tablas del itinerario (1° y 2° tabla completa).
     Devuelve un diccionario con estructura limpia.
+
+    Estructura:
+    {
+        itinerario_titulo: 2) INICIANDO LA CARRERA EN EL SEGUNDO SEMESTRE DEL AÑO,
+        semestres: [
+            {
+                orden: 1
+                semestre: 1,
+                año: 1,
+                materias: ["", "", ""]
+            },{
+                orden: 2
+                semestre: 2,
+                año: 1,
+                materias: ["", "", ""]
+            }
+        ]        
+    }
     """
     itinerarios = []
 
@@ -290,14 +308,14 @@ def scrapear_carrera(carrera_data):
             # Guardarlo en tu objeto
             carrera["ambitos_desempeno"] = ambitos
 
-            print("Ámbitos encontrados:", ambitos)
+            # print("Ámbitos encontrados:", ambitos)
 
             # ============================================================
             # EXTRACCIÓN DEL PLAN DE ESTUDIOS
             # ============================================================
             plan_estudios = extraer_tabla_plan_estudios(resultado)
             carrera["plan_estudios"] = plan_estudios
-            print(f"Plan de estudios: {len(plan_estudios)} materias extraídas.")
+            # print(f"Plan de estudios: {len(plan_estudios)} materias extraídas.")
 
 
             # ============================================================
