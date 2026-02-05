@@ -164,11 +164,22 @@ def extraer_itinerario(soup):
         return itinerarios
 
     # Buscar todas las tablas después del título
-    tablas = h1_it.find_all_next("table")
+    tablas = h1_it.find_all_next("table", limit=2) # Limito a las 2 posibles tablas
 
     for tabla in tablas:
-        tabla_data = []
+        # tabla_data = []
+        semestres = []
+        itinerario_titulo = None
+        año_actual = 0
+
         for tr in tabla.find_all("tr"):
+            # título del itinerario
+            if not itinerario_titulo:
+                span = tr.find("span")
+                if span:
+                    itinerario_titulo = span.get_text(strip=True)
+                    continue
+            
             fila = []
             for td in tr.find_all(["td", "th"]):
                 # Algunos TD contienen listas ul/li → convertir a texto plano
@@ -177,9 +188,14 @@ def extraer_itinerario(soup):
                     fila.append(li_items)
                 else:
                     fila.append(td.get_text(strip=True))
-            tabla_data.append(fila)
+            semestres.append(fila)
+            # tabla_data.append(fila)
 
-        itinerarios.append(tabla_data)
+        itinerarios.append({
+            "itinerario_titulo": itinerario_titulo,
+            "semestres": semestres
+        })
+        # itinerarios.append(tabla_data)
 
     return itinerarios
 
