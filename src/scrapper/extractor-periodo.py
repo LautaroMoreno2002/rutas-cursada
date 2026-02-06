@@ -24,18 +24,82 @@ def extraer_periodo(url_periodo):
     print(f"Error al obtener el título: {e}")
     return None
 
-def convertir_pdf_a_xlsx(ruta_pdf):
-  filas = []
+# def convertir_pdf_a_xlsx(ruta_pdf):
+#   filas = []
 
-  with pdfplumber.open(ruta_pdf) as pdf:
-      for pagina in pdf.pages:
-          tablas = pagina.extract_tables()
-          for tabla in tablas:
-              for fila in tabla:
-                  filas.append(fila)
+#   with pdfplumber.open(ruta_pdf) as pdf:
+#       for pagina in pdf.pages:
+#           tablas = pagina.extract_tables()
+#           for tabla in tablas:
+#               for fila in tabla:
+#                   filas.append(fila)
 
-  df = pd.DataFrame(filas)
-  df.to_excel(os.getenv("PERIODO_EXCEL_FILENAME"), index=False)
+#   df = pd.DataFrame(filas)
+#   df.to_excel(os.getenv("PERIODO_EXCEL_FILENAME"), index=False)
+
+
+def convertir_pdf_a_csv(ruta_pdf):
+    filas_limpias = []
+
+    COLUMNAS_ESPERADAS = 13
+
+    with pdfplumber.open(ruta_pdf) as pdf:
+        for pagina in pdf.pages:
+            tablas = pagina.extract_tables(
+                {
+                    "vertical_strategy": "lines",
+                    "horizontal_strategy": "lines",
+                    "snap_tolerance": 3,
+                    "join_tolerance": 3
+                }
+            )
+
+            for tabla in tablas:
+                for fila in tabla:
+                    if not fila:
+                        continue
+
+                    # Limpiar celdas
+                    fila = [
+                        celda.replace("\n", " ").strip() if celda else ""
+                        for celda in fila
+                    ]
+
+                    # Ignorar filas vacías
+                    if all(c == "" for c in fila):
+                        continue
+
+                    # Normalizar cantidad de columnas
+                    if len(fila) < COLUMNAS_ESPERADAS:
+                        fila.extend([""] * (COLUMNAS_ESPERADAS - len(fila)))
+                    elif len(fila) > COLUMNAS_ESPERADAS:
+                        fila = fila[:COLUMNAS_ESPERADAS]
+
+                    filas_limpias.append(fila)
+
+    columnas = [
+        "codigo_actividad",
+        "actividad",
+        "comision",
+        "inicio_dictado",
+        "fin_dictado",
+        "dia",
+        "horario",
+        "docentes",
+        "aula",
+        "edificacion",
+        "compartido_con",
+        "tipo_clase",
+        "instancia"
+    ]
+
+    df = pd.DataFrame(filas_limpias, columns=columnas)
+
+    df.to_csv(
+        os.getenv("PERIODO_CSV_FILENAME"),
+        index=False,
+        encoding="utf-8"
+    )
 
 if __name__ == "__main__":
   periodo_extraido = extraer_periodo(os.getenv("URL_PERIODO"))
@@ -44,4 +108,4 @@ if __name__ == "__main__":
   with open(os.getenv("PERIODO_PDF_FILENAME"), "wb") as f:
     f.write(pdf_response.content)
   
-  convertir_pdf_a_xlsx(os.getenv("PERIODO_PDF_FILENAME"))
+  convertir_pdf_a_csv(os.getenv("PERIODO_PDF_FILENAME"))

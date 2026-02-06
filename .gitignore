@@ -13,6 +13,7 @@ env/
 venv/
 src/data/periodo.pdf
 src/data/periodo.xlsx
+src/data/periodo.csv
 src/data/carreras.json
 src/data/materias_del_periodo.json
 build/
