@@ -8,6 +8,13 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+def es_numero(texto):
+    try:
+        float(texto)
+        return True
+    except ValueError:
+        return False
+
 def realizar_solicitud_con_reintentos(url_carreras):
   """
   Realiza una solicitud HTTP con reintentos en caso de fallo temporal.
@@ -101,7 +108,7 @@ def extraer_tabla_plan_estudios(soup):
         celdas = [td.get_text(strip=True) for td in tr.find_all("td")]
 
         if len(celdas) >= 5:
-            if celdas[0] != "":
+            if celdas[0] != "" and not es_numero(celdas[0]):
                 nombre_limpio = celdas[0].rstrip(" *")
                 plan.append({
                     "asignatura": nombre_limpio,
@@ -122,7 +129,7 @@ def extraer_tabla_plan_estudios(soup):
             celdas = [td.get_text(strip=True) for td in tr.find_all("td")]
 
             if len(celdas) >= 5:
-                if celdas[0] != "" or celdas[0] != "Otros requisitos académicos":
+                if celdas[0] != "" and not es_numero(celdas[0]) and celdas[0] != "Otros requisitos académicos":
                     nombre_limpio = celdas[0]
                     plan.append({
                         "asignatura": nombre_limpio,
@@ -148,8 +155,8 @@ def extraer_itinerario(soup):
             semestres: [
                 {
                     orden: int,
-                    semestre: int,
                     año: int,
+                    semestre: int,
                     materias: [str]
                 }
             ]
@@ -157,81 +164,80 @@ def extraer_itinerario(soup):
     ]
     """
 
-    itinerarios = []
+    # itinerarios = []
 
-    h1_it = soup.find("h1", string=re.compile("Itinerario", re.I))
-    if not h1_it:
-        return itinerarios
+    # h1_it = soup.find("h1", string=re.compile("Itinerario", re.I))
+    # if not h1_it:
+    #     return itinerarios
 
-    tablas = h1_it.find_all_next("table", limit=2)
+    # tablas = h1_it.find_all_next("table", limit=2)
 
-    for tabla in tablas:
-        itinerario_titulo = None
-        semestres = []
+    # for tabla in tablas:
+    #     itinerario_titulo = None
+    #     semestres = []
 
-        orden = 0
-        año_actual = 1
-        semestre_actual = 1
-        semestre_inicio = None  # 👈 CLAVE
+    #     orden = 0
+    #     año_actual = 1
+    #     semestre_actual = 1
+    #     semestre_inicio = None  # 👈 CLAVE
 
-        for tr in tabla.find_all("tr"):
-            # Título del itinerario
-            if itinerario_titulo is None:
-                span = tr.find("span")
-                if span:
-                    itinerario_titulo = span.get_text(strip=True)
+    #     for tr in tabla.find_all("tr"):
+    #         # Título del itinerario
+    #         if itinerario_titulo is None:
+    #             span = tr.find("span")
+    #             if span:
+    #                 itinerario_titulo = span.get_text(strip=True)
 
-                    if "segundo semestre" in itinerario_titulo.lower():
-                        semestre_actual = 2
-                    else:
-                        semestre_actual = 1
+    #                 if "segundo semestre" in itinerario_titulo.lower():
+    #                     semestre_actual = 2
+    #                 else:
+    #                     semestre_actual = 1
 
-                    semestre_inicio = semestre_actual  # 👈 GUARDAMOS CÓMO ARRANCA
-                    continue
+    #                 semestre_inicio = semestre_actual  # 👈 GUARDAMOS CÓMO ARRANCA
+    #                 continue
 
-            tds = tr.find_all("td")
-            if not tds:
-                continue
+    #         tds = tr.find_all("td")
+    #         if not tds:
+    #             continue
 
-            for td in tds:
-                ul = td.find("ul")
-                if not ul:
-                    continue
+    #         for td in tds:
+    #             ul = td.find("ul")
+    #             if not ul:
+    #                 continue
 
-                materias = [li.get_text(strip=True) for li in ul.find_all("li")]
-                if not materias:
-                    continue
+    #             materias = [li.get_text(strip=True) for li in ul.find_all("li")]
+    #             if not materias:
+    #                 continue
 
-                orden += 1
+    #             orden += 1
 
-                semestres.append({
-                    "orden": orden,
-                    "semestre": semestre_actual,
-                    "año": año_actual,
-                    "materias": materias
-                })
+    #             semestres.append({
+    #                 "orden": orden,
+    #                 "año": año_actual,
+    #                 "semestre": semestre_actual,
+    #                 "materias": materias
+    #             })
 
-                # 🔁 alternar semestre
-                if semestre_actual == 1:
-                    semestre_actual = 2
-                else:
-                    semestre_actual = 1
+    #             # 🔁 alternar semestre
+    #             if semestre_actual == 1:
+    #                 semestre_actual = 2
+    #             else:
+    #                 semestre_actual = 1
 
-                # 📅 subir año SOLO cuando se completa el par correcto
-                if semestre_actual == semestre_inicio:
-                    año_actual += 1
+    #             # 📅 subir año SOLO cuando se completa el par correcto
+    #             if semestre_actual == semestre_inicio:
+    #                 año_actual += 1
 
-        if itinerario_titulo and semestres:
-            itinerarios.append({
-                "itinerario_titulo": itinerario_titulo,
-                "semestres": semestres
-            })
+    #     if itinerario_titulo and semestres:
+    #         itinerarios.append({
+    #             "itinerario_titulo": itinerario_titulo,
+    #             "semestres": semestres
+    #         })
 
-    return itinerarios
+    # return itinerarios
 
-"""
-CASO ESPECIAL, si quiero que el año se incremente cuando se completa un par de semestres (para el caso del segundo itinerario que empieza en segundo semestre):
-def extraer_itinerario(soup):
+
+# CASO ESPECIAL, si quiero que el año se incremente cuando se completa un par de semestres (para el caso del segundo itinerario que empieza en segundo semestre):
     itinerarios = []
 
     h1_it = soup.find("h1", string=re.compile("Itinerario", re.I))
@@ -280,8 +286,8 @@ def extraer_itinerario(soup):
 
                 semestres.append({
                     "orden": orden,
-                    "semestre": semestre_actual,
                     "año": año_actual,
+                    "semestre": semestre_actual,
                     "materias": materias
                 })
 
@@ -299,8 +305,6 @@ def extraer_itinerario(soup):
             })
 
     return itinerarios
-"""
-
 
 def scrapear_carreras(url_carreras):
   """
@@ -368,8 +372,8 @@ def scrapear_carrera(carrera_data):
   detalle_carrera = []
   
   for item, carrera in enumerate(carrera_data): # Recorro cada carrera extraída
-    # if carrera["carrera"] == "Tecnicatura Universitaria en Informática" or carrera["carrera"] == "Licenciatura en Sistemas":
-    if carrera["carrera"] == "Licenciatura en Sistemas":
+    if carrera["carrera"] == "Tecnicatura Universitaria en Informática" or carrera["carrera"] == "Licenciatura en Sistemas":
+    # if carrera["carrera"] == "Licenciatura en Sistemas":
         url = carrera['url_plan_estudios']
             # print(f"--> {item + 1}/{len(carrera_data)} Accediendo a la carrera: {carrera['carrera']} - URL: {url}")
 
