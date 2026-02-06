@@ -372,10 +372,11 @@ def scrapear_carrera(carrera_data):
   detalle_carrera = []
   
   for item, carrera in enumerate(carrera_data): # Recorro cada carrera extraída
-    if carrera["carrera"] == "Tecnicatura Universitaria en Informática" or carrera["carrera"] == "Licenciatura en Sistemas":
+    # if carrera["carrera"] == "Tecnicatura Universitaria en Informática" or carrera["carrera"] == "Licenciatura en Sistemas":
     # if carrera["carrera"] == "Licenciatura en Sistemas":
-        url = carrera['url_plan_estudios']
+        # url = carrera['url_plan_estudios']
             # print(f"--> {item + 1}/{len(carrera_data)} Accediendo a la carrera: {carrera['carrera']} - URL: {url}")
+        url = carrera['url_plan_estudios']
 
         try: 
             response = realizar_solicitud_con_reintentos(url)
@@ -467,31 +468,106 @@ def scrapear_carrera(carrera_data):
   
   return detalle_carrera
 
+def scrapear_nombres_carreras(url_carreras):
+    """
+    Scrapea únicamente los nombres de las carreras disponibles.
+    NO extrae URLs ni detalles.
+    """
+    nombres = []
+
+    print(f"🔎 Descubriendo carreras disponibles en: {url_carreras}")
+
+    response = realizar_solicitud_con_reintentos(url_carreras)
+    soup = BeautifulSoup(response.content, "html.parser")
+
+    contenedores = soup.find_all(
+        'article',
+        class_=re.compile(r'post|hentry|career-item')
+    )
+
+    enlaces = []
+
+    if contenedores:
+        for cont in contenedores:
+            a = cont.find('a', href=re.compile(r'/carrera/'))
+            if a:
+                enlaces.append(a)
+    else:
+        enlaces = soup.find_all('a', href=re.compile(r'/carrera/'))
+
+    for a in enlaces:
+        nombre = re.sub(r'\s+', ' ', a.get_text(strip=True))
+        if nombre and len(nombre) > 10:
+            nombres.append(nombre)
+
+    # eliminar duplicados manteniendo orden
+    nombres = list(dict.fromkeys(nombres))
+
+    return nombres
+
+def mostrar_menu_carreras(nombres):
+    print("\n📚 Carreras disponibles:\n")
+    print("0 - TODAS las carreras\n")
+
+    for i, nombre in enumerate(nombres, start=1):
+        print(f"{i} - {nombre}")
+
+def filtrar_carreras_por_nombre(carreras_extraidas, nombres_seleccionados):
+    if not nombres_seleccionados:
+        return carreras_extraidas
+
+    return [
+        c for c in carreras_extraidas
+        if c["carrera"] in nombres_seleccionados
+    ]
+
 if __name__ == "__main__":
-   carreras_extraidas = scrapear_carreras(os.getenv('URL_CARRERAS'))
-   if not carreras_extraidas:
-    print("No se encontraron carreras en la página proporcionada.")
-   else:
-    print(f"✅ Extracción de {len(carreras_extraidas)} enlaces completada. Iniciando scraping de detalles con pausas...")
-      
-    # obtengo los detalles de cada carrera
-    detalles_carreras = scrapear_carrera(carreras_extraidas)
 
-    # print(f"detalles_carreras: {detalles_carreras}")
+    # 1️⃣ SCRAPING LIVIANO (descubrimiento)
+    nombres_carreras = scrapear_nombres_carreras(os.getenv("URL_CARRERAS"))
 
-     # --- Guardar los datos en un archivo JSON ---
+    if not nombres_carreras:
+        print("❌ No se pudieron descubrir carreras.")
+        exit()
+
+    mostrar_menu_carreras(nombres_carreras)
+
+    # 2️⃣ Selección del usuario
     try:
-          with open(os.getenv('CARRERAS_FILENAME'), 'w', encoding='utf-8') as f:
-              json.dump(detalles_carreras, f, indent=4, ensure_ascii=False)
-  
-          # Imprimir una muestra en consola (los primeros 3)
-        #   print("--- Muestra de los primeros 3 resultados ---")
-        #   print(json.dumps(detalles_carreras[:3], indent=4, ensure_ascii=False))
-        #   print("\n" + "*"*80)
-        #   print(f"💾 Los datos han sido guardados correctamente en el archivo: {os.getenv('CARRERAS_FILENAME')}")
-        #   print(f"Total de carreras encontradas: {len(detalles_carreras)}")
-        #   print("*"*80)
+        opcion = int(input("\n👉 Seleccione una carrera: "))
+    except ValueError:
+        print("❌ Debe ingresar un número.")
+        exit()
+
+    # 3️⃣ SCRAPING MASIVO (URLs reales)
+    carreras_extraidas = scrapear_carreras(os.getenv("URL_CARRERAS"))
+
+    if opcion == 0:
+        carreras_a_scrapear = carreras_extraidas
+        print("\n🚀 Se scrapearán TODAS las carreras.")
+    else:
+        indice = opcion - 1
+        if indice < 0 or indice >= len(nombres_carreras):
+            print("❌ Opción inválida.")
+            exit()
+
+        nombre_seleccionado = nombres_carreras[indice]
+        carreras_a_scrapear = filtrar_carreras_por_nombre(
+            carreras_extraidas,
+            [nombre_seleccionado]
+        )
+
+        print(f"\n🎯 Carrera seleccionada: {nombre_seleccionado}")
+
+    # 4️⃣ SCRAPING PESADO FINAL
+    detalles_carreras = scrapear_carrera(carreras_a_scrapear)
+
+    # 5️⃣ Guardar JSON
+    try:
+        with open(os.getenv('CARRERAS_FILENAME'), 'w', encoding='utf-8') as f:
+            json.dump(detalles_carreras, f, indent=4, ensure_ascii=False)
+
+        print(f"\n💾 Datos guardados correctamente en {os.getenv('CARRERAS_FILENAME')}")
 
     except IOError as e:
-          print(f"\nError: No se pudo escribir el archivo {os.getenv('CARRERAS_FILENAME')}. {e}")
-          print(f"\nDejá de cagar y ver reels al mismo tiempo, se te van a entumecer las piernas")
+        print(f"\nError al escribir el archivo: {e}")
