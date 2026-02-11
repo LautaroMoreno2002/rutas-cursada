@@ -5,10 +5,11 @@ import pandas as pd
 import re
 import json
 from dotenv import load_dotenv
+from datetime import datetime
 
 load_dotenv()
 
-def extraer_periodo_definido():
+def extraer_periodo_definido(df):
     """
     ESTRUCTURA DEL JSON (para el periodo definido con aulas)
     {
@@ -35,10 +36,6 @@ def extraer_periodo_definido():
         ]
     }
     """
-    df = pd.read_excel("./src/data/periodo.xlsx")
-    df = df.iloc[2:].reset_index(drop=True)  # Quita las primeras 2 filas
-    df = df.replace("\n", " ", regex=True)
-
     resultado = []
 
     # Agrupo por código y materia
@@ -103,7 +100,7 @@ def extraer_codigo_y_actividad(nombre_actividad):
 
     return "", nombre_actividad.strip()
 
-def extraer_periodo_no_definido():
+def extraer_periodo_no_definido(df):
     """
     ESTRUCTURA DEL JSON (para el periodo no definido)
     {
@@ -130,70 +127,37 @@ def extraer_periodo_no_definido():
         ]
     }
     """
-    df = pd.read_excel("./src/data/periodo.xlsx")
-    print(df.columns.tolist())
-    df = df.iloc[2:].reset_index(drop=True)  # Quita las primeras 2 filas
-    df = df.replace("\n", " ", regex=True)
-    df.columns = [
-    "actividad",
-    "comision",
-    "dia",
-    "horario",
-    "modalidad"
-]
-    df = df.fillna("NO DEFINIDO")
+    resultado = []
+    # Propaga Actividad y Comisión
+    df[[0, 1]] = df[[0, 1]].ffill()
 
-    actividades = {}
+    # Opcional: si modalidad también viene vacía
+    df[4] = df[4].ffill()
+    
+    # Elimina encabezados intermedios
+    df = df[~df[0].astype(str).str.contains("Oferta Académica", na=False)]
+    df = df[~df[0].astype(str).str.contains("Actividad", na=False)]
 
-    for _, row in df.iterrows():
-        nombre_completo = row["actividad"]
-        comision = row.get("comision", "NO DEFINIDO")
-        dia = row.get("dia", "NO DEFINIDO")
-        horario = row.get("horario", "NO DEFINIDO")
-        modalidad = row.get("modalidad", "NO DEFINIDO")
+    # Agrupo por materia
+    for (actividad, comision), df_materia in df.groupby([0, 1]):
+        (codigo, actividad) = extraer_codigo_y_actividad(actividad)
+        materia_json = {
+            "codigo_actividad": codigo,
+            "actividad": actividad,
+            "inicio_dictado": "NO ASIGNADO",
+            "fin_dictado": "NO ASIGNADO",
+            "comisiones": []
+        }
+        
+        
 
-        codigo, actividad = extraer_codigo_y_actividad(nombre_completo)
+    # Realizo múltiples copias para ir depurando los resultados
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
 
-        # Si la actividad no existe aún, se crea
-        if codigo not in actividades:
-            actividades[codigo] = {
-                "codigo_actividad": codigo,
-                "actividad": actividad,
-                "inicio_dictado": "NO DEFINIDO",
-                "fin_dictado": "NO DEFINIDO",
-                "instancia": "NO DEFINIDO",
-                "modalidad": modalidad,
-                "comisiones": []
-            }
-
-        # Buscar comisión existente
-        comision_existente = next(
-            (c for c in actividades[codigo]["comisiones"] if c["comision"] == comision),
-            None
-        )
-
-        if not comision_existente:
-            comision_existente = {
-                "comision": comision,
-                "docentes": ["NO DEFINIDO"],
-                "dias": []
-            }
-            actividades[codigo]["comisiones"].append(comision_existente)
-
-        # Agregar día
-        comision_existente["dias"].append({
-            "dia": dia,
-            "horario": horario,
-            "aula": "NO DEFINIDO",
-            "edificacion": "NO DEFINIDO",
-            "compartido_con": "NO DEFINIDO"
-        })
-
-
-    # ==========================
-    # Resultado final
-    # ==========================
-    resultado = list(actividades.values())
+    df.to_excel(
+        f"oferta_expandida_{timestamp}.xlsx",
+        index=False
+    )
 
     with open(os.getenv("PERIODO_CON_MATERIAS_FILENAME"), "w", encoding="utf-8") as f:
         json.dump(resultado, f, ensure_ascii=False, indent=4)
@@ -201,4 +165,7 @@ def extraer_periodo_no_definido():
     print("JSON generado correctamente")
 
 
-extraer_periodo_no_definido()
+df = pd.read_excel("./src/data/periodo.xlsx")
+df = df.iloc[2:].reset_index(drop=True)  # Quita las primeras 2 filas
+df = df.replace("\n", " ", regex=True)
+extraer_periodo_no_definido(df)
