@@ -129,7 +129,7 @@ def extraer_periodo_no_definido(df):
     """
     resultado = []
     # Propaga Actividad y Comisión
-    df[[0, 1]] = df[[0, 1]].ffill()
+    df[[0, 1]] = df[[0, 1]].ffil()
 
     # Opcional: si modalidad también viene vacía
     df[4] = df[4].ffill()
@@ -163,7 +163,6 @@ def extraer_periodo_no_definido(df):
         json.dump(resultado, f, ensure_ascii=False, indent=4)
 
     print("JSON generado correctamente")
-
 
 df = pd.read_excel("./src/data/periodo.xlsx")
 df = df.iloc[2:].reset_index(drop=True)  # Quita las primeras 2 filas
