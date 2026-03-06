@@ -9,6 +9,22 @@ from datetime import datetime
 
 load_dotenv()
 
+def extraer_codigo_y_actividad(nombre_actividad):
+    """
+    Extrae el código de la actividad desde el nombre.
+    Ej: 'ADMINISTRACIÓN ... (A0075)'
+    """
+    if not nombre_actividad:
+        return "", ""
+
+    match = re.search(r"\(([^)]+)\)$", nombre_actividad.strip())
+    if match:
+        codigo = match.group(1)
+        actividad = re.sub(r"\s*\([^)]+\)$", "", nombre_actividad).strip()
+        return codigo, actividad
+
+    return "", nombre_actividad.strip()
+
 def extraer_periodo_definido(df):
     """
     ESTRUCTURA DEL JSON (para el periodo definido con aulas)
@@ -84,22 +100,6 @@ def extraer_periodo_definido(df):
     with open(os.getenv("PERIODO_CON_MATERIAS_FILENAME"), "w", encoding="utf-8") as f:
         json.dump(resultado, f, ensure_ascii=False, indent=4)
 
-def extraer_codigo_y_actividad(nombre_actividad):
-    """
-    Extrae el código de la actividad desde el nombre.
-    Ej: 'ADMINISTRACIÓN ... (A0075)'
-    """
-    if not nombre_actividad:
-        return "", ""
-
-    match = re.search(r"\(([^)]+)\)$", nombre_actividad.strip())
-    if match:
-        codigo = match.group(1)
-        actividad = re.sub(r"\s*\([^)]+\)$", "", nombre_actividad).strip()
-        return codigo, actividad
-
-    return "", nombre_actividad.strip()
-
 def extraer_periodo_no_definido(df):
     """
     ESTRUCTURA DEL JSON (para el periodo no definido)
@@ -128,26 +128,29 @@ def extraer_periodo_no_definido(df):
     }
     """
     resultado = []
-    # Propaga Actividad y Comisión
-    df[[0, 1]] = df[[0, 1]].ffil()
 
-    # Opcional: si modalidad también viene vacía
-    df[4] = df[4].ffill()
     
-    # Elimina encabezados intermedios
+    # # Elimina encabezados intermedios
     df = df[~df[0].astype(str).str.contains("Oferta Académica", na=False)]
+    df = df[~df[0].astype(str).str.contains("Materias Semestrales", na=False)]
     df = df[~df[0].astype(str).str.contains("Actividad", na=False)]
+    
+    # # Propaga Actividad y Comisión
+    df[[0, 1]] = df[[0, 1]].ffill()
+    
+    # # Opcional: si modalidad también viene vacía
+    df[4] = df[4].ffill()
 
-    # Agrupo por materia
-    for (actividad, comision), df_materia in df.groupby([0, 1]):
-        (codigo, actividad) = extraer_codigo_y_actividad(actividad)
-        materia_json = {
-            "codigo_actividad": codigo,
-            "actividad": actividad,
-            "inicio_dictado": "NO ASIGNADO",
-            "fin_dictado": "NO ASIGNADO",
-            "comisiones": []
-        }
+    # # Agrupo por materia
+    # for (actividad, comision), df_materia in df.groupby([0, 1]):
+    #     (codigo, actividad) = extraer_codigo_y_actividad(actividad)
+    #     materia_json = {
+    #         "codigo_actividad": codigo,
+    #         "actividad": actividad,
+    #         "inicio_dictado": "NO ASIGNADO",
+    #         "fin_dictado": "NO ASIGNADO",
+    #         "comisiones": []
+    #     }
         
         
 
@@ -163,6 +166,7 @@ def extraer_periodo_no_definido(df):
         json.dump(resultado, f, ensure_ascii=False, indent=4)
 
     print("JSON generado correctamente")
+
 
 df = pd.read_excel("./src/data/periodo.xlsx")
 df = df.iloc[2:].reset_index(drop=True)  # Quita las primeras 2 filas
