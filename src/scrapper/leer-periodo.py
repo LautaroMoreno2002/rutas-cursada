@@ -142,16 +142,41 @@ def extraer_periodo_no_definido(df):
     df[4] = df[4].ffill()
 
     # # Agrupo por materia
-    # for (actividad, comision), df_materia in df.groupby([0, 1]):
-    #     (codigo, actividad) = extraer_codigo_y_actividad(actividad)
-    #     materia_json = {
-    #         "codigo_actividad": codigo,
-    #         "actividad": actividad,
-    #         "inicio_dictado": "NO ASIGNADO",
-    #         "fin_dictado": "NO ASIGNADO",
-    #         "comisiones": []
-    #     }
-        
+    for (actividad, comision), df_materia in df.groupby([0, 1]):
+        (codigo, actividad) = extraer_codigo_y_actividad(actividad)
+        # print(codigo, actividad)
+        materia_json = {
+            "codigo_actividad": codigo,
+            "actividad": actividad,
+            "inicio_dictado": "NO ASIGNADO",
+            "fin_dictado": "NO ASIGNADO",
+            "modalidad": df_materia[4].iloc[0],
+            "comisiones": []
+        }
+        # print(materia_json)
+        # Agrupo por comisión
+        for (comision), df_comision in df_materia.groupby(1):
+            comision_json = {
+                "comision": comision,
+                "docentes": "",
+                "dias": []
+            }
+            print(df_comision)
+            # Recorro los días y horarios
+            for _, fila in df_comision.iterrows():
+                dia_json = {
+                    "dia": "" if pd.isna(fila[2]) else fila[2],
+                    "horario": "" if pd.isna(fila[3]) else fila[3],
+                    "tipo_clase": "" if pd.isna(fila[4]) else fila[4],
+                    "aula": "NO ASIGNADA",
+                    "edificacion": "NO ASIGNADA",
+                    "compartido_con": ""
+                }
+                comision_json["dias"].append(dia_json)
+
+                materia_json["comisiones"].append(comision_json)
+
+            resultado.append(materia_json)
         
 
     # Realizo múltiples copias para ir depurando los resultados
