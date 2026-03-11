@@ -54,6 +54,18 @@ def extraer_periodo_definido(df):
     """
     resultado = []
 
+    # Elimino las filas que contengan los header
+    patrones = [
+    "Sede Campus:",
+    "Códig"
+    ]
+
+    df = df[
+        ~df.astype(str)
+        .apply(lambda fila: fila.str.contains("|".join(patrones), case=False, na=False))
+        .any(axis=1)
+    ]
+
     # Agrupo por código y materia
     for (codigo, actividad), df_materia in df.groupby([0, 1]):
         if codigo != "Códig o Activid ad" and actividad != "Actividad":
@@ -96,6 +108,14 @@ def extraer_periodo_definido(df):
                 materia_json["comisiones"].append(comision_json)
 
             resultado.append(materia_json)
+        
+    # Realizo múltiples copias para ir depurando los resultados
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+
+    df.to_excel(
+        f"oferta_expandida_{timestamp}.xlsx",
+        index=False
+    )
 
     with open(os.getenv("PERIODO_CON_MATERIAS_FILENAME"), "w", encoding="utf-8") as f:
         json.dump(resultado, f, ensure_ascii=False, indent=4)
