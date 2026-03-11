@@ -63,7 +63,7 @@ def extraer_periodo_definido(df):
                 "actividad": actividad,
                 "inicio_dictado": df_materia[3].iloc[0],
                 "fin_dictado": df_materia[4].iloc[0],
-                "instancia": df_materia[12].iloc[0],
+                "instancia": df_materia[11].iloc[0],
                 "comisiones": []
             }
             # Agrupo por comisión
@@ -192,8 +192,19 @@ def extraer_periodo_no_definido(df):
 
     print("JSON generado correctamente")
 
+def determinar_periodo(df):
+    cant_columnas = len(df.columns)
+    if cant_columnas <= 5:
+        print("Leyendo periodo no definido")
+        extraer_periodo_no_definido(df)
+    else:
+        print("Leyendo periodo definido")
+        extraer_periodo_definido(df)
 
-df = pd.read_excel("./src/data/periodo.xlsx")
-df = df.iloc[2:].reset_index(drop=True)  # Quita las primeras 2 filas
-df = df.replace("\n", " ", regex=True)
-extraer_periodo_no_definido(df)
+def leer_periodo():
+    df = pd.read_excel("./src/data/periodo.xlsx")
+    df = df.iloc[2:].reset_index(drop=True)  # Quita las primeras 2 filas
+    df = df.replace("\n", " ", regex=True)
+    determinar_periodo(df)
+
+leer_periodo()
