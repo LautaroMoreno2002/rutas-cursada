@@ -9,6 +9,12 @@ from datetime import datetime
 
 load_dotenv()
 
+def obtener_comision(comision_con_codigo):
+    match = re.search(r"COM-\d+", comision_con_codigo)
+    if match:
+        return match.group()
+    return None
+        
 def extraer_codigo_y_actividad(nombre_actividad):
     """
     Extrae el código de la actividad desde el nombre.
@@ -88,7 +94,7 @@ def extraer_periodo_definido(df):
                 docentes = list(set(docentes))  # quitar repetidos
 
                 comision_json = {
-                    "comision": comision,
+                    "comision": obtener_comision(comision),
                     "docentes": "" if len(docentes) <= 0 else docentes,
                     "dias": []
                 }
@@ -109,13 +115,13 @@ def extraer_periodo_definido(df):
 
             resultado.append(materia_json)
         
-    # Realizo múltiples copias para ir depurando los resultados
-    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    # # Realizo múltiples copias para ir depurando los resultados
+    # timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
 
-    df.to_excel(
-        f"oferta_expandida_{timestamp}.xlsx",
-        index=False
-    )
+    # df.to_excel(
+    #     f"oferta_expandida_{timestamp}.xlsx",
+    #     index=False
+    # )
 
     with open(os.getenv("PERIODO_CON_MATERIAS_FILENAME"), "w", encoding="utf-8") as f:
         json.dump(resultado, f, ensure_ascii=False, indent=4)
@@ -199,13 +205,13 @@ def extraer_periodo_no_definido(df):
             resultado.append(materia_json)
         
 
-    # Realizo múltiples copias para ir depurando los resultados
-    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    # # Realizo múltiples copias para ir depurando los resultados
+    # timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
 
-    df.to_excel(
-        f"oferta_expandida_{timestamp}.xlsx",
-        index=False
-    )
+    # df.to_excel(
+    #     f"oferta_expandida_{timestamp}.xlsx",
+    #     index=False
+    # )
 
     with open(os.getenv("PERIODO_CON_MATERIAS_FILENAME"), "w", encoding="utf-8") as f:
         json.dump(resultado, f, ensure_ascii=False, indent=4)
