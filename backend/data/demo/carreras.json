@@ -1,0 +1,522 @@
+[
+  {
+    "carrera": "Licenciatura en Sistemas",
+    "url_plan_estudios": "https://www.ejemplo.edu.ar/carrera/licenciatura-en-sistemas",
+    "duracion": "4 años",
+    "titulo_oficial": "Licenciado/a en Sistemas",
+    "modalidad": "Presencial",
+    "ambitos_desempeno": [
+      "Empresas de desarrollo de software",
+      "Organismos públicos",
+      "Investigación"
+    ],
+    "plan_estudios": [
+      {
+        "asignatura": "Introducción a la Programación",
+        "regimen_de_cursada": "Semestral",
+        "carga_horaria_semanal": "8",
+        "carga_horaria_total": "128",
+        "correlativas": [],
+        "otro_requisito": false
+      },
+      {
+        "asignatura": "Taller de Lectura y Escritura",
+        "regimen_de_cursada": "Semestral",
+        "carga_horaria_semanal": "4",
+        "carga_horaria_total": "64",
+        "correlativas": [],
+        "otro_requisito": false
+      },
+      {
+        "asignatura": "Matemática General",
+        "regimen_de_cursada": "Semestral",
+        "carga_horaria_semanal": "6",
+        "carga_horaria_total": "96",
+        "correlativas": [],
+        "otro_requisito": false
+      },
+      {
+        "asignatura": "Organización del Computador I",
+        "regimen_de_cursada": "Semestral",
+        "carga_horaria_semanal": "6",
+        "carga_horaria_total": "96",
+        "correlativas": [],
+        "otro_requisito": false
+      },
+      {
+        "asignatura": "Programación I",
+        "regimen_de_cursada": "Semestral",
+        "carga_horaria_semanal": "8",
+        "carga_horaria_total": "128",
+        "correlativas": [
+          "Introd. a la Programación"
+        ],
+        "otro_requisito": false
+      },
+      {
+        "asignatura": "Álgebra Lineal",
+        "regimen_de_cursada": "Semestral",
+        "carga_horaria_semanal": "6",
+        "carga_horaria_total": "96",
+        "correlativas": [
+          "Matemática General"
+        ],
+        "otro_requisito": false
+      },
+      {
+        "asignatura": "Lógica y Teoría de Números",
+        "regimen_de_cursada": "Semestral",
+        "carga_horaria_semanal": "6",
+        "carga_horaria_total": "96",
+        "correlativas": [
+          "Matemática General"
+        ],
+        "otro_requisito": false
+      },
+      {
+        "asignatura": "Organización del Computador II",
+        "regimen_de_cursada": "Semestral",
+        "carga_horaria_semanal": "6",
+        "carga_horaria_total": "96",
+        "correlativas": [
+          "Organización del Computador I"
+        ],
+        "otro_requisito": false
+      },
+      {
+        "asignatura": "Programación II",
+        "regimen_de_cursada": "Semestral",
+        "carga_horaria_semanal": "8",
+        "carga_horaria_total": "128",
+        "correlativas": [
+          "Programación I"
+        ],
+        "otro_requisito": false
+      },
+      {
+        "asignatura": "Cálculo para Computación",
+        "regimen_de_cursada": "Semestral",
+        "carga_horaria_semanal": "6",
+        "carga_horaria_total": "96",
+        "correlativas": [
+          "Álgebra Lineal"
+        ],
+        "otro_requisito": false
+      },
+      {
+        "asignatura": "Bases de Datos I",
+        "regimen_de_cursada": "Semestral",
+        "carga_horaria_semanal": "6",
+        "carga_horaria_total": "96",
+        "correlativas": [
+          "Programación I"
+        ],
+        "otro_requisito": false
+      },
+      {
+        "asignatura": "Sistemas Operativos y Redes I",
+        "regimen_de_cursada": "Semestral",
+        "carga_horaria_semanal": "6",
+        "carga_horaria_total": "96",
+        "correlativas": [
+          "Organización del Computador II"
+        ],
+        "otro_requisito": false
+      },
+      {
+        "asignatura": "Programación III",
+        "regimen_de_cursada": "Semestral",
+        "carga_horaria_semanal": "8",
+        "carga_horaria_total": "128",
+        "correlativas": [
+          "Programación II"
+        ],
+        "otro_requisito": false
+      },
+      {
+        "asignatura": "Ingeniería de Software I",
+        "regimen_de_cursada": "Semestral",
+        "carga_horaria_semanal": "6",
+        "carga_horaria_total": "96",
+        "correlativas": [
+          "Programación II"
+        ],
+        "otro_requisito": false
+      },
+      {
+        "asignatura": "Probabilidad y Estadística",
+        "regimen_de_cursada": "Semestral",
+        "carga_horaria_semanal": "6",
+        "carga_horaria_total": "96",
+        "correlativas": [
+          "Cálculo para Computación"
+        ],
+        "otro_requisito": false
+      },
+      {
+        "asignatura": "Sistemas Operativos y Redes II",
+        "regimen_de_cursada": "Semestral",
+        "carga_horaria_semanal": "6",
+        "carga_horaria_total": "96",
+        "correlativas": [
+          "Sistemas Operativos y Redes I"
+        ],
+        "otro_requisito": false
+      },
+      {
+        "asignatura": "Bases de Datos II",
+        "regimen_de_cursada": "Semestral",
+        "carga_horaria_semanal": "8",
+        "carga_horaria_total": "128",
+        "correlativas": [
+          "Bases de Datos I",
+          "Programación II"
+        ],
+        "otro_requisito": false
+      },
+      {
+        "asignatura": "Ingeniería de Software II",
+        "regimen_de_cursada": "Semestral",
+        "carga_horaria_semanal": "6",
+        "carga_horaria_total": "96",
+        "correlativas": [
+          "Ingeniería de Software I"
+        ],
+        "otro_requisito": false
+      },
+      {
+        "asignatura": "Especificaciones y Verificación de Software",
+        "regimen_de_cursada": "Semestral",
+        "carga_horaria_semanal": "6",
+        "carga_horaria_total": "96",
+        "correlativas": [
+          "Programación III",
+          "Lógica y Teoría de Números"
+        ],
+        "otro_requisito": false
+      },
+      {
+        "asignatura": "Proyecto Profesional I",
+        "regimen_de_cursada": "Semestral",
+        "carga_horaria_semanal": "8",
+        "carga_horaria_total": "128",
+        "correlativas": [
+          "Ingeniería de Software I",
+          "Bases de Datos I"
+        ],
+        "otro_requisito": false
+      },
+      {
+        "asignatura": "Proyecto Profesional II",
+        "regimen_de_cursada": "Semestral",
+        "carga_horaria_semanal": "8",
+        "carga_horaria_total": "128",
+        "correlativas": [
+          "Proyecto Profesional I",
+          "Ingeniería de Software II"
+        ],
+        "otro_requisito": false
+      },
+      {
+        "asignatura": "Modelado y Optimización",
+        "regimen_de_cursada": "Semestral",
+        "carga_horaria_semanal": "6",
+        "carga_horaria_total": "96",
+        "correlativas": [
+          "Probabilidad y Estadística"
+        ],
+        "otro_requisito": false
+      },
+      {
+        "asignatura": "Teoría de la Computación",
+        "regimen_de_cursada": "Semestral",
+        "carga_horaria_semanal": "6",
+        "carga_horaria_total": "96",
+        "correlativas": [
+          "Programación III",
+          "Lógica y Teoría de Números"
+        ],
+        "otro_requisito": false
+      },
+      {
+        "asignatura": "Informática y Sociedad",
+        "regimen_de_cursada": "Semestral",
+        "carga_horaria_semanal": "4",
+        "carga_horaria_total": "64",
+        "correlativas": [],
+        "otro_requisito": false
+      },
+      {
+        "asignatura": "Gestión de Proyectos",
+        "regimen_de_cursada": "Semestral",
+        "carga_horaria_semanal": "6",
+        "carga_horaria_total": "96",
+        "correlativas": [
+          "Ingeniería de Software II",
+          "Proyecto Profesional I"
+        ],
+        "otro_requisito": false
+      },
+      {
+        "asignatura": "Seguridad Informática",
+        "regimen_de_cursada": "Semestral",
+        "carga_horaria_semanal": "6",
+        "carga_horaria_total": "96",
+        "correlativas": [
+          "Sistemas Operativos y Redes II"
+        ],
+        "otro_requisito": false
+      },
+      {
+        "asignatura": "Lenguajes Formales y Autómatas",
+        "regimen_de_cursada": "Semestral",
+        "carga_horaria_semanal": "6",
+        "carga_horaria_total": "96",
+        "correlativas": [
+          "Teoría de la Computación"
+        ],
+        "otro_requisito": false
+      },
+      {
+        "asignatura": "Práctica Profesional Supervisada",
+        "regimen_de_cursada": "Semestral",
+        "carga_horaria_semanal": "8",
+        "carga_horaria_total": "128",
+        "correlativas": [
+          "Proyecto Profesional II",
+          "Bases de Datos II"
+        ],
+        "otro_requisito": false
+      },
+      {
+        "asignatura": "Taller de Tesina",
+        "regimen_de_cursada": "Anual",
+        "carga_horaria_semanal": "4",
+        "carga_horaria_total": "128",
+        "correlativas": [
+          "Proyecto Profesional II",
+          "Bases de Datos II"
+        ],
+        "otro_requisito": false
+      },
+      {
+        "asignatura": "Taller de Utilitarios",
+        "regimen_de_cursada": "Semestral",
+        "carga_horaria_semanal": "2",
+        "carga_horaria_total": "32",
+        "correlativas": [],
+        "otro_requisito": true
+      },
+      {
+        "asignatura": "Inglés Lectocomprensión I",
+        "regimen_de_cursada": "Semestral",
+        "carga_horaria_semanal": "4",
+        "carga_horaria_total": "64",
+        "correlativas": [],
+        "otro_requisito": true
+      },
+      {
+        "asignatura": "Inglés Lectocomprensión II",
+        "regimen_de_cursada": "Semestral",
+        "carga_horaria_semanal": "4",
+        "carga_horaria_total": "64",
+        "correlativas": [
+          "Inglés Lectocomprensión I"
+        ],
+        "otro_requisito": true
+      },
+      {
+        "asignatura": "Inglés Lectocomprensión III",
+        "regimen_de_cursada": "Semestral",
+        "carga_horaria_semanal": "4",
+        "carga_horaria_total": "64",
+        "correlativas": [
+          "Inglés Lectocomprensión II"
+        ],
+        "otro_requisito": true
+      }
+    ],
+    "itinerario": [
+      {
+        "itinerario_titulo": "Itinerario sugerido con inicio en el primer semestre",
+        "semestres": [
+          {
+            "orden": 1,
+            "año": 1,
+            "semestre": 1,
+            "materias": [
+              "Introducción a la Programación",
+              "Taller de Lectura y Escritura",
+              "Matemática General",
+              "Organización del Computador I"
+            ]
+          },
+          {
+            "orden": 2,
+            "año": 1,
+            "semestre": 2,
+            "materias": [
+              "Programación I",
+              "Álgebra Lineal",
+              "Lógica y Teoría de Números",
+              "Organización del Computador II"
+            ]
+          },
+          {
+            "orden": 3,
+            "año": 2,
+            "semestre": 1,
+            "materias": [
+              "Programación II",
+              "Cálculo para Computación",
+              "Bases de Datos I",
+              "Sistemas Operativos y Redes I"
+            ]
+          },
+          {
+            "orden": 4,
+            "año": 2,
+            "semestre": 2,
+            "materias": [
+              "Programación III",
+              "Ingeniería de Software I",
+              "Probabilidad y Estadística",
+              "Sistemas Operativos y Redes II"
+            ]
+          },
+          {
+            "orden": 5,
+            "año": 3,
+            "semestre": 1,
+            "materias": [
+              "Bases de Datos II",
+              "Ingeniería de Software II",
+              "Especificaciones y Verificación de Software",
+              "Proyecto Profesional I"
+            ]
+          },
+          {
+            "orden": 6,
+            "año": 3,
+            "semestre": 2,
+            "materias": [
+              "Proyecto Profesional II",
+              "Modelado y Optimización",
+              "Teoría de la Computación",
+              "Informática y Sociedad"
+            ]
+          },
+          {
+            "orden": 7,
+            "año": 4,
+            "semestre": 1,
+            "materias": [
+              "Gestión de Proyectos",
+              "Seguridad Informática",
+              "Lenguajes Formales y Autómatas"
+            ]
+          },
+          {
+            "orden": 8,
+            "año": 4,
+            "semestre": 2,
+            "materias": [
+              "Práctica Profesional Supervisada",
+              "Taller de Tesina"
+            ]
+          }
+        ]
+      },
+      {
+        "itinerario_titulo": "Itinerario sugerido con inicio en el segundo semestre",
+        "semestres": [
+          {
+            "orden": 1,
+            "año": 1,
+            "semestre": 2,
+            "materias": [
+              "Introducción a la Programación",
+              "Taller de Lectura y Escritura",
+              "Matemática General",
+              "Organización del Computador I"
+            ]
+          },
+          {
+            "orden": 2,
+            "año": 2,
+            "semestre": 1,
+            "materias": [
+              "Programación I",
+              "Álgebra Lineal",
+              "Lógica y Teoría de Números",
+              "Organización del Computador II"
+            ]
+          },
+          {
+            "orden": 3,
+            "año": 2,
+            "semestre": 2,
+            "materias": [
+              "Programación II",
+              "Cálculo para Computación",
+              "Bases de Datos I",
+              "Sistemas Operativos y Redes I"
+            ]
+          },
+          {
+            "orden": 4,
+            "año": 3,
+            "semestre": 1,
+            "materias": [
+              "Programación III",
+              "Ingeniería de Software I",
+              "Probabilidad y Estadística",
+              "Sistemas Operativos y Redes II"
+            ]
+          },
+          {
+            "orden": 5,
+            "año": 3,
+            "semestre": 2,
+            "materias": [
+              "Bases de Datos II",
+              "Ingeniería de Software II",
+              "Especificaciones y Verificación de Software",
+              "Proyecto Profesional I"
+            ]
+          },
+          {
+            "orden": 6,
+            "año": 4,
+            "semestre": 1,
+            "materias": [
+              "Proyecto Profesional II",
+              "Modelado y Optimización",
+              "Teoría de la Computación",
+              "Informática y Sociedad"
+            ]
+          },
+          {
+            "orden": 7,
+            "año": 4,
+            "semestre": 2,
+            "materias": [
+              "Gestión de Proyectos",
+              "Seguridad Informática",
+              "Lenguajes Formales y Autómatas"
+            ]
+          },
+          {
+            "orden": 8,
+            "año": 5,
+            "semestre": 1,
+            "materias": [
+              "Práctica Profesional Supervisada",
+              "Taller de Tesina"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

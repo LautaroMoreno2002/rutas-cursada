@@ -1,0 +1,1733 @@
+{
+  "periodo": {
+    "anio": 2026,
+    "semestre": 2,
+    "titulo": "Oferta 2° semestre 2026 (DEMO)",
+    "definido": true,
+    "fuente": null
+  },
+  "materias": [
+    {
+      "codigo_actividad": "A1000",
+      "actividad": "INTRODUCCIÓN A LA PROGRAMACIÓN",
+      "inicio_dictado": "10/08/2026",
+      "fin_dictado": "05/12/2026",
+      "instancia": "Regular",
+      "modalidad": "",
+      "comisiones": [
+        {
+          "comision": "COM-01",
+          "docentes": [
+            "Laura Benítez",
+            "Andrea Molina"
+          ],
+          "dias": [
+            {
+              "dia": "Miércoles",
+              "horario": "18:00 a 22:00",
+              "tipo_clase": "Teórico-Práctica",
+              "aula": "Aula 7",
+              "edificacion": "Módulo 1",
+              "compartido_con": ""
+            },
+            {
+              "dia": "Viernes",
+              "horario": "18:00 a 22:00",
+              "tipo_clase": "Teórico-Práctica",
+              "aula": "Aula 2",
+              "edificacion": "Módulo 7",
+              "compartido_con": ""
+            }
+          ]
+        },
+        {
+          "comision": "COM-02",
+          "docentes": [
+            "Pablo Ortiz",
+            "Hernán Castro"
+          ],
+          "dias": [
+            {
+              "dia": "Jueves",
+              "horario": "18:00 a 22:00",
+              "tipo_clase": "Práctica",
+              "aula": "Aula 9",
+              "edificacion": "Módulo 6",
+              "compartido_con": ""
+            },
+            {
+              "dia": "Viernes",
+              "horario": "18:00 a 22:00",
+              "tipo_clase": "Teórica",
+              "aula": "Aula 17",
+              "edificacion": "Módulo 4",
+              "compartido_con": ""
+            }
+          ]
+        },
+        {
+          "comision": "COM-03",
+          "docentes": [
+            "Sergio Luna",
+            "Julieta Vega"
+          ],
+          "dias": [
+            {
+              "dia": "Martes",
+              "horario": "18:00 a 22:00",
+              "tipo_clase": "Práctica",
+              "aula": "Aula 9",
+              "edificacion": "Módulo 6",
+              "compartido_con": ""
+            },
+            {
+              "dia": "Jueves",
+              "horario": "18:00 a 22:00",
+              "tipo_clase": "Práctica",
+              "aula": "Aula 9",
+              "edificacion": "Módulo 3",
+              "compartido_con": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "codigo_actividad": "A1001",
+      "actividad": "TALLER DE LECTURA Y ESCRITURA",
+      "inicio_dictado": "10/08/2026",
+      "fin_dictado": "05/12/2026",
+      "instancia": "Regular",
+      "modalidad": "",
+      "comisiones": [
+        {
+          "comision": "COM-01",
+          "docentes": [
+            "Carla Medina",
+            "Paula Ríos"
+          ],
+          "dias": [
+            {
+              "dia": "Lunes",
+              "horario": "18:00 a 22:00",
+              "tipo_clase": "Práctica",
+              "aula": "Aula 11",
+              "edificacion": "Módulo 3",
+              "compartido_con": ""
+            }
+          ]
+        },
+        {
+          "comision": "COM-02",
+          "docentes": [
+            "Diego Ferrari",
+            "Laura Benítez"
+          ],
+          "dias": [
+            {
+              "dia": "Miércoles",
+              "horario": "18:00 a 22:00",
+              "tipo_clase": "Teórica",
+              "aula": "Aula 15",
+              "edificacion": "Módulo 7",
+              "compartido_con": ""
+            }
+          ]
+        },
+        {
+          "comision": "COM-03",
+          "docentes": [
+            "Pablo Ortiz",
+            "Andrea Molina"
+          ],
+          "dias": [
+            {
+              "dia": "Martes",
+              "horario": "08:00 a 12:00",
+              "tipo_clase": "Práctica",
+              "aula": "Aula 1",
+              "edificacion": "Módulo 6",
+              "compartido_con": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "codigo_actividad": "A1002",
+      "actividad": "MATEMÁTICA GENERAL",
+      "inicio_dictado": "10/08/2026",
+      "fin_dictado": "05/12/2026",
+      "instancia": "Regular",
+      "modalidad": "",
+      "comisiones": [
+        {
+          "comision": "COM-01",
+          "docentes": [
+            "Hernán Castro",
+            "Julieta Vega"
+          ],
+          "dias": [
+            {
+              "dia": "Lunes",
+              "horario": "18:00 a 22:00",
+              "tipo_clase": "Teórica",
+              "aula": "Aula 11",
+              "edificacion": "Módulo 2",
+              "compartido_con": ""
+            },
+            {
+              "dia": "Jueves",
+              "horario": "18:00 a 20:00",
+              "tipo_clase": "Teórica",
+              "aula": "Aula 19",
+              "edificacion": "Módulo 1",
+              "compartido_con": ""
+            }
+          ]
+        },
+        {
+          "comision": "COM-02",
+          "docentes": [
+            "Diego Ferrari",
+            "Sergio Luna"
+          ],
+          "dias": [
+            {
+              "dia": "Lunes",
+              "horario": "14:00 a 18:00",
+              "tipo_clase": "Teórico-Práctica",
+              "aula": "Aula 14",
+              "edificacion": "Módulo 5",
+              "compartido_con": ""
+            },
+            {
+              "dia": "Martes",
+              "horario": "09:00 a 11:00",
+              "tipo_clase": "Teórico-Práctica",
+              "aula": "Aula 15",
+              "edificacion": "Módulo 2",
+              "compartido_con": ""
+            }
+          ]
+        },
+        {
+          "comision": "COM-03",
+          "docentes": [
+            "Carla Medina",
+            "Sergio Luna"
+          ],
+          "dias": [
+            {
+              "dia": "Miércoles",
+              "horario": "08:00 a 12:00",
+              "tipo_clase": "Teórico-Práctica",
+              "aula": "Aula 11",
+              "edificacion": "Módulo 5",
+              "compartido_con": ""
+            },
+            {
+              "dia": "Jueves",
+              "horario": "08:00 a 10:00",
+              "tipo_clase": "Teórico-Práctica",
+              "aula": "Aula 15",
+              "edificacion": "Módulo 6",
+              "compartido_con": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "codigo_actividad": "A1003",
+      "actividad": "ORGANIZACIÓN DEL COMPUTADOR I",
+      "inicio_dictado": "10/08/2026",
+      "fin_dictado": "05/12/2026",
+      "instancia": "Regular",
+      "modalidad": "",
+      "comisiones": [
+        {
+          "comision": "COM-01",
+          "docentes": [
+            "Pablo Ortiz",
+            "Julieta Vega"
+          ],
+          "dias": [
+            {
+              "dia": "Martes",
+              "horario": "18:00 a 22:00",
+              "tipo_clase": "Teórico-Práctica",
+              "aula": "Aula 14",
+              "edificacion": "Módulo 2",
+              "compartido_con": ""
+            },
+            {
+              "dia": "Jueves",
+              "horario": "18:00 a 20:00",
+              "tipo_clase": "Práctica",
+              "aula": "Aula 12",
+              "edificacion": "Módulo 6",
+              "compartido_con": ""
+            }
+          ]
+        },
+        {
+          "comision": "COM-02",
+          "docentes": [
+            "Paula Ríos",
+            "Andrea Molina"
+          ],
+          "dias": [
+            {
+              "dia": "Jueves",
+              "horario": "14:00 a 18:00",
+              "tipo_clase": "Teórico-Práctica",
+              "aula": "Aula 19",
+              "edificacion": "Módulo 4",
+              "compartido_con": ""
+            },
+            {
+              "dia": "Viernes",
+              "horario": "14:00 a 16:00",
+              "tipo_clase": "Práctica",
+              "aula": "Aula 4",
+              "edificacion": "Módulo 7",
+              "compartido_con": ""
+            }
+          ]
+        },
+        {
+          "comision": "COM-03",
+          "docentes": [
+            "Hernán Castro",
+            "Sergio Luna"
+          ],
+          "dias": [
+            {
+              "dia": "Jueves",
+              "horario": "18:00 a 22:00",
+              "tipo_clase": "Práctica",
+              "aula": "Aula 17",
+              "edificacion": "Módulo 2",
+              "compartido_con": ""
+            },
+            {
+              "dia": "Viernes",
+              "horario": "18:00 a 20:00",
+              "tipo_clase": "Teórico-Práctica",
+              "aula": "Aula 8",
+              "edificacion": "Módulo 7",
+              "compartido_con": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "codigo_actividad": "A1004",
+      "actividad": "PROGRAMACIÓN I",
+      "inicio_dictado": "10/08/2026",
+      "fin_dictado": "05/12/2026",
+      "instancia": "Regular",
+      "modalidad": "",
+      "comisiones": [
+        {
+          "comision": "COM-01",
+          "docentes": [
+            "Laura Benítez",
+            "Julieta Vega"
+          ],
+          "dias": [
+            {
+              "dia": "Martes",
+              "horario": "18:00 a 22:00",
+              "tipo_clase": "Práctica",
+              "aula": "Aula 17",
+              "edificacion": "Módulo 1",
+              "compartido_con": ""
+            },
+            {
+              "dia": "Viernes",
+              "horario": "18:00 a 22:00",
+              "tipo_clase": "Teórica",
+              "aula": "Aula 3",
+              "edificacion": "Módulo 6",
+              "compartido_con": ""
+            }
+          ]
+        },
+        {
+          "comision": "COM-02",
+          "docentes": [
+            "Pablo Ortiz",
+            "Hernán Castro"
+          ],
+          "dias": [
+            {
+              "dia": "Jueves",
+              "horario": "08:00 a 12:00",
+              "tipo_clase": "Teórica",
+              "aula": "Aula 5",
+              "edificacion": "Módulo 2",
+              "compartido_con": ""
+            },
+            {
+              "dia": "Viernes",
+              "horario": "14:00 a 18:00",
+              "tipo_clase": "Práctica",
+              "aula": "Aula 3",
+              "edificacion": "Módulo 7",
+              "compartido_con": ""
+            }
+          ]
+        },
+        {
+          "comision": "COM-03",
+          "docentes": [
+            "Diego Ferrari",
+            "Pablo Ortiz"
+          ],
+          "dias": [
+            {
+              "dia": "Martes",
+              "horario": "18:00 a 22:00",
+              "tipo_clase": "Práctica",
+              "aula": "Aula 2",
+              "edificacion": "Módulo 7",
+              "compartido_con": ""
+            },
+            {
+              "dia": "Miércoles",
+              "horario": "18:00 a 22:00",
+              "tipo_clase": "Teórico-Práctica",
+              "aula": "Aula 8",
+              "edificacion": "Módulo 4",
+              "compartido_con": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "codigo_actividad": "A1005",
+      "actividad": "ÁLGEBRA LINEAL",
+      "inicio_dictado": "10/08/2026",
+      "fin_dictado": "05/12/2026",
+      "instancia": "Regular",
+      "modalidad": "",
+      "comisiones": [
+        {
+          "comision": "COM-01",
+          "docentes": [
+            "Hernán Castro",
+            "Paula Ríos"
+          ],
+          "dias": [
+            {
+              "dia": "Miércoles",
+              "horario": "18:00 a 22:00",
+              "tipo_clase": "Práctica",
+              "aula": "Aula 6",
+              "edificacion": "Módulo 7",
+              "compartido_con": ""
+            },
+            {
+              "dia": "Viernes",
+              "horario": "18:00 a 20:00",
+              "tipo_clase": "Teórico-Práctica",
+              "aula": "Aula 7",
+              "edificacion": "Módulo 4",
+              "compartido_con": ""
+            }
+          ]
+        },
+        {
+          "comision": "COM-02",
+          "docentes": [
+            "Martín Sosa",
+            "Diego Ferrari"
+          ],
+          "dias": [
+            {
+              "dia": "Jueves",
+              "horario": "18:00 a 22:00",
+              "tipo_clase": "Práctica",
+              "aula": "Aula 6",
+              "edificacion": "Módulo 6",
+              "compartido_con": ""
+            },
+            {
+              "dia": "Viernes",
+              "horario": "18:00 a 20:00",
+              "tipo_clase": "Teórica",
+              "aula": "Aula 18",
+              "edificacion": "Módulo 3",
+              "compartido_con": ""
+            }
+          ]
+        },
+        {
+          "comision": "COM-03",
+          "docentes": [
+            "Sergio Luna",
+            "Martín Sosa"
+          ],
+          "dias": [
+            {
+              "dia": "Lunes",
+              "horario": "08:00 a 12:00",
+              "tipo_clase": "Práctica",
+              "aula": "Aula 1",
+              "edificacion": "Módulo 6",
+              "compartido_con": ""
+            },
+            {
+              "dia": "Martes",
+              "horario": "08:00 a 10:00",
+              "tipo_clase": "Teórica",
+              "aula": "Aula 2",
+              "edificacion": "Módulo 2",
+              "compartido_con": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "codigo_actividad": "A1006",
+      "actividad": "LÓGICA Y TEORÍA DE NÚMEROS",
+      "inicio_dictado": "10/08/2026",
+      "fin_dictado": "05/12/2026",
+      "instancia": "Regular",
+      "modalidad": "",
+      "comisiones": [
+        {
+          "comision": "COM-01",
+          "docentes": [
+            "Pablo Ortiz",
+            "Andrea Molina"
+          ],
+          "dias": [
+            {
+              "dia": "Lunes",
+              "horario": "18:00 a 22:00",
+              "tipo_clase": "Práctica",
+              "aula": "Aula 15",
+              "edificacion": "Módulo 1",
+              "compartido_con": ""
+            },
+            {
+              "dia": "Miércoles",
+              "horario": "18:00 a 20:00",
+              "tipo_clase": "Teórica",
+              "aula": "Aula 15",
+              "edificacion": "Módulo 6",
+              "compartido_con": ""
+            }
+          ]
+        },
+        {
+          "comision": "COM-02",
+          "docentes": [
+            "Carla Medina",
+            "Hernán Castro"
+          ],
+          "dias": [
+            {
+              "dia": "Lunes",
+              "horario": "09:00 a 13:00",
+              "tipo_clase": "Práctica",
+              "aula": "Aula 10",
+              "edificacion": "Módulo 3",
+              "compartido_con": ""
+            },
+            {
+              "dia": "Miércoles",
+              "horario": "09:00 a 11:00",
+              "tipo_clase": "Teórica",
+              "aula": "Aula 20",
+              "edificacion": "Módulo 1",
+              "compartido_con": ""
+            }
+          ]
+        },
+        {
+          "comision": "COM-03",
+          "docentes": [
+            "Sergio Luna",
+            "Julieta Vega"
+          ],
+          "dias": [
+            {
+              "dia": "Miércoles",
+              "horario": "08:00 a 12:00",
+              "tipo_clase": "Práctica",
+              "aula": "Aula 20",
+              "edificacion": "Módulo 2",
+              "compartido_con": ""
+            },
+            {
+              "dia": "Viernes",
+              "horario": "14:00 a 16:00",
+              "tipo_clase": "Teórica",
+              "aula": "Aula 4",
+              "edificacion": "Módulo 4",
+              "compartido_con": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "codigo_actividad": "A1007",
+      "actividad": "ORGANIZACIÓN DEL COMPUTADOR II",
+      "inicio_dictado": "10/08/2026",
+      "fin_dictado": "05/12/2026",
+      "instancia": "Regular",
+      "modalidad": "",
+      "comisiones": [
+        {
+          "comision": "COM-01",
+          "docentes": [
+            "Sergio Luna",
+            "Andrea Molina"
+          ],
+          "dias": [
+            {
+              "dia": "Lunes",
+              "horario": "18:00 a 22:00",
+              "tipo_clase": "Teórico-Práctica",
+              "aula": "Aula 18",
+              "edificacion": "Módulo 4",
+              "compartido_con": ""
+            },
+            {
+              "dia": "Jueves",
+              "horario": "18:00 a 20:00",
+              "tipo_clase": "Teórica",
+              "aula": "Aula 19",
+              "edificacion": "Módulo 4",
+              "compartido_con": ""
+            }
+          ]
+        },
+        {
+          "comision": "COM-02",
+          "docentes": [
+            "Andrea Molina",
+            "Laura Benítez"
+          ],
+          "dias": [
+            {
+              "dia": "Lunes",
+              "horario": "09:00 a 13:00",
+              "tipo_clase": "Práctica",
+              "aula": "Aula 2",
+              "edificacion": "Módulo 7",
+              "compartido_con": ""
+            },
+            {
+              "dia": "Jueves",
+              "horario": "14:00 a 16:00",
+              "tipo_clase": "Práctica",
+              "aula": "Aula 15",
+              "edificacion": "Módulo 3",
+              "compartido_con": ""
+            }
+          ]
+        },
+        {
+          "comision": "COM-03",
+          "docentes": [
+            "Julieta Vega",
+            "Hernán Castro"
+          ],
+          "dias": [
+            {
+              "dia": "Jueves",
+              "horario": "14:00 a 18:00",
+              "tipo_clase": "Teórica",
+              "aula": "Aula 17",
+              "edificacion": "Módulo 4",
+              "compartido_con": ""
+            },
+            {
+              "dia": "Viernes",
+              "horario": "09:00 a 11:00",
+              "tipo_clase": "Práctica",
+              "aula": "Aula 14",
+              "edificacion": "Módulo 6",
+              "compartido_con": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "codigo_actividad": "A1008",
+      "actividad": "PROGRAMACIÓN II",
+      "inicio_dictado": "10/08/2026",
+      "fin_dictado": "05/12/2026",
+      "instancia": "Regular",
+      "modalidad": "",
+      "comisiones": [
+        {
+          "comision": "COM-01",
+          "docentes": [
+            "Martín Sosa",
+            "Julieta Vega"
+          ],
+          "dias": [
+            {
+              "dia": "Martes",
+              "horario": "18:00 a 22:00",
+              "tipo_clase": "Práctica",
+              "aula": "Aula 14",
+              "edificacion": "Módulo 5",
+              "compartido_con": ""
+            },
+            {
+              "dia": "Jueves",
+              "horario": "18:00 a 22:00",
+              "tipo_clase": "Práctica",
+              "aula": "Aula 9",
+              "edificacion": "Módulo 6",
+              "compartido_con": ""
+            }
+          ]
+        },
+        {
+          "comision": "COM-02",
+          "docentes": [
+            "Andrea Molina",
+            "Sergio Luna"
+          ],
+          "dias": [
+            {
+              "dia": "Martes",
+              "horario": "08:00 a 12:00",
+              "tipo_clase": "Teórico-Práctica",
+              "aula": "Aula 11",
+              "edificacion": "Módulo 2",
+              "compartido_con": ""
+            },
+            {
+              "dia": "Jueves",
+              "horario": "09:00 a 13:00",
+              "tipo_clase": "Práctica",
+              "aula": "Aula 4",
+              "edificacion": "Módulo 2",
+              "compartido_con": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "codigo_actividad": "A1009",
+      "actividad": "CÁLCULO PARA COMPUTACIÓN",
+      "inicio_dictado": "10/08/2026",
+      "fin_dictado": "05/12/2026",
+      "instancia": "Regular",
+      "modalidad": "",
+      "comisiones": [
+        {
+          "comision": "COM-01",
+          "docentes": [
+            "Pablo Ortiz",
+            "Andrea Molina"
+          ],
+          "dias": [
+            {
+              "dia": "Martes",
+              "horario": "18:00 a 22:00",
+              "tipo_clase": "Práctica",
+              "aula": "Aula 17",
+              "edificacion": "Módulo 4",
+              "compartido_con": ""
+            },
+            {
+              "dia": "Viernes",
+              "horario": "18:00 a 20:00",
+              "tipo_clase": "Teórico-Práctica",
+              "aula": "Aula 9",
+              "edificacion": "Módulo 5",
+              "compartido_con": ""
+            }
+          ]
+        },
+        {
+          "comision": "COM-02",
+          "docentes": [
+            "Hernán Castro",
+            "Andrea Molina"
+          ],
+          "dias": [
+            {
+              "dia": "Martes",
+              "horario": "18:00 a 22:00",
+              "tipo_clase": "Teórica",
+              "aula": "Aula 9",
+              "edificacion": "Módulo 1",
+              "compartido_con": ""
+            },
+            {
+              "dia": "Jueves",
+              "horario": "18:00 a 20:00",
+              "tipo_clase": "Teórica",
+              "aula": "Aula 10",
+              "edificacion": "Módulo 5",
+              "compartido_con": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "codigo_actividad": "A1010",
+      "actividad": "BASES DE DATOS I",
+      "inicio_dictado": "10/08/2026",
+      "fin_dictado": "05/12/2026",
+      "instancia": "Regular",
+      "modalidad": "",
+      "comisiones": [
+        {
+          "comision": "COM-01",
+          "docentes": [
+            "Paula Ríos",
+            "Andrea Molina"
+          ],
+          "dias": [
+            {
+              "dia": "Miércoles",
+              "horario": "18:00 a 22:00",
+              "tipo_clase": "Práctica",
+              "aula": "Aula 14",
+              "edificacion": "Módulo 4",
+              "compartido_con": ""
+            },
+            {
+              "dia": "Viernes",
+              "horario": "18:00 a 20:00",
+              "tipo_clase": "Teórica",
+              "aula": "Aula 5",
+              "edificacion": "Módulo 5",
+              "compartido_con": ""
+            }
+          ]
+        },
+        {
+          "comision": "COM-02",
+          "docentes": [
+            "Sergio Luna",
+            "Carla Medina"
+          ],
+          "dias": [
+            {
+              "dia": "Lunes",
+              "horario": "18:00 a 22:00",
+              "tipo_clase": "Teórico-Práctica",
+              "aula": "Aula 3",
+              "edificacion": "Módulo 5",
+              "compartido_con": ""
+            },
+            {
+              "dia": "Jueves",
+              "horario": "18:00 a 20:00",
+              "tipo_clase": "Teórico-Práctica",
+              "aula": "Aula 3",
+              "edificacion": "Módulo 7",
+              "compartido_con": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "codigo_actividad": "A1011",
+      "actividad": "SISTEMAS OPERATIVOS Y REDES I",
+      "inicio_dictado": "10/08/2026",
+      "fin_dictado": "05/12/2026",
+      "instancia": "Regular",
+      "modalidad": "",
+      "comisiones": [
+        {
+          "comision": "COM-01",
+          "docentes": [
+            "Paula Ríos",
+            "Martín Sosa"
+          ],
+          "dias": [
+            {
+              "dia": "Lunes",
+              "horario": "18:00 a 22:00",
+              "tipo_clase": "Práctica",
+              "aula": "Aula 6",
+              "edificacion": "Módulo 7",
+              "compartido_con": ""
+            },
+            {
+              "dia": "Miércoles",
+              "horario": "18:00 a 20:00",
+              "tipo_clase": "Teórico-Práctica",
+              "aula": "Aula 5",
+              "edificacion": "Módulo 3",
+              "compartido_con": ""
+            }
+          ]
+        },
+        {
+          "comision": "COM-02",
+          "docentes": [
+            "Hernán Castro",
+            "Julieta Vega"
+          ],
+          "dias": [
+            {
+              "dia": "Lunes",
+              "horario": "09:00 a 13:00",
+              "tipo_clase": "Teórica",
+              "aula": "Aula 11",
+              "edificacion": "Módulo 2",
+              "compartido_con": ""
+            },
+            {
+              "dia": "Viernes",
+              "horario": "08:00 a 10:00",
+              "tipo_clase": "Práctica",
+              "aula": "Aula 18",
+              "edificacion": "Módulo 5",
+              "compartido_con": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "codigo_actividad": "A1012",
+      "actividad": "PROGRAMACIÓN III",
+      "inicio_dictado": "10/08/2026",
+      "fin_dictado": "05/12/2026",
+      "instancia": "Regular",
+      "modalidad": "",
+      "comisiones": [
+        {
+          "comision": "COM-01",
+          "docentes": [
+            "Hernán Castro",
+            "Sergio Luna"
+          ],
+          "dias": [
+            {
+              "dia": "Lunes",
+              "horario": "18:00 a 22:00",
+              "tipo_clase": "Teórico-Práctica",
+              "aula": "Aula 8",
+              "edificacion": "Módulo 2",
+              "compartido_con": ""
+            },
+            {
+              "dia": "Jueves",
+              "horario": "18:00 a 22:00",
+              "tipo_clase": "Teórica",
+              "aula": "Aula 7",
+              "edificacion": "Módulo 3",
+              "compartido_con": ""
+            }
+          ]
+        },
+        {
+          "comision": "COM-02",
+          "docentes": [
+            "Laura Benítez",
+            "Diego Ferrari"
+          ],
+          "dias": [
+            {
+              "dia": "Lunes",
+              "horario": "14:00 a 18:00",
+              "tipo_clase": "Práctica",
+              "aula": "Aula 7",
+              "edificacion": "Módulo 7",
+              "compartido_con": ""
+            },
+            {
+              "dia": "Miércoles",
+              "horario": "14:00 a 18:00",
+              "tipo_clase": "Teórica",
+              "aula": "Aula 1",
+              "edificacion": "Módulo 7",
+              "compartido_con": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "codigo_actividad": "A1013",
+      "actividad": "INGENIERÍA DE SOFTWARE I",
+      "inicio_dictado": "10/08/2026",
+      "fin_dictado": "05/12/2026",
+      "instancia": "Regular",
+      "modalidad": "",
+      "comisiones": [
+        {
+          "comision": "COM-01",
+          "docentes": [
+            "Carla Medina",
+            "Sergio Luna"
+          ],
+          "dias": [
+            {
+              "dia": "Martes",
+              "horario": "18:00 a 22:00",
+              "tipo_clase": "Práctica",
+              "aula": "Aula 6",
+              "edificacion": "Módulo 2",
+              "compartido_con": ""
+            },
+            {
+              "dia": "Jueves",
+              "horario": "18:00 a 20:00",
+              "tipo_clase": "Teórico-Práctica",
+              "aula": "Aula 6",
+              "edificacion": "Módulo 1",
+              "compartido_con": ""
+            }
+          ]
+        },
+        {
+          "comision": "COM-02",
+          "docentes": [
+            "Laura Benítez",
+            "Andrea Molina"
+          ],
+          "dias": [
+            {
+              "dia": "Martes",
+              "horario": "18:00 a 22:00",
+              "tipo_clase": "Teórica",
+              "aula": "Aula 14",
+              "edificacion": "Módulo 7",
+              "compartido_con": ""
+            },
+            {
+              "dia": "Miércoles",
+              "horario": "18:00 a 20:00",
+              "tipo_clase": "Teórico-Práctica",
+              "aula": "Aula 19",
+              "edificacion": "Módulo 2",
+              "compartido_con": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "codigo_actividad": "A1014",
+      "actividad": "PROBABILIDAD Y ESTADÍSTICA",
+      "inicio_dictado": "10/08/2026",
+      "fin_dictado": "05/12/2026",
+      "instancia": "Regular",
+      "modalidad": "",
+      "comisiones": [
+        {
+          "comision": "COM-01",
+          "docentes": [
+            "Hernán Castro",
+            "Paula Ríos"
+          ],
+          "dias": [
+            {
+              "dia": "Martes",
+              "horario": "18:00 a 22:00",
+              "tipo_clase": "Práctica",
+              "aula": "Aula 4",
+              "edificacion": "Módulo 4",
+              "compartido_con": ""
+            },
+            {
+              "dia": "Viernes",
+              "horario": "18:00 a 20:00",
+              "tipo_clase": "Práctica",
+              "aula": "Aula 13",
+              "edificacion": "Módulo 6",
+              "compartido_con": ""
+            }
+          ]
+        },
+        {
+          "comision": "COM-02",
+          "docentes": [
+            "Martín Sosa",
+            "Sergio Luna"
+          ],
+          "dias": [
+            {
+              "dia": "Miércoles",
+              "horario": "18:00 a 22:00",
+              "tipo_clase": "Práctica",
+              "aula": "Aula 12",
+              "edificacion": "Módulo 3",
+              "compartido_con": ""
+            },
+            {
+              "dia": "Jueves",
+              "horario": "18:00 a 20:00",
+              "tipo_clase": "Teórico-Práctica",
+              "aula": "Aula 15",
+              "edificacion": "Módulo 4",
+              "compartido_con": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "codigo_actividad": "A1015",
+      "actividad": "SISTEMAS OPERATIVOS Y REDES II",
+      "inicio_dictado": "10/08/2026",
+      "fin_dictado": "05/12/2026",
+      "instancia": "Regular",
+      "modalidad": "",
+      "comisiones": [
+        {
+          "comision": "COM-01",
+          "docentes": [
+            "Julieta Vega",
+            "Andrea Molina"
+          ],
+          "dias": [
+            {
+              "dia": "Miércoles",
+              "horario": "18:00 a 22:00",
+              "tipo_clase": "Práctica",
+              "aula": "Aula 10",
+              "edificacion": "Módulo 3",
+              "compartido_con": ""
+            },
+            {
+              "dia": "Viernes",
+              "horario": "18:00 a 20:00",
+              "tipo_clase": "Teórica",
+              "aula": "Aula 13",
+              "edificacion": "Módulo 7",
+              "compartido_con": ""
+            }
+          ]
+        },
+        {
+          "comision": "COM-02",
+          "docentes": [
+            "Carla Medina",
+            "Julieta Vega"
+          ],
+          "dias": [
+            {
+              "dia": "Lunes",
+              "horario": "14:00 a 18:00",
+              "tipo_clase": "Práctica",
+              "aula": "Aula 5",
+              "edificacion": "Módulo 6",
+              "compartido_con": ""
+            },
+            {
+              "dia": "Martes",
+              "horario": "09:00 a 11:00",
+              "tipo_clase": "Teórico-Práctica",
+              "aula": "Aula 4",
+              "edificacion": "Módulo 4",
+              "compartido_con": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "codigo_actividad": "A1017",
+      "actividad": "INGENIERÍA DE SOFTWARE II",
+      "inicio_dictado": "10/08/2026",
+      "fin_dictado": "05/12/2026",
+      "instancia": "Regular",
+      "modalidad": "",
+      "comisiones": [
+        {
+          "comision": "COM-01",
+          "docentes": [
+            "Pablo Ortiz",
+            "Julieta Vega"
+          ],
+          "dias": [
+            {
+              "dia": "Lunes",
+              "horario": "18:00 a 22:00",
+              "tipo_clase": "Práctica",
+              "aula": "Aula 14",
+              "edificacion": "Módulo 3",
+              "compartido_con": ""
+            },
+            {
+              "dia": "Jueves",
+              "horario": "18:00 a 20:00",
+              "tipo_clase": "Teórica",
+              "aula": "Aula 19",
+              "edificacion": "Módulo 2",
+              "compartido_con": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "codigo_actividad": "A1018",
+      "actividad": "ESPECIFICACIONES Y VERIFICACIÓN DE SOFTWARE",
+      "inicio_dictado": "10/08/2026",
+      "fin_dictado": "05/12/2026",
+      "instancia": "Regular",
+      "modalidad": "",
+      "comisiones": [
+        {
+          "comision": "COM-01",
+          "docentes": [
+            "Sergio Luna",
+            "Pablo Ortiz"
+          ],
+          "dias": [
+            {
+              "dia": "Martes",
+              "horario": "18:00 a 22:00",
+              "tipo_clase": "Teórica",
+              "aula": "Aula 7",
+              "edificacion": "Módulo 4",
+              "compartido_con": ""
+            },
+            {
+              "dia": "Jueves",
+              "horario": "18:00 a 20:00",
+              "tipo_clase": "Teórico-Práctica",
+              "aula": "Aula 3",
+              "edificacion": "Módulo 6",
+              "compartido_con": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "codigo_actividad": "A1019",
+      "actividad": "PROYECTO PROFESIONAL I",
+      "inicio_dictado": "10/08/2026",
+      "fin_dictado": "05/12/2026",
+      "instancia": "Regular",
+      "modalidad": "",
+      "comisiones": [
+        {
+          "comision": "COM-01",
+          "docentes": [
+            "Hernán Castro",
+            "Laura Benítez"
+          ],
+          "dias": [
+            {
+              "dia": "Martes",
+              "horario": "18:00 a 22:00",
+              "tipo_clase": "Práctica",
+              "aula": "Aula 14",
+              "edificacion": "Módulo 1",
+              "compartido_con": ""
+            },
+            {
+              "dia": "Viernes",
+              "horario": "18:00 a 22:00",
+              "tipo_clase": "Teórica",
+              "aula": "Aula 5",
+              "edificacion": "Módulo 7",
+              "compartido_con": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "codigo_actividad": "A1020",
+      "actividad": "PROYECTO PROFESIONAL II",
+      "inicio_dictado": "10/08/2026",
+      "fin_dictado": "05/12/2026",
+      "instancia": "Regular",
+      "modalidad": "",
+      "comisiones": [
+        {
+          "comision": "COM-01",
+          "docentes": [
+            "Julieta Vega",
+            "Sergio Luna"
+          ],
+          "dias": [
+            {
+              "dia": "Miércoles",
+              "horario": "18:00 a 22:00",
+              "tipo_clase": "Práctica",
+              "aula": "Aula 4",
+              "edificacion": "Módulo 7",
+              "compartido_con": ""
+            },
+            {
+              "dia": "Viernes",
+              "horario": "18:00 a 22:00",
+              "tipo_clase": "Teórico-Práctica",
+              "aula": "Aula 7",
+              "edificacion": "Módulo 2",
+              "compartido_con": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "codigo_actividad": "A1021",
+      "actividad": "MODELADO Y OPTIMIZACIÓN",
+      "inicio_dictado": "10/08/2026",
+      "fin_dictado": "05/12/2026",
+      "instancia": "Regular",
+      "modalidad": "",
+      "comisiones": [
+        {
+          "comision": "COM-01",
+          "docentes": [
+            "Carla Medina",
+            "Julieta Vega"
+          ],
+          "dias": [
+            {
+              "dia": "Lunes",
+              "horario": "18:00 a 22:00",
+              "tipo_clase": "Teórico-Práctica",
+              "aula": "Aula 19",
+              "edificacion": "Módulo 6",
+              "compartido_con": ""
+            },
+            {
+              "dia": "Miércoles",
+              "horario": "18:00 a 20:00",
+              "tipo_clase": "Teórico-Práctica",
+              "aula": "Aula 19",
+              "edificacion": "Módulo 5",
+              "compartido_con": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "codigo_actividad": "A1022",
+      "actividad": "TEORÍA DE LA COMPUTACIÓN",
+      "inicio_dictado": "10/08/2026",
+      "fin_dictado": "05/12/2026",
+      "instancia": "Regular",
+      "modalidad": "",
+      "comisiones": [
+        {
+          "comision": "COM-01",
+          "docentes": [
+            "Diego Ferrari",
+            "Hernán Castro"
+          ],
+          "dias": [
+            {
+              "dia": "Lunes",
+              "horario": "18:00 a 22:00",
+              "tipo_clase": "Teórico-Práctica",
+              "aula": "Aula 10",
+              "edificacion": "Módulo 1",
+              "compartido_con": ""
+            },
+            {
+              "dia": "Jueves",
+              "horario": "18:00 a 20:00",
+              "tipo_clase": "Teórico-Práctica",
+              "aula": "Aula 13",
+              "edificacion": "Módulo 3",
+              "compartido_con": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "codigo_actividad": "A1023",
+      "actividad": "INFORMÁTICA Y SOCIEDAD",
+      "inicio_dictado": "10/08/2026",
+      "fin_dictado": "05/12/2026",
+      "instancia": "Regular",
+      "modalidad": "",
+      "comisiones": [
+        {
+          "comision": "COM-01",
+          "docentes": [
+            "Martín Sosa",
+            "Paula Ríos"
+          ],
+          "dias": [
+            {
+              "dia": "Sábado",
+              "horario": "09:00 a 13:00",
+              "tipo_clase": "Teórica",
+              "aula": "Aula 3",
+              "edificacion": "Módulo 1",
+              "compartido_con": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "codigo_actividad": "A1025",
+      "actividad": "SEGURIDAD INFORMÁTICA",
+      "inicio_dictado": "10/08/2026",
+      "fin_dictado": "05/12/2026",
+      "instancia": "Regular",
+      "modalidad": "",
+      "comisiones": [
+        {
+          "comision": "COM-01",
+          "docentes": [
+            "Martín Sosa",
+            "Julieta Vega"
+          ],
+          "dias": [
+            {
+              "dia": "Miércoles",
+              "horario": "18:00 a 22:00",
+              "tipo_clase": "Teórica",
+              "aula": "Aula 5",
+              "edificacion": "Módulo 2",
+              "compartido_con": ""
+            },
+            {
+              "dia": "Viernes",
+              "horario": "18:00 a 20:00",
+              "tipo_clase": "Teórico-Práctica",
+              "aula": "Aula 11",
+              "edificacion": "Módulo 4",
+              "compartido_con": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "codigo_actividad": "A1026",
+      "actividad": "LENGUAJES FORMALES Y AUTÓMATAS",
+      "inicio_dictado": "10/08/2026",
+      "fin_dictado": "05/12/2026",
+      "instancia": "Regular",
+      "modalidad": "",
+      "comisiones": [
+        {
+          "comision": "COM-01",
+          "docentes": [
+            "Julieta Vega",
+            "Sergio Luna"
+          ],
+          "dias": [
+            {
+              "dia": "Lunes",
+              "horario": "18:00 a 22:00",
+              "tipo_clase": "Teórica",
+              "aula": "Aula 8",
+              "edificacion": "Módulo 1",
+              "compartido_con": ""
+            },
+            {
+              "dia": "Miércoles",
+              "horario": "18:00 a 20:00",
+              "tipo_clase": "Teórico-Práctica",
+              "aula": "Aula 2",
+              "edificacion": "Módulo 5",
+              "compartido_con": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "codigo_actividad": "A1027",
+      "actividad": "PRÁCTICA PROFESIONAL SUPERVISADA",
+      "inicio_dictado": "10/08/2026",
+      "fin_dictado": "05/12/2026",
+      "instancia": "Regular",
+      "modalidad": "",
+      "comisiones": [
+        {
+          "comision": "COM-01",
+          "docentes": [
+            "Sergio Luna",
+            "Julieta Vega"
+          ],
+          "dias": [
+            {
+              "dia": "Lunes",
+              "horario": "18:00 a 22:00",
+              "tipo_clase": "Práctica",
+              "aula": "Aula 9",
+              "edificacion": "Módulo 7",
+              "compartido_con": ""
+            },
+            {
+              "dia": "Jueves",
+              "horario": "18:00 a 22:00",
+              "tipo_clase": "Teórica",
+              "aula": "Aula 5",
+              "edificacion": "Módulo 1",
+              "compartido_con": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "codigo_actividad": "A1029",
+      "actividad": "TALLER DE UTILITARIOS",
+      "inicio_dictado": "10/08/2026",
+      "fin_dictado": "05/12/2026",
+      "instancia": "Regular",
+      "modalidad": "",
+      "comisiones": [
+        {
+          "comision": "COM-01",
+          "docentes": [
+            "Andrea Molina",
+            "Hernán Castro"
+          ],
+          "dias": [
+            {
+              "dia": "Viernes",
+              "horario": "18:00 a 20:00",
+              "tipo_clase": "Teórica",
+              "aula": "Aula 3",
+              "edificacion": "Módulo 7",
+              "compartido_con": ""
+            }
+          ]
+        },
+        {
+          "comision": "COM-02",
+          "docentes": [
+            "Martín Sosa",
+            "Paula Ríos"
+          ],
+          "dias": [
+            {
+              "dia": "Martes",
+              "horario": "08:00 a 10:00",
+              "tipo_clase": "Teórica",
+              "aula": "Aula 15",
+              "edificacion": "Módulo 1",
+              "compartido_con": ""
+            }
+          ]
+        },
+        {
+          "comision": "COM-03",
+          "docentes": [
+            "Sergio Luna",
+            "Pablo Ortiz"
+          ],
+          "dias": [
+            {
+              "dia": "Jueves",
+              "horario": "14:00 a 16:00",
+              "tipo_clase": "Teórica",
+              "aula": "Aula 11",
+              "edificacion": "Módulo 1",
+              "compartido_con": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "codigo_actividad": "A1030",
+      "actividad": "INGLÉS LECTOCOMPRENSIÓN I",
+      "inicio_dictado": "10/08/2026",
+      "fin_dictado": "05/12/2026",
+      "instancia": "Regular",
+      "modalidad": "",
+      "comisiones": [
+        {
+          "comision": "COM-01",
+          "docentes": [
+            "Sergio Luna",
+            "Diego Ferrari"
+          ],
+          "dias": [
+            {
+              "dia": "Miércoles",
+              "horario": "18:00 a 22:00",
+              "tipo_clase": "Práctica",
+              "aula": "Aula 19",
+              "edificacion": "Módulo 5",
+              "compartido_con": ""
+            }
+          ]
+        },
+        {
+          "comision": "COM-02",
+          "docentes": [
+            "Diego Ferrari",
+            "Sergio Luna"
+          ],
+          "dias": [
+            {
+              "dia": "Viernes",
+              "horario": "18:00 a 22:00",
+              "tipo_clase": "Teórico-Práctica",
+              "aula": "Aula 9",
+              "edificacion": "Módulo 5",
+              "compartido_con": ""
+            }
+          ]
+        },
+        {
+          "comision": "COM-03",
+          "docentes": [
+            "Julieta Vega",
+            "Sergio Luna"
+          ],
+          "dias": [
+            {
+              "dia": "Viernes",
+              "horario": "18:00 a 22:00",
+              "tipo_clase": "Teórica",
+              "aula": "Aula 13",
+              "edificacion": "Módulo 6",
+              "compartido_con": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "codigo_actividad": "A1031",
+      "actividad": "INGLÉS LECTOCOMPRENSIÓN II",
+      "inicio_dictado": "10/08/2026",
+      "fin_dictado": "05/12/2026",
+      "instancia": "Regular",
+      "modalidad": "",
+      "comisiones": [
+        {
+          "comision": "COM-01",
+          "docentes": [
+            "Martín Sosa",
+            "Sergio Luna"
+          ],
+          "dias": [
+            {
+              "dia": "Lunes",
+              "horario": "18:00 a 22:00",
+              "tipo_clase": "Teórico-Práctica",
+              "aula": "Aula 12",
+              "edificacion": "Módulo 6",
+              "compartido_con": ""
+            }
+          ]
+        },
+        {
+          "comision": "COM-02",
+          "docentes": [
+            "Martín Sosa",
+            "Diego Ferrari"
+          ],
+          "dias": [
+            {
+              "dia": "Viernes",
+              "horario": "14:00 a 18:00",
+              "tipo_clase": "Práctica",
+              "aula": "Aula 13",
+              "edificacion": "Módulo 5",
+              "compartido_con": ""
+            }
+          ]
+        },
+        {
+          "comision": "COM-03",
+          "docentes": [
+            "Julieta Vega",
+            "Paula Ríos"
+          ],
+          "dias": [
+            {
+              "dia": "Miércoles",
+              "horario": "14:00 a 18:00",
+              "tipo_clase": "Práctica",
+              "aula": "Aula 2",
+              "edificacion": "Módulo 1",
+              "compartido_con": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "codigo_actividad": "A1032",
+      "actividad": "INGLÉS LECTOCOMPRENSIÓN III",
+      "inicio_dictado": "10/08/2026",
+      "fin_dictado": "05/12/2026",
+      "instancia": "Regular",
+      "modalidad": "",
+      "comisiones": [
+        {
+          "comision": "COM-01",
+          "docentes": [
+            "Paula Ríos",
+            "Andrea Molina"
+          ],
+          "dias": [
+            {
+              "dia": "Jueves",
+              "horario": "18:00 a 22:00",
+              "tipo_clase": "Práctica",
+              "aula": "Aula 17",
+              "edificacion": "Módulo 1",
+              "compartido_con": ""
+            }
+          ]
+        },
+        {
+          "comision": "COM-02",
+          "docentes": [
+            "Diego Ferrari",
+            "Laura Benítez"
+          ],
+          "dias": [
+            {
+              "dia": "Jueves",
+              "horario": "14:00 a 18:00",
+              "tipo_clase": "Teórico-Práctica",
+              "aula": "Aula 8",
+              "edificacion": "Módulo 6",
+              "compartido_con": ""
+            }
+          ]
+        },
+        {
+          "comision": "COM-03",
+          "docentes": [
+            "Julieta Vega",
+            "Andrea Molina"
+          ],
+          "dias": [
+            {
+              "dia": "Lunes",
+              "horario": "18:00 a 22:00",
+              "tipo_clase": "Teórica",
+              "aula": "Aula 12",
+              "edificacion": "Módulo 6",
+              "compartido_con": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

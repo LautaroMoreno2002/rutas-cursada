@@ -1,0 +1,19 @@
+# MySQL para desarrollo:  docker compose up -d
+# Después, en backend/.env:  DB_HOST=127.0.0.1  DB_USER=rutas  DB_PASSWORD=rutas  DB_NAME=rutas_cursada
+services:
+  mysql:
+    image: mysql:8.4
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: rutas_cursada
+      MYSQL_USER: rutas
+      MYSQL_PASSWORD: rutas
+      MYSQL_ROOT_PASSWORD: root
+    command: ["--character-set-server=utf8mb4", "--collation-server=utf8mb4_unicode_ci"]
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+volumes:
+  mysql_data:
