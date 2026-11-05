@@ -11,11 +11,11 @@ __pycache__/
 entorno/
 env/
 venv/
-src/data/periodo.pdf
-src/data/periodo.xlsx
-src/data/periodo.csv
-src/data/carreras.json
-src/data/materias_del_periodo.json
+# Datos generados por los scrapers y base SQLite local (los datos demo sí se versionan)
+backend/data/*
+!backend/data/demo/
+frontend/node_modules/
+frontend/dist/
 build/
 develop-eggs/
 dist/

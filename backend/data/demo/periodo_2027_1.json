@@ -1,0 +1,1507 @@
+{
+  "periodo": {
+    "anio": 2027,
+    "semestre": 1,
+    "titulo": "Oferta 1° semestre 2027 (DEMO)",
+    "definido": false,
+    "fuente": null
+  },
+  "materias": [
+    {
+      "codigo_actividad": "A1000",
+      "actividad": "INTRODUCCIÓN A LA PROGRAMACIÓN",
+      "inicio_dictado": "NO ASIGNADO",
+      "fin_dictado": "NO ASIGNADO",
+      "instancia": "",
+      "modalidad": "Presencial",
+      "comisiones": [
+        {
+          "comision": "COM-01",
+          "docentes": [],
+          "dias": [
+            {
+              "dia": "Martes",
+              "horario": "18 a 22",
+              "tipo_clase": "Presencial",
+              "aula": "NO ASIGNADO",
+              "edificacion": "NO ASIGNADO",
+              "compartido_con": ""
+            },
+            {
+              "dia": "Jueves",
+              "horario": "18 a 22",
+              "tipo_clase": "Presencial",
+              "aula": "NO ASIGNADO",
+              "edificacion": "NO ASIGNADO",
+              "compartido_con": ""
+            }
+          ]
+        },
+        {
+          "comision": "COM-02",
+          "docentes": [],
+          "dias": [
+            {
+              "dia": "Lunes",
+              "horario": "18 a 22",
+              "tipo_clase": "Presencial",
+              "aula": "NO ASIGNADO",
+              "edificacion": "NO ASIGNADO",
+              "compartido_con": ""
+            },
+            {
+              "dia": "Viernes",
+              "horario": "18 a 22",
+              "tipo_clase": "Presencial",
+              "aula": "NO ASIGNADO",
+              "edificacion": "NO ASIGNADO",
+              "compartido_con": ""
+            }
+          ]
+        },
+        {
+          "comision": "COM-03",
+          "docentes": [],
+          "dias": [
+            {
+              "dia": "Jueves",
+              "horario": "08 a 12",
+              "tipo_clase": "Presencial",
+              "aula": "NO ASIGNADO",
+              "edificacion": "NO ASIGNADO",
+              "compartido_con": ""
+            },
+            {
+              "dia": "Viernes",
+              "horario": "14 a 18",
+              "tipo_clase": "Presencial",
+              "aula": "NO ASIGNADO",
+              "edificacion": "NO ASIGNADO",
+              "compartido_con": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "codigo_actividad": "A1001",
+      "actividad": "TALLER DE LECTURA Y ESCRITURA",
+      "inicio_dictado": "NO ASIGNADO",
+      "fin_dictado": "NO ASIGNADO",
+      "instancia": "",
+      "modalidad": "Presencial",
+      "comisiones": [
+        {
+          "comision": "COM-01",
+          "docentes": [],
+          "dias": [
+            {
+              "dia": "Viernes",
+              "horario": "18 a 22",
+              "tipo_clase": "Presencial",
+              "aula": "NO ASIGNADO",
+              "edificacion": "NO ASIGNADO",
+              "compartido_con": ""
+            }
+          ]
+        },
+        {
+          "comision": "COM-02",
+          "docentes": [],
+          "dias": [
+            {
+              "dia": "Jueves",
+              "horario": "18 a 22",
+              "tipo_clase": "Presencial",
+              "aula": "NO ASIGNADO",
+              "edificacion": "NO ASIGNADO",
+              "compartido_con": ""
+            }
+          ]
+        },
+        {
+          "comision": "COM-03",
+          "docentes": [],
+          "dias": [
+            {
+              "dia": "Jueves",
+              "horario": "09 a 13",
+              "tipo_clase": "Presencial",
+              "aula": "NO ASIGNADO",
+              "edificacion": "NO ASIGNADO",
+              "compartido_con": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "codigo_actividad": "A1002",
+      "actividad": "MATEMÁTICA GENERAL",
+      "inicio_dictado": "NO ASIGNADO",
+      "fin_dictado": "NO ASIGNADO",
+      "instancia": "",
+      "modalidad": "Presencial",
+      "comisiones": [
+        {
+          "comision": "COM-01",
+          "docentes": [],
+          "dias": [
+            {
+              "dia": "Miércoles",
+              "horario": "18 a 22",
+              "tipo_clase": "Presencial",
+              "aula": "NO ASIGNADO",
+              "edificacion": "NO ASIGNADO",
+              "compartido_con": ""
+            },
+            {
+              "dia": "Viernes",
+              "horario": "18 a 20",
+              "tipo_clase": "Presencial",
+              "aula": "NO ASIGNADO",
+              "edificacion": "NO ASIGNADO",
+              "compartido_con": ""
+            }
+          ]
+        },
+        {
+          "comision": "COM-02",
+          "docentes": [],
+          "dias": [
+            {
+              "dia": "Martes",
+              "horario": "14 a 18",
+              "tipo_clase": "Presencial",
+              "aula": "NO ASIGNADO",
+              "edificacion": "NO ASIGNADO",
+              "compartido_con": ""
+            },
+            {
+              "dia": "Viernes",
+              "horario": "09 a 11",
+              "tipo_clase": "Presencial",
+              "aula": "NO ASIGNADO",
+              "edificacion": "NO ASIGNADO",
+              "compartido_con": ""
+            }
+          ]
+        },
+        {
+          "comision": "COM-03",
+          "docentes": [],
+          "dias": [
+            {
+              "dia": "Lunes",
+              "horario": "14 a 18",
+              "tipo_clase": "Presencial",
+              "aula": "NO ASIGNADO",
+              "edificacion": "NO ASIGNADO",
+              "compartido_con": ""
+            },
+            {
+              "dia": "Viernes",
+              "horario": "08 a 10",
+              "tipo_clase": "Presencial",
+              "aula": "NO ASIGNADO",
+              "edificacion": "NO ASIGNADO",
+              "compartido_con": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "codigo_actividad": "A1003",
+      "actividad": "ORGANIZACIÓN DEL COMPUTADOR I",
+      "inicio_dictado": "NO ASIGNADO",
+      "fin_dictado": "NO ASIGNADO",
+      "instancia": "",
+      "modalidad": "Presencial",
+      "comisiones": [
+        {
+          "comision": "COM-01",
+          "docentes": [],
+          "dias": [
+            {
+              "dia": "Lunes",
+              "horario": "18 a 22",
+              "tipo_clase": "Presencial",
+              "aula": "NO ASIGNADO",
+              "edificacion": "NO ASIGNADO",
+              "compartido_con": ""
+            },
+            {
+              "dia": "Miércoles",
+              "horario": "18 a 20",
+              "tipo_clase": "Presencial",
+              "aula": "NO ASIGNADO",
+              "edificacion": "NO ASIGNADO",
+              "compartido_con": ""
+            }
+          ]
+        },
+        {
+          "comision": "COM-02",
+          "docentes": [],
+          "dias": [
+            {
+              "dia": "Lunes",
+              "horario": "18 a 22",
+              "tipo_clase": "Presencial",
+              "aula": "NO ASIGNADO",
+              "edificacion": "NO ASIGNADO",
+              "compartido_con": ""
+            },
+            {
+              "dia": "Miércoles",
+              "horario": "18 a 20",
+              "tipo_clase": "Presencial",
+              "aula": "NO ASIGNADO",
+              "edificacion": "NO ASIGNADO",
+              "compartido_con": ""
+            }
+          ]
+        },
+        {
+          "comision": "COM-03",
+          "docentes": [],
+          "dias": [
+            {
+              "dia": "Martes",
+              "horario": "14 a 18",
+              "tipo_clase": "Presencial",
+              "aula": "NO ASIGNADO",
+              "edificacion": "NO ASIGNADO",
+              "compartido_con": ""
+            },
+            {
+              "dia": "Viernes",
+              "horario": "09 a 11",
+              "tipo_clase": "Presencial",
+              "aula": "NO ASIGNADO",
+              "edificacion": "NO ASIGNADO",
+              "compartido_con": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "codigo_actividad": "A1004",
+      "actividad": "PROGRAMACIÓN I",
+      "inicio_dictado": "NO ASIGNADO",
+      "fin_dictado": "NO ASIGNADO",
+      "instancia": "",
+      "modalidad": "Presencial",
+      "comisiones": [
+        {
+          "comision": "COM-01",
+          "docentes": [],
+          "dias": [
+            {
+              "dia": "Lunes",
+              "horario": "18 a 22",
+              "tipo_clase": "Presencial",
+              "aula": "NO ASIGNADO",
+              "edificacion": "NO ASIGNADO",
+              "compartido_con": ""
+            },
+            {
+              "dia": "Jueves",
+              "horario": "18 a 22",
+              "tipo_clase": "Presencial",
+              "aula": "NO ASIGNADO",
+              "edificacion": "NO ASIGNADO",
+              "compartido_con": ""
+            }
+          ]
+        },
+        {
+          "comision": "COM-02",
+          "docentes": [],
+          "dias": [
+            {
+              "dia": "Miércoles",
+              "horario": "14 a 18",
+              "tipo_clase": "Presencial",
+              "aula": "NO ASIGNADO",
+              "edificacion": "NO ASIGNADO",
+              "compartido_con": ""
+            },
+            {
+              "dia": "Jueves",
+              "horario": "14 a 18",
+              "tipo_clase": "Presencial",
+              "aula": "NO ASIGNADO",
+              "edificacion": "NO ASIGNADO",
+              "compartido_con": ""
+            }
+          ]
+        },
+        {
+          "comision": "COM-03",
+          "docentes": [],
+          "dias": [
+            {
+              "dia": "Martes",
+              "horario": "18 a 22",
+              "tipo_clase": "Presencial",
+              "aula": "NO ASIGNADO",
+              "edificacion": "NO ASIGNADO",
+              "compartido_con": ""
+            },
+            {
+              "dia": "Miércoles",
+              "horario": "18 a 22",
+              "tipo_clase": "Presencial",
+              "aula": "NO ASIGNADO",
+              "edificacion": "NO ASIGNADO",
+              "compartido_con": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "codigo_actividad": "A1005",
+      "actividad": "ÁLGEBRA LINEAL",
+      "inicio_dictado": "NO ASIGNADO",
+      "fin_dictado": "NO ASIGNADO",
+      "instancia": "",
+      "modalidad": "Presencial",
+      "comisiones": [
+        {
+          "comision": "COM-01",
+          "docentes": [],
+          "dias": [
+            {
+              "dia": "Martes",
+              "horario": "18 a 22",
+              "tipo_clase": "Presencial",
+              "aula": "NO ASIGNADO",
+              "edificacion": "NO ASIGNADO",
+              "compartido_con": ""
+            },
+            {
+              "dia": "Jueves",
+              "horario": "18 a 20",
+              "tipo_clase": "Presencial",
+              "aula": "NO ASIGNADO",
+              "edificacion": "NO ASIGNADO",
+              "compartido_con": ""
+            }
+          ]
+        },
+        {
+          "comision": "COM-02",
+          "docentes": [],
+          "dias": [
+            {
+              "dia": "Lunes",
+              "horario": "18 a 22",
+              "tipo_clase": "Presencial",
+              "aula": "NO ASIGNADO",
+              "edificacion": "NO ASIGNADO",
+              "compartido_con": ""
+            },
+            {
+              "dia": "Viernes",
+              "horario": "18 a 20",
+              "tipo_clase": "Presencial",
+              "aula": "NO ASIGNADO",
+              "edificacion": "NO ASIGNADO",
+              "compartido_con": ""
+            }
+          ]
+        },
+        {
+          "comision": "COM-03",
+          "docentes": [],
+          "dias": [
+            {
+              "dia": "Lunes",
+              "horario": "18 a 22",
+              "tipo_clase": "Presencial",
+              "aula": "NO ASIGNADO",
+              "edificacion": "NO ASIGNADO",
+              "compartido_con": ""
+            },
+            {
+              "dia": "Martes",
+              "horario": "18 a 20",
+              "tipo_clase": "Presencial",
+              "aula": "NO ASIGNADO",
+              "edificacion": "NO ASIGNADO",
+              "compartido_con": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "codigo_actividad": "A1006",
+      "actividad": "LÓGICA Y TEORÍA DE NÚMEROS",
+      "inicio_dictado": "NO ASIGNADO",
+      "fin_dictado": "NO ASIGNADO",
+      "instancia": "",
+      "modalidad": "Presencial",
+      "comisiones": [
+        {
+          "comision": "COM-01",
+          "docentes": [],
+          "dias": [
+            {
+              "dia": "Martes",
+              "horario": "18 a 22",
+              "tipo_clase": "Presencial",
+              "aula": "NO ASIGNADO",
+              "edificacion": "NO ASIGNADO",
+              "compartido_con": ""
+            },
+            {
+              "dia": "Viernes",
+              "horario": "18 a 20",
+              "tipo_clase": "Presencial",
+              "aula": "NO ASIGNADO",
+              "edificacion": "NO ASIGNADO",
+              "compartido_con": ""
+            }
+          ]
+        },
+        {
+          "comision": "COM-02",
+          "docentes": [],
+          "dias": [
+            {
+              "dia": "Lunes",
+              "horario": "18 a 22",
+              "tipo_clase": "Presencial",
+              "aula": "NO ASIGNADO",
+              "edificacion": "NO ASIGNADO",
+              "compartido_con": ""
+            },
+            {
+              "dia": "Miércoles",
+              "horario": "18 a 20",
+              "tipo_clase": "Presencial",
+              "aula": "NO ASIGNADO",
+              "edificacion": "NO ASIGNADO",
+              "compartido_con": ""
+            }
+          ]
+        },
+        {
+          "comision": "COM-03",
+          "docentes": [],
+          "dias": [
+            {
+              "dia": "Martes",
+              "horario": "18 a 22",
+              "tipo_clase": "Presencial",
+              "aula": "NO ASIGNADO",
+              "edificacion": "NO ASIGNADO",
+              "compartido_con": ""
+            },
+            {
+              "dia": "Jueves",
+              "horario": "18 a 20",
+              "tipo_clase": "Presencial",
+              "aula": "NO ASIGNADO",
+              "edificacion": "NO ASIGNADO",
+              "compartido_con": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "codigo_actividad": "A1007",
+      "actividad": "ORGANIZACIÓN DEL COMPUTADOR II",
+      "inicio_dictado": "NO ASIGNADO",
+      "fin_dictado": "NO ASIGNADO",
+      "instancia": "",
+      "modalidad": "Presencial",
+      "comisiones": [
+        {
+          "comision": "COM-01",
+          "docentes": [],
+          "dias": [
+            {
+              "dia": "Miércoles",
+              "horario": "18 a 22",
+              "tipo_clase": "Presencial",
+              "aula": "NO ASIGNADO",
+              "edificacion": "NO ASIGNADO",
+              "compartido_con": ""
+            },
+            {
+              "dia": "Viernes",
+              "horario": "18 a 20",
+              "tipo_clase": "Presencial",
+              "aula": "NO ASIGNADO",
+              "edificacion": "NO ASIGNADO",
+              "compartido_con": ""
+            }
+          ]
+        },
+        {
+          "comision": "COM-02",
+          "docentes": [],
+          "dias": [
+            {
+              "dia": "Martes",
+              "horario": "09 a 13",
+              "tipo_clase": "Presencial",
+              "aula": "NO ASIGNADO",
+              "edificacion": "NO ASIGNADO",
+              "compartido_con": ""
+            },
+            {
+              "dia": "Miércoles",
+              "horario": "08 a 10",
+              "tipo_clase": "Presencial",
+              "aula": "NO ASIGNADO",
+              "edificacion": "NO ASIGNADO",
+              "compartido_con": ""
+            }
+          ]
+        },
+        {
+          "comision": "COM-03",
+          "docentes": [],
+          "dias": [
+            {
+              "dia": "Martes",
+              "horario": "18 a 22",
+              "tipo_clase": "Presencial",
+              "aula": "NO ASIGNADO",
+              "edificacion": "NO ASIGNADO",
+              "compartido_con": ""
+            },
+            {
+              "dia": "Jueves",
+              "horario": "18 a 20",
+              "tipo_clase": "Presencial",
+              "aula": "NO ASIGNADO",
+              "edificacion": "NO ASIGNADO",
+              "compartido_con": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "codigo_actividad": "A1008",
+      "actividad": "PROGRAMACIÓN II",
+      "inicio_dictado": "NO ASIGNADO",
+      "fin_dictado": "NO ASIGNADO",
+      "instancia": "",
+      "modalidad": "Presencial",
+      "comisiones": [
+        {
+          "comision": "COM-01",
+          "docentes": [],
+          "dias": [
+            {
+              "dia": "Lunes",
+              "horario": "18 a 22",
+              "tipo_clase": "Presencial",
+              "aula": "NO ASIGNADO",
+              "edificacion": "NO ASIGNADO",
+              "compartido_con": ""
+            },
+            {
+              "dia": "Miércoles",
+              "horario": "18 a 22",
+              "tipo_clase": "Presencial",
+              "aula": "NO ASIGNADO",
+              "edificacion": "NO ASIGNADO",
+              "compartido_con": ""
+            }
+          ]
+        },
+        {
+          "comision": "COM-02",
+          "docentes": [],
+          "dias": [
+            {
+              "dia": "Lunes",
+              "horario": "08 a 12",
+              "tipo_clase": "Presencial",
+              "aula": "NO ASIGNADO",
+              "edificacion": "NO ASIGNADO",
+              "compartido_con": ""
+            },
+            {
+              "dia": "Miércoles",
+              "horario": "08 a 12",
+              "tipo_clase": "Presencial",
+              "aula": "NO ASIGNADO",
+              "edificacion": "NO ASIGNADO",
+              "compartido_con": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "codigo_actividad": "A1009",
+      "actividad": "CÁLCULO PARA COMPUTACIÓN",
+      "inicio_dictado": "NO ASIGNADO",
+      "fin_dictado": "NO ASIGNADO",
+      "instancia": "",
+      "modalidad": "Presencial",
+      "comisiones": [
+        {
+          "comision": "COM-01",
+          "docentes": [],
+          "dias": [
+            {
+              "dia": "Lunes",
+              "horario": "18 a 22",
+              "tipo_clase": "Presencial",
+              "aula": "NO ASIGNADO",
+              "edificacion": "NO ASIGNADO",
+              "compartido_con": ""
+            },
+            {
+              "dia": "Jueves",
+              "horario": "18 a 20",
+              "tipo_clase": "Presencial",
+              "aula": "NO ASIGNADO",
+              "edificacion": "NO ASIGNADO",
+              "compartido_con": ""
+            }
+          ]
+        },
+        {
+          "comision": "COM-02",
+          "docentes": [],
+          "dias": [
+            {
+              "dia": "Miércoles",
+              "horario": "09 a 13",
+              "tipo_clase": "Presencial",
+              "aula": "NO ASIGNADO",
+              "edificacion": "NO ASIGNADO",
+              "compartido_con": ""
+            },
+            {
+              "dia": "Jueves",
+              "horario": "08 a 10",
+              "tipo_clase": "Presencial",
+              "aula": "NO ASIGNADO",
+              "edificacion": "NO ASIGNADO",
+              "compartido_con": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "codigo_actividad": "A1010",
+      "actividad": "BASES DE DATOS I",
+      "inicio_dictado": "NO ASIGNADO",
+      "fin_dictado": "NO ASIGNADO",
+      "instancia": "",
+      "modalidad": "Presencial",
+      "comisiones": [
+        {
+          "comision": "COM-01",
+          "docentes": [],
+          "dias": [
+            {
+              "dia": "Martes",
+              "horario": "18 a 22",
+              "tipo_clase": "Presencial",
+              "aula": "NO ASIGNADO",
+              "edificacion": "NO ASIGNADO",
+              "compartido_con": ""
+            },
+            {
+              "dia": "Jueves",
+              "horario": "18 a 20",
+              "tipo_clase": "Presencial",
+              "aula": "NO ASIGNADO",
+              "edificacion": "NO ASIGNADO",
+              "compartido_con": ""
+            }
+          ]
+        },
+        {
+          "comision": "COM-02",
+          "docentes": [],
+          "dias": [
+            {
+              "dia": "Lunes",
+              "horario": "14 a 18",
+              "tipo_clase": "Presencial",
+              "aula": "NO ASIGNADO",
+              "edificacion": "NO ASIGNADO",
+              "compartido_con": ""
+            },
+            {
+              "dia": "Jueves",
+              "horario": "14 a 16",
+              "tipo_clase": "Presencial",
+              "aula": "NO ASIGNADO",
+              "edificacion": "NO ASIGNADO",
+              "compartido_con": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "codigo_actividad": "A1011",
+      "actividad": "SISTEMAS OPERATIVOS Y REDES I",
+      "inicio_dictado": "NO ASIGNADO",
+      "fin_dictado": "NO ASIGNADO",
+      "instancia": "",
+      "modalidad": "Presencial",
+      "comisiones": [
+        {
+          "comision": "COM-01",
+          "docentes": [],
+          "dias": [
+            {
+              "dia": "Martes",
+              "horario": "18 a 22",
+              "tipo_clase": "Presencial",
+              "aula": "NO ASIGNADO",
+              "edificacion": "NO ASIGNADO",
+              "compartido_con": ""
+            },
+            {
+              "dia": "Viernes",
+              "horario": "18 a 20",
+              "tipo_clase": "Presencial",
+              "aula": "NO ASIGNADO",
+              "edificacion": "NO ASIGNADO",
+              "compartido_con": ""
+            }
+          ]
+        },
+        {
+          "comision": "COM-02",
+          "docentes": [],
+          "dias": [
+            {
+              "dia": "Lunes",
+              "horario": "09 a 13",
+              "tipo_clase": "Presencial",
+              "aula": "NO ASIGNADO",
+              "edificacion": "NO ASIGNADO",
+              "compartido_con": ""
+            },
+            {
+              "dia": "Jueves",
+              "horario": "08 a 10",
+              "tipo_clase": "Presencial",
+              "aula": "NO ASIGNADO",
+              "edificacion": "NO ASIGNADO",
+              "compartido_con": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "codigo_actividad": "A1012",
+      "actividad": "PROGRAMACIÓN III",
+      "inicio_dictado": "NO ASIGNADO",
+      "fin_dictado": "NO ASIGNADO",
+      "instancia": "",
+      "modalidad": "Presencial",
+      "comisiones": [
+        {
+          "comision": "COM-01",
+          "docentes": [],
+          "dias": [
+            {
+              "dia": "Miércoles",
+              "horario": "18 a 22",
+              "tipo_clase": "Presencial",
+              "aula": "NO ASIGNADO",
+              "edificacion": "NO ASIGNADO",
+              "compartido_con": ""
+            },
+            {
+              "dia": "Viernes",
+              "horario": "18 a 22",
+              "tipo_clase": "Presencial",
+              "aula": "NO ASIGNADO",
+              "edificacion": "NO ASIGNADO",
+              "compartido_con": ""
+            }
+          ]
+        },
+        {
+          "comision": "COM-02",
+          "docentes": [],
+          "dias": [
+            {
+              "dia": "Lunes",
+              "horario": "18 a 22",
+              "tipo_clase": "Presencial",
+              "aula": "NO ASIGNADO",
+              "edificacion": "NO ASIGNADO",
+              "compartido_con": ""
+            },
+            {
+              "dia": "Viernes",
+              "horario": "18 a 22",
+              "tipo_clase": "Presencial",
+              "aula": "NO ASIGNADO",
+              "edificacion": "NO ASIGNADO",
+              "compartido_con": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "codigo_actividad": "A1013",
+      "actividad": "INGENIERÍA DE SOFTWARE I",
+      "inicio_dictado": "NO ASIGNADO",
+      "fin_dictado": "NO ASIGNADO",
+      "instancia": "",
+      "modalidad": "Presencial",
+      "comisiones": [
+        {
+          "comision": "COM-01",
+          "docentes": [],
+          "dias": [
+            {
+              "dia": "Lunes",
+              "horario": "18 a 22",
+              "tipo_clase": "Presencial",
+              "aula": "NO ASIGNADO",
+              "edificacion": "NO ASIGNADO",
+              "compartido_con": ""
+            },
+            {
+              "dia": "Miércoles",
+              "horario": "18 a 20",
+              "tipo_clase": "Presencial",
+              "aula": "NO ASIGNADO",
+              "edificacion": "NO ASIGNADO",
+              "compartido_con": ""
+            }
+          ]
+        },
+        {
+          "comision": "COM-02",
+          "docentes": [],
+          "dias": [
+            {
+              "dia": "Jueves",
+              "horario": "09 a 13",
+              "tipo_clase": "Presencial",
+              "aula": "NO ASIGNADO",
+              "edificacion": "NO ASIGNADO",
+              "compartido_con": ""
+            },
+            {
+              "dia": "Viernes",
+              "horario": "09 a 11",
+              "tipo_clase": "Presencial",
+              "aula": "NO ASIGNADO",
+              "edificacion": "NO ASIGNADO",
+              "compartido_con": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "codigo_actividad": "A1014",
+      "actividad": "PROBABILIDAD Y ESTADÍSTICA",
+      "inicio_dictado": "NO ASIGNADO",
+      "fin_dictado": "NO ASIGNADO",
+      "instancia": "",
+      "modalidad": "Presencial",
+      "comisiones": [
+        {
+          "comision": "COM-01",
+          "docentes": [],
+          "dias": [
+            {
+              "dia": "Lunes",
+              "horario": "18 a 22",
+              "tipo_clase": "Presencial",
+              "aula": "NO ASIGNADO",
+              "edificacion": "NO ASIGNADO",
+              "compartido_con": ""
+            },
+            {
+              "dia": "Jueves",
+              "horario": "18 a 20",
+              "tipo_clase": "Presencial",
+              "aula": "NO ASIGNADO",
+              "edificacion": "NO ASIGNADO",
+              "compartido_con": ""
+            }
+          ]
+        },
+        {
+          "comision": "COM-02",
+          "docentes": [],
+          "dias": [
+            {
+              "dia": "Lunes",
+              "horario": "18 a 22",
+              "tipo_clase": "Presencial",
+              "aula": "NO ASIGNADO",
+              "edificacion": "NO ASIGNADO",
+              "compartido_con": ""
+            },
+            {
+              "dia": "Jueves",
+              "horario": "18 a 20",
+              "tipo_clase": "Presencial",
+              "aula": "NO ASIGNADO",
+              "edificacion": "NO ASIGNADO",
+              "compartido_con": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "codigo_actividad": "A1015",
+      "actividad": "SISTEMAS OPERATIVOS Y REDES II",
+      "inicio_dictado": "NO ASIGNADO",
+      "fin_dictado": "NO ASIGNADO",
+      "instancia": "",
+      "modalidad": "Presencial",
+      "comisiones": [
+        {
+          "comision": "COM-01",
+          "docentes": [],
+          "dias": [
+            {
+              "dia": "Martes",
+              "horario": "18 a 22",
+              "tipo_clase": "Presencial",
+              "aula": "NO ASIGNADO",
+              "edificacion": "NO ASIGNADO",
+              "compartido_con": ""
+            },
+            {
+              "dia": "Jueves",
+              "horario": "18 a 20",
+              "tipo_clase": "Presencial",
+              "aula": "NO ASIGNADO",
+              "edificacion": "NO ASIGNADO",
+              "compartido_con": ""
+            }
+          ]
+        },
+        {
+          "comision": "COM-02",
+          "docentes": [],
+          "dias": [
+            {
+              "dia": "Lunes",
+              "horario": "18 a 22",
+              "tipo_clase": "Presencial",
+              "aula": "NO ASIGNADO",
+              "edificacion": "NO ASIGNADO",
+              "compartido_con": ""
+            },
+            {
+              "dia": "Miércoles",
+              "horario": "18 a 20",
+              "tipo_clase": "Presencial",
+              "aula": "NO ASIGNADO",
+              "edificacion": "NO ASIGNADO",
+              "compartido_con": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "codigo_actividad": "A1016",
+      "actividad": "BASES DE DATOS II",
+      "inicio_dictado": "NO ASIGNADO",
+      "fin_dictado": "NO ASIGNADO",
+      "instancia": "",
+      "modalidad": "Presencial",
+      "comisiones": [
+        {
+          "comision": "COM-01",
+          "docentes": [],
+          "dias": [
+            {
+              "dia": "Martes",
+              "horario": "18 a 22",
+              "tipo_clase": "Presencial",
+              "aula": "NO ASIGNADO",
+              "edificacion": "NO ASIGNADO",
+              "compartido_con": ""
+            },
+            {
+              "dia": "Viernes",
+              "horario": "18 a 22",
+              "tipo_clase": "Presencial",
+              "aula": "NO ASIGNADO",
+              "edificacion": "NO ASIGNADO",
+              "compartido_con": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "codigo_actividad": "A1017",
+      "actividad": "INGENIERÍA DE SOFTWARE II",
+      "inicio_dictado": "NO ASIGNADO",
+      "fin_dictado": "NO ASIGNADO",
+      "instancia": "",
+      "modalidad": "Presencial",
+      "comisiones": [
+        {
+          "comision": "COM-01",
+          "docentes": [],
+          "dias": [
+            {
+              "dia": "Miércoles",
+              "horario": "18 a 22",
+              "tipo_clase": "Presencial",
+              "aula": "NO ASIGNADO",
+              "edificacion": "NO ASIGNADO",
+              "compartido_con": ""
+            },
+            {
+              "dia": "Viernes",
+              "horario": "18 a 20",
+              "tipo_clase": "Presencial",
+              "aula": "NO ASIGNADO",
+              "edificacion": "NO ASIGNADO",
+              "compartido_con": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "codigo_actividad": "A1018",
+      "actividad": "ESPECIFICACIONES Y VERIFICACIÓN DE SOFTWARE",
+      "inicio_dictado": "NO ASIGNADO",
+      "fin_dictado": "NO ASIGNADO",
+      "instancia": "",
+      "modalidad": "Presencial",
+      "comisiones": [
+        {
+          "comision": "COM-01",
+          "docentes": [],
+          "dias": [
+            {
+              "dia": "Lunes",
+              "horario": "18 a 22",
+              "tipo_clase": "Presencial",
+              "aula": "NO ASIGNADO",
+              "edificacion": "NO ASIGNADO",
+              "compartido_con": ""
+            },
+            {
+              "dia": "Miércoles",
+              "horario": "18 a 20",
+              "tipo_clase": "Presencial",
+              "aula": "NO ASIGNADO",
+              "edificacion": "NO ASIGNADO",
+              "compartido_con": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "codigo_actividad": "A1019",
+      "actividad": "PROYECTO PROFESIONAL I",
+      "inicio_dictado": "NO ASIGNADO",
+      "fin_dictado": "NO ASIGNADO",
+      "instancia": "",
+      "modalidad": "Presencial",
+      "comisiones": [
+        {
+          "comision": "COM-01",
+          "docentes": [],
+          "dias": [
+            {
+              "dia": "Lunes",
+              "horario": "18 a 22",
+              "tipo_clase": "Presencial",
+              "aula": "NO ASIGNADO",
+              "edificacion": "NO ASIGNADO",
+              "compartido_con": ""
+            },
+            {
+              "dia": "Jueves",
+              "horario": "18 a 22",
+              "tipo_clase": "Presencial",
+              "aula": "NO ASIGNADO",
+              "edificacion": "NO ASIGNADO",
+              "compartido_con": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "codigo_actividad": "A1023",
+      "actividad": "INFORMÁTICA Y SOCIEDAD",
+      "inicio_dictado": "NO ASIGNADO",
+      "fin_dictado": "NO ASIGNADO",
+      "instancia": "",
+      "modalidad": "Presencial",
+      "comisiones": [
+        {
+          "comision": "COM-01",
+          "docentes": [],
+          "dias": [
+            {
+              "dia": "Sábado",
+              "horario": "9 a 13",
+              "tipo_clase": "Presencial",
+              "aula": "NO ASIGNADO",
+              "edificacion": "NO ASIGNADO",
+              "compartido_con": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "codigo_actividad": "A1024",
+      "actividad": "GESTIÓN DE PROYECTOS",
+      "inicio_dictado": "NO ASIGNADO",
+      "fin_dictado": "NO ASIGNADO",
+      "instancia": "",
+      "modalidad": "Presencial",
+      "comisiones": [
+        {
+          "comision": "COM-01",
+          "docentes": [],
+          "dias": [
+            {
+              "dia": "Lunes",
+              "horario": "18 a 22",
+              "tipo_clase": "Presencial",
+              "aula": "NO ASIGNADO",
+              "edificacion": "NO ASIGNADO",
+              "compartido_con": ""
+            },
+            {
+              "dia": "Jueves",
+              "horario": "18 a 20",
+              "tipo_clase": "Presencial",
+              "aula": "NO ASIGNADO",
+              "edificacion": "NO ASIGNADO",
+              "compartido_con": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "codigo_actividad": "A1025",
+      "actividad": "SEGURIDAD INFORMÁTICA",
+      "inicio_dictado": "NO ASIGNADO",
+      "fin_dictado": "NO ASIGNADO",
+      "instancia": "",
+      "modalidad": "Presencial",
+      "comisiones": [
+        {
+          "comision": "COM-01",
+          "docentes": [],
+          "dias": [
+            {
+              "dia": "Martes",
+              "horario": "18 a 22",
+              "tipo_clase": "Presencial",
+              "aula": "NO ASIGNADO",
+              "edificacion": "NO ASIGNADO",
+              "compartido_con": ""
+            },
+            {
+              "dia": "Jueves",
+              "horario": "18 a 20",
+              "tipo_clase": "Presencial",
+              "aula": "NO ASIGNADO",
+              "edificacion": "NO ASIGNADO",
+              "compartido_con": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "codigo_actividad": "A1026",
+      "actividad": "LENGUAJES FORMALES Y AUTÓMATAS",
+      "inicio_dictado": "NO ASIGNADO",
+      "fin_dictado": "NO ASIGNADO",
+      "instancia": "",
+      "modalidad": "Presencial",
+      "comisiones": [
+        {
+          "comision": "COM-01",
+          "docentes": [],
+          "dias": [
+            {
+              "dia": "Martes",
+              "horario": "18 a 22",
+              "tipo_clase": "Presencial",
+              "aula": "NO ASIGNADO",
+              "edificacion": "NO ASIGNADO",
+              "compartido_con": ""
+            },
+            {
+              "dia": "Viernes",
+              "horario": "18 a 20",
+              "tipo_clase": "Presencial",
+              "aula": "NO ASIGNADO",
+              "edificacion": "NO ASIGNADO",
+              "compartido_con": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "codigo_actividad": "A1028",
+      "actividad": "TALLER DE TESINA",
+      "inicio_dictado": "NO ASIGNADO",
+      "fin_dictado": "NO ASIGNADO",
+      "instancia": "",
+      "modalidad": "Presencial",
+      "comisiones": [
+        {
+          "comision": "COM-01",
+          "docentes": [],
+          "dias": [
+            {
+              "dia": "Viernes",
+              "horario": "18 a 22",
+              "tipo_clase": "Presencial",
+              "aula": "NO ASIGNADO",
+              "edificacion": "NO ASIGNADO",
+              "compartido_con": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "codigo_actividad": "A1029",
+      "actividad": "TALLER DE UTILITARIOS",
+      "inicio_dictado": "NO ASIGNADO",
+      "fin_dictado": "NO ASIGNADO",
+      "instancia": "",
+      "modalidad": "Presencial",
+      "comisiones": [
+        {
+          "comision": "COM-01",
+          "docentes": [],
+          "dias": [
+            {
+              "dia": "Jueves",
+              "horario": "18 a 20",
+              "tipo_clase": "Presencial",
+              "aula": "NO ASIGNADO",
+              "edificacion": "NO ASIGNADO",
+              "compartido_con": ""
+            }
+          ]
+        },
+        {
+          "comision": "COM-02",
+          "docentes": [],
+          "dias": [
+            {
+              "dia": "Martes",
+              "horario": "18 a 20",
+              "tipo_clase": "Presencial",
+              "aula": "NO ASIGNADO",
+              "edificacion": "NO ASIGNADO",
+              "compartido_con": ""
+            }
+          ]
+        },
+        {
+          "comision": "COM-03",
+          "docentes": [],
+          "dias": [
+            {
+              "dia": "Viernes",
+              "horario": "14 a 16",
+              "tipo_clase": "Presencial",
+              "aula": "NO ASIGNADO",
+              "edificacion": "NO ASIGNADO",
+              "compartido_con": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "codigo_actividad": "A1030",
+      "actividad": "INGLÉS LECTOCOMPRENSIÓN I",
+      "inicio_dictado": "NO ASIGNADO",
+      "fin_dictado": "NO ASIGNADO",
+      "instancia": "",
+      "modalidad": "Presencial",
+      "comisiones": [
+        {
+          "comision": "COM-01",
+          "docentes": [],
+          "dias": [
+            {
+              "dia": "Martes",
+              "horario": "18 a 22",
+              "tipo_clase": "Presencial",
+              "aula": "NO ASIGNADO",
+              "edificacion": "NO ASIGNADO",
+              "compartido_con": ""
+            }
+          ]
+        },
+        {
+          "comision": "COM-02",
+          "docentes": [],
+          "dias": [
+            {
+              "dia": "Lunes",
+              "horario": "09 a 13",
+              "tipo_clase": "Presencial",
+              "aula": "NO ASIGNADO",
+              "edificacion": "NO ASIGNADO",
+              "compartido_con": ""
+            }
+          ]
+        },
+        {
+          "comision": "COM-03",
+          "docentes": [],
+          "dias": [
+            {
+              "dia": "Jueves",
+              "horario": "18 a 22",
+              "tipo_clase": "Presencial",
+              "aula": "NO ASIGNADO",
+              "edificacion": "NO ASIGNADO",
+              "compartido_con": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "codigo_actividad": "A1031",
+      "actividad": "INGLÉS LECTOCOMPRENSIÓN II",
+      "inicio_dictado": "NO ASIGNADO",
+      "fin_dictado": "NO ASIGNADO",
+      "instancia": "",
+      "modalidad": "Presencial",
+      "comisiones": [
+        {
+          "comision": "COM-01",
+          "docentes": [],
+          "dias": [
+            {
+              "dia": "Viernes",
+              "horario": "18 a 22",
+              "tipo_clase": "Presencial",
+              "aula": "NO ASIGNADO",
+              "edificacion": "NO ASIGNADO",
+              "compartido_con": ""
+            }
+          ]
+        },
+        {
+          "comision": "COM-02",
+          "docentes": [],
+          "dias": [
+            {
+              "dia": "Martes",
+              "horario": "18 a 22",
+              "tipo_clase": "Presencial",
+              "aula": "NO ASIGNADO",
+              "edificacion": "NO ASIGNADO",
+              "compartido_con": ""
+            }
+          ]
+        },
+        {
+          "comision": "COM-03",
+          "docentes": [],
+          "dias": [
+            {
+              "dia": "Viernes",
+              "horario": "08 a 12",
+              "tipo_clase": "Presencial",
+              "aula": "NO ASIGNADO",
+              "edificacion": "NO ASIGNADO",
+              "compartido_con": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "codigo_actividad": "A1032",
+      "actividad": "INGLÉS LECTOCOMPRENSIÓN III",
+      "inicio_dictado": "NO ASIGNADO",
+      "fin_dictado": "NO ASIGNADO",
+      "instancia": "",
+      "modalidad": "Presencial",
+      "comisiones": [
+        {
+          "comision": "COM-01",
+          "docentes": [],
+          "dias": [
+            {
+              "dia": "Miércoles",
+              "horario": "18 a 22",
+              "tipo_clase": "Presencial",
+              "aula": "NO ASIGNADO",
+              "edificacion": "NO ASIGNADO",
+              "compartido_con": ""
+            }
+          ]
+        },
+        {
+          "comision": "COM-02",
+          "docentes": [],
+          "dias": [
+            {
+              "dia": "Miércoles",
+              "horario": "09 a 13",
+              "tipo_clase": "Presencial",
+              "aula": "NO ASIGNADO",
+              "edificacion": "NO ASIGNADO",
+              "compartido_con": ""
+            }
+          ]
+        },
+        {
+          "comision": "COM-03",
+          "docentes": [],
+          "dias": [
+            {
+              "dia": "Martes",
+              "horario": "08 a 12",
+              "tipo_clase": "Presencial",
+              "aula": "NO ASIGNADO",
+              "edificacion": "NO ASIGNADO",
+              "compartido_con": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
