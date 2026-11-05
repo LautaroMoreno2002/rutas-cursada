@@ -58,6 +58,11 @@ def test_helpers_periodo():
     assert detectar_anio_semestre("Oferta 1° semestre 2026") == (2026, 1)
     assert detectar_anio_semestre("Segundo cuatrimestre 2025") == (2025, 2)
     assert detectar_anio_semestre("oferta-2do-semestre-2027.pdf".replace("-", " ")) == (2027, 2)
+    # Link real de la UNGS: el título no dice el semestre y la carpeta de uploads es de 2018
+    assert detectar_anio_semestre(
+        "Ver oferta (Con Aulas) https://www.ungs.edu.ar/wp-content/uploads/2018/07/"
+        "COMISIONES-DE-UN-PERIODO-2_2026-ANUAL_2026-v21-CON-AULAS-22026-ANUAL2026.pdf"
+    ) == (2026, 2)
 
 
 def test_pdf_definido(tmp_dir):

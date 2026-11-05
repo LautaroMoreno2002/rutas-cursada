@@ -47,10 +47,17 @@ _ORDINALES = {
 
 
 def detectar_anio_semestre(texto):
-    """Intenta deducir (año, semestre) del título/URL. Ej: '1° semestre 2026', 'segundo cuatrimestre 2025'."""
+    """Intenta deducir (año, semestre) del título/URL.
+    Ej: '1° semestre 2026', 'segundo cuatrimestre 2025', '...COMISIONES-DE-UN-PERIODO-2_2026-ANUAL_2026...pdf'."""
     if not texto:
         return None, None
     t = texto.lower()
+    # La carpeta de WordPress (wp-content/uploads/2018/07/) no es el año del período
+    t = re.sub(r"wp-content/uploads/\d{4}/\d{2}/", "", t)
+    # Nombre del PDF de la UNGS: "COMISIONES-DE-UN-PERIODO-2_2026-ANUAL_2026-...pdf"
+    m = re.search(r"periodo[-_ ]*([12])[-_ ]+(20\d{2})", t)
+    if m:
+        return int(m.group(2)), int(m.group(1))
     anio = None
     m = re.search(r"(20\d{2})", t)
     if m:
