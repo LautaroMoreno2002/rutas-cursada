@@ -1,236 +1,187 @@
-import requests
-import os
-import pandas as pd
-# import openpyxl
-import re
 import json
+import os
+import re
+import sys
+
+import pandas as pd
 from dotenv import load_dotenv
-from datetime import datetime
 
 load_dotenv()
 
+# Excel generado por extractor-periodo.py y JSON de salida.
+PERIODO_EXCEL_FILENAME = os.getenv("PERIODO_EXCEL_FILENAME") or "data/periodo.xlsx"
+PERIODO_CON_MATERIAS_FILENAME = os.getenv("PERIODO_CON_MATERIAS_FILENAME") or "data/periodo_con_materias.json"
+
+
+def valor(celda):
+    """Celda vacía -> ""."""
+    return "" if pd.isna(celda) else celda
+
+
 def obtener_comision(comision_con_codigo):
     match = re.search(r"COM-\d+", comision_con_codigo)
-    if match:
-        return match.group()
-    return None
-        
+    return match.group() if match else None
+
+
 def extraer_codigo_y_actividad(nombre_actividad):
     """
-    Extrae el código de la actividad desde el nombre.
-    Ej: 'ADMINISTRACIÓN ... (A0075)'
+    Separa el código del nombre de la actividad.
+    Ej: 'ADMINISTRACIÓN ... (A0075)' -> ('A0075', 'ADMINISTRACIÓN ...')
     """
     if not nombre_actividad:
         return "", ""
 
     match = re.search(r"\(([^)]+)\)$", nombre_actividad.strip())
     if match:
-        codigo = match.group(1)
         actividad = re.sub(r"\s*\([^)]+\)$", "", nombre_actividad).strip()
-        return codigo, actividad
+        return match.group(1), actividad
 
     return "", nombre_actividad.strip()
 
+
+def guardar_json(resultado):
+    carpeta = os.path.dirname(PERIODO_CON_MATERIAS_FILENAME)
+    if carpeta:
+        os.makedirs(carpeta, exist_ok=True)
+    with open(PERIODO_CON_MATERIAS_FILENAME, "w", encoding="utf-8") as f:
+        json.dump(resultado, f, ensure_ascii=False, indent=4)
+    print(f"JSON generado correctamente en {PERIODO_CON_MATERIAS_FILENAME}")
+
+
 def extraer_periodo_definido(df):
     """
-    ESTRUCTURA DEL JSON (para el periodo definido con aulas)
+    Período con aulas asignadas (13 columnas). Estructura del JSON:
     {
-        codigo_actividad: "",
-        actividad: "",
-        inicio_dictado: "",
-        fin_dictado: "",
-        instancia: "",
+        codigo_actividad, actividad, inicio_dictado, fin_dictado, instancia,
         comisiones: [
             {
-                comision: "",
-                docentes: [""]
-                dias: [
-                    {
-                        dia: "",
-                        horario: "",
-                        tipo_clase: "",
-                        aula: "",
-                        edificacion: "",
-                        compartido_con: ""                    
-                    }
-                ]
+                comision, docentes: [] o "",
+                dias: [{dia, horario, tipo_clase, aula, edificacion, compartido_con}]
             }
         ]
     }
     """
     resultado = []
 
-    # Elimino las filas que contengan los header
-    patrones = [
-    "Sede Campus:",
-    "Códig"
-    ]
-
-    df = df[
-        ~df.astype(str)
-        .apply(lambda fila: fila.str.contains("|".join(patrones), case=False, na=False))
-        .any(axis=1)
-    ]
+    # Elimino las filas de encabezado que se repiten en cada página
+    patrones = "Sede Campus:|Códig"
+    df = df[~df.astype(str).apply(lambda fila: fila.str.contains(patrones, case=False, na=False)).any(axis=1)]
 
     # Agrupo por código y materia
     for (codigo, actividad), df_materia in df.groupby([0, 1]):
-        if codigo != "Códig o Activid ad" and actividad != "Actividad":
-            actividad = re.sub(r'\s*\(.*?\)\s*', '', actividad).strip()
-            materia_json = {
-                "codigo_actividad": codigo,
-                "actividad": actividad,
-                "inicio_dictado": df_materia[3].iloc[0],
-                "fin_dictado": df_materia[4].iloc[0],
-                "instancia": df_materia[11].iloc[0],
-                "comisiones": []
-            }
-            # Agrupo por comisión
-            for (comision), df_comision in df_materia.groupby(2):
-                docentes = []
-                for valor in df_comision[7].dropna():
-                    partes = [d.strip() for d in valor.split(",")]
-                    docentes.extend(partes)
+        if codigo == "Códig o Activid ad" or actividad == "Actividad":
+            continue
 
-                docentes = list(set(docentes))  # quitar repetidos
+        materia_json = {
+            "codigo_actividad": codigo,
+            "actividad": re.sub(r"\s*\(.*?\)\s*", "", actividad).strip(),
+            "inicio_dictado": df_materia[3].iloc[0],
+            "fin_dictado": df_materia[4].iloc[0],
+            "instancia": df_materia[11].iloc[0],
+            "comisiones": [],
+        }
 
-                comision_json = {
-                    "comision": obtener_comision(comision),
-                    "docentes": "" if len(docentes) <= 0 else docentes,
-                    "dias": []
-                }
-                # Recorro los días y horarios
-                for _, fila in df_comision.iterrows():
-                    dia_json = {
-                        "dia": "" if pd.isna(fila[5]) else fila[5],
-                        "horario": "" if pd.isna(fila[6]) else fila[6],
-                        "tipo_clase": "" if pd.isna(fila[11]) else fila[11],
-                        "aula": "" if pd.isna(fila[8]) else fila[8],
-                        "edificacion": "" if pd.isna(fila[9]) else fila[9],
-                        "compartido_con": "" if pd.isna(fila[10]) else fila[10]
+        # Agrupo por comisión
+        for comision, df_comision in df_materia.groupby(2):
+            # Docentes de todas las filas, sin repetir y en orden de aparición
+            docentes = []
+            for celda in df_comision[7].dropna():
+                docentes.extend(d.strip() for d in celda.split(","))
+            docentes = list(dict.fromkeys(docentes))
+
+            materia_json["comisiones"].append({
+                "comision": obtener_comision(comision),
+                "docentes": docentes or "",
+                "dias": [
+                    {
+                        "dia": valor(fila[5]),
+                        "horario": valor(fila[6]),
+                        "tipo_clase": valor(fila[11]),
+                        "aula": valor(fila[8]),
+                        "edificacion": valor(fila[9]),
+                        "compartido_con": valor(fila[10]),
                     }
+                    for _, fila in df_comision.iterrows()
+                ],
+            })
 
-                    comision_json["dias"].append(dia_json)
+        resultado.append(materia_json)
 
-                materia_json["comisiones"].append(comision_json)
+    guardar_json(resultado)
 
-            resultado.append(materia_json)
-        
-    # # Realizo múltiples copias para ir depurando los resultados
-    # timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-
-    # df.to_excel(
-    #     f"oferta_expandida_{timestamp}.xlsx",
-    #     index=False
-    # )
-
-    with open(os.getenv("PERIODO_CON_MATERIAS_FILENAME"), "w", encoding="utf-8") as f:
-        json.dump(resultado, f, ensure_ascii=False, indent=4)
 
 def extraer_periodo_no_definido(df):
     """
-    ESTRUCTURA DEL JSON (para el periodo no definido)
+    Período sin aulas asignadas (5 columnas). Estructura del JSON
+    (una entrada por cada actividad y comisión):
     {
-        codigo_actividad: "",
-        actividad: "",
-        inicio_dictado: "NO DEFINIDO",
-        fin_dictado: "NO DEFINIDO",
-        instancia: "NO DEFINIDO",
-        modalidad: "",
+        codigo_actividad, actividad,
+        inicio_dictado: "NO ASIGNADO", fin_dictado: "NO ASIGNADO", modalidad,
         comisiones: [
             {
-                comision: "",
-                docentes: ["NO DEFINIDO"]
-                dias: [
-                    {
-                        dia: "",
-                        horario: "",
-                        aula: "NO DEFINIDO",
-                        edificacion: "NO DEFINIDO",
-                        compartido_con: "NO DEFINIDO"                    
-                    }
-                ]
+                comision, docentes: "",
+                dias: [{dia, horario, tipo_clase, aula: "NO ASIGNADA",
+                        edificacion: "NO ASIGNADA", compartido_con: ""}]
             }
         ]
     }
     """
     resultado = []
 
-    
-    # # Elimina encabezados intermedios
-    df = df[~df[0].astype(str).str.contains("Oferta Académica", na=False)]
-    df = df[~df[0].astype(str).str.contains("Materias Semestrales", na=False)]
-    df = df[~df[0].astype(str).str.contains("Actividad", na=False)]
-    
-    # # Propaga Actividad y Comisión
+    # Elimino encabezados intermedios
+    for encabezado in ("Oferta Académica", "Materias Semestrales", "Actividad"):
+        df = df[~df[0].astype(str).str.contains(encabezado, na=False)]
+    df = df.copy()
+
+    # Propago Actividad, Comisión y Modalidad a las filas que vienen vacías
     df[[0, 1]] = df[[0, 1]].ffill()
-    
-    # # Opcional: si modalidad también viene vacía
     df[4] = df[4].ffill()
 
-    # # Agrupo por materia
-    for (actividad, comision), df_materia in df.groupby([0, 1]):
-        (codigo, actividad) = extraer_codigo_y_actividad(actividad)
-        # print(codigo, actividad)
+    # Agrupo por materia y comisión
+    for (nombre_actividad, comision), df_materia in df.groupby([0, 1]):
+        codigo, actividad = extraer_codigo_y_actividad(nombre_actividad)
         materia_json = {
             "codigo_actividad": codigo,
             "actividad": actividad,
             "inicio_dictado": "NO ASIGNADO",
             "fin_dictado": "NO ASIGNADO",
             "modalidad": df_materia[4].iloc[0],
-            "comisiones": []
+            "comisiones": [],
         }
-        # print(materia_json)
-        # Agrupo por comisión
-        for (comision), df_comision in df_materia.groupby(1):
-            comision_json = {
-                "comision": comision,
-                "docentes": "",
-                "dias": []
-            }
-            print(df_comision)
-            # Recorro los días y horarios
-            for _, fila in df_comision.iterrows():
-                dia_json = {
-                    "dia": "" if pd.isna(fila[2]) else fila[2],
-                    "horario": "" if pd.isna(fila[3]) else fila[3],
-                    "tipo_clase": "" if pd.isna(fila[4]) else fila[4],
-                    "aula": "NO ASIGNADA",
-                    "edificacion": "NO ASIGNADA",
-                    "compartido_con": ""
-                }
-                comision_json["dias"].append(dia_json)
 
-                materia_json["comisiones"].append(comision_json)
+        comision_json = {"comision": comision, "docentes": "", "dias": []}
+        for _, fila in df_materia.iterrows():
+            comision_json["dias"].append({
+                "dia": valor(fila[2]),
+                "horario": valor(fila[3]),
+                "tipo_clase": valor(fila[4]),
+                "aula": "NO ASIGNADA",
+                "edificacion": "NO ASIGNADA",
+                "compartido_con": "",
+            })
+            # Se agrega una vez por cada día, como en la versión anterior
+            materia_json["comisiones"].append(comision_json)
 
-            resultado.append(materia_json)
-        
+        resultado.append(materia_json)
 
-    # # Realizo múltiples copias para ir depurando los resultados
-    # timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    guardar_json(resultado)
 
-    # df.to_excel(
-    #     f"oferta_expandida_{timestamp}.xlsx",
-    #     index=False
-    # )
 
-    with open(os.getenv("PERIODO_CON_MATERIAS_FILENAME"), "w", encoding="utf-8") as f:
-        json.dump(resultado, f, ensure_ascii=False, indent=4)
+def leer_periodo():
+    if not os.path.exists(PERIODO_EXCEL_FILENAME):
+        sys.exit(f"❌ No existe {PERIODO_EXCEL_FILENAME}. Ejecutá antes extractor-periodo.py")
 
-    print("JSON generado correctamente")
+    df = pd.read_excel(PERIODO_EXCEL_FILENAME)
+    df = df.iloc[2:].reset_index(drop=True)  # Quita las primeras 2 filas
+    df = df.replace("\n", " ", regex=True)
 
-def determinar_periodo(df):
-    cant_columnas = len(df.columns)
-    if cant_columnas <= 5:
+    if len(df.columns) <= 5:
         print("Leyendo periodo no definido")
         extraer_periodo_no_definido(df)
     else:
         print("Leyendo periodo definido")
         extraer_periodo_definido(df)
 
-def leer_periodo():
-    df = pd.read_excel("./src/data/periodo.xlsx")
-    df = df.iloc[2:].reset_index(drop=True)  # Quita las primeras 2 filas
-    df = df.replace("\n", " ", regex=True)
-    determinar_periodo(df)
 
-leer_periodo()
+if __name__ == "__main__":
+    leer_periodo()
